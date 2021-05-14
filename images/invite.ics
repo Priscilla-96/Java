@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20210512T080000Z
+DTEND:20210512T083000Z
+DTSTAMP:20210511T102400Z
+ORGANIZER;CN=hr@codelantic.com:mailto:hr@codelantic.com
+UID:165dl9rqvr6mcisgb0vjui1uos@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=noelpriscilla9@gmail.com;X-NUM-GUESTS=0:mailto:noelpriscilla9@gmail
+ .com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=hr@codelantic.com;X-NUM-GUESTS=0:mailto:hr@codelantic.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=premkumar@codelantic.com;X-NUM-GUESTS=0:mailto:premkumar@codelantic
+ .com
+X-MICROSOFT-CDO-OWNERAPPTID:1320575725
+CREATED:20210511T102357Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nPlease do not edit this section of the descriptio
+ n.\n\nThis event has a video call.\nJoin: https://meet.google.com/ghd-uhev-
+ apm\n(US) +1 929-356-5752 PIN: 118879597#\nView more phone numbers: https:/
+ /tel.meet/ghd-uhev-apm?pin=6198234974553&hs=7\n\nView your event at https:/
+ /calendar.google.com/calendar/event?action=VIEW&eid=MTY1ZGw5cnF2cjZtY2lzZ2I
+ wdmp1aTF1b3Mgbm9lbHByaXNjaWxsYTlAbQ&tok=MTcjaHJAY29kZWxhbnRpYy5jb202ZWNjZjJ
+ kNzI1YzVhMmQxODQ3YmI3OGM4OGQ4NTU5ODAzYjJmMDQ2&ctz=Asia%2FColombo&hl=en&es=1
+ .\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~::~:~::-
+LAST-MODIFIED:20210511T102358Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Interview with Codelantic _BA Intern
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
