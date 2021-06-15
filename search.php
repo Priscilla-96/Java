@@ -25,6 +25,8 @@ $result=search();
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<!-- Fade-in animation -->
+<link rel="stylesheet" href="css/animate.css">
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <link href='//fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
@@ -52,8 +54,8 @@ $(document).ready(function(){
  <?php include_once("includes/navigation.php");?>
 <!-- ============================  Navigation End ============================ -->
 <div class="grid_3">
-  <div class="container">
-   <div class="breadcrumb1">
+  <div class="container fadeInUp animated">
+   <div class="breadcrumb1 ">
      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
@@ -68,11 +70,11 @@ $(document).ready(function(){
       });
     });
    </script>-->
-<div class="col-md-9 search_left">
-  <form action="" method="post">	
-   <div class="form_but1">
+<div class="col-md-9 search_left fadeInUp animated">
+  <form action="priceoptions.php" method="post">	
+   <div class="form_but1 fadeInUp animated">
 	<label class="col-sm-5 control-lable1" for="sex">Gender : </label>
-	<div class="col-sm-7 form_radios">
+	<div class="col-sm-7 form_radios fadeInUp animated">
 		<input type="radio" class="radio_1" name="sex" value="male" <?php echo "checked";?>/> Groom &nbsp;&nbsp;
 		<input type="radio" class="radio_1" name="sex" value="female"/> Bride
 		
@@ -82,36 +84,29 @@ $(document).ready(function(){
 	</div>
 	<div class="clearfix"> </div>
   </div>
-  <div class="form_but1">
+  <div class="form_but1 fadeInUp animated">
 	<label class="col-sm-5 control-lable1" for="Marital Status">Marital Status : </label>
-	<div class="col-sm-7 form_radios">
-		<input type="checkbox" class="radio_1" name="maritalstatus" value="Single" <?php echo "checked" ?>/> Single &nbsp;&nbsp;
-		<input type="checkbox" class="radio_1" name="maritalstatus" value="divorced" /> Divorced &nbsp;&nbsp;
-		<input type="checkbox" class="radio_1" name="maritalstatus" value="widowed" /> Widowed &nbsp;&nbsp;
-		<input type="checkbox" class="radio_1" name="maritalstatus" value="seperated"/> Separated &nbsp;&nbsp;
-		<input type="checkbox" class="radio_1" name="maritalstatus" value="any" /> Any
+	<div class="col-sm-7 form_radios fadeInUp animated">
+		<input type="radio" class="radio_1" name="maritalstatus" value="Single" <?php echo "checked" ?>/> Single &nbsp;&nbsp;
+		<input type="radio" class="radio_1" name="maritalstatus" value="Divorced" /> Divorced &nbsp;&nbsp;
+		<input type="radio" class="radio_1" name="maritalstatus" value="Married" /> Married &nbsp;&nbsp;
+		<input type="radio" class="radio_1" name="maritalstatus" value="Not Defined"/> Any
+		
 	</div>
 	<div class="clearfix"> </div>
   </div>
+  <?php /*?>
   <div class="form_but1">
     <label class="col-sm-5 control-lable1" for="country">Country : </label>
     <div class="col-sm-7 form_radios">
       <div class="select-block1">
         <select name="country">
             <option value="">Country</option>
-            <option value="Japan">Japan</option>
-            <option value="Kenya">Kenya</option>
-            <option value="Dubai">Dubai</option>
-            <option value="Italy">Italy</option>
-            <option value="Greece">Greece</option> 
-            <option value="Iceland">Iceland</option> 
-            <option value="China">China</option> 
-            <option value="India">India</option> 
-            <option value="Irland">Irland</option> 
             <option value="Srilanka">Srilanka</option> 
-            <option value="Russia">Russia</option> 
-            <option value="Hong Kong">Hong Kong</option> 
-            <option value="Germany">Germany</option>
+            <option value="India">India</option> 
+            <option value="Australia">Australia</option> 
+            <option value="UAE">UAE</option> 
+            
           </select>
       </div>
     </div>
@@ -169,30 +164,24 @@ $(document).ready(function(){
       </div>
     </div>
     <div class="clearfix"> </div>
-  </div>
-  <div class="form_but1">
+  </div><?php */?>
+  <div class="form_but1 fadeInUp animated">
     <label class="col-sm-5 control-lable1" for="Mother Tongue">Mother Tongue : </label>
     <div class="col-sm-7 form_radios">
-      <div class="select-block1">
+      <div class="select-block1 fadeInUp animated">
         <select name="mothertounge">
-            <option value="Malayalam">Sinhala</option>
+            <option value="Sinhala">Sinhala</option>
             <option value="English">English</option>
-            <option value="French">Malay</option>
-            <option value="Telugu">Telugu</option>
-            <option value="Bengali">Bengali</option>
-            <option value="Bihari">Bihari</option>
+            <option value="Tamil">Tamil</option>
             <option value="Hindi">Hindi</option>
-            <option value="Tamil">Tamil</option> 
-            <option value="Urdu">Urdu</option> 
-            <option value="Manipuri">Manipuri</option> 
         </select>
       </div>
     </div>
     <div class="clearfix"> </div>
   </div>
-  <div class="form_but1">
+  <div class="form_but1 fadeInUp animated">
 	<label class="col-sm-5 control-lable1" for="Age">Age : </label>
-	<div class="col-sm-7 form_radios">
+	<div class="col-sm-7 form_radios ">
 	  <div class="col-sm-5 input-group1">
         <input class="form-control has-dark-background" name="agemin" id="slider-name" placeholder="18" type="text" required=""/>
       </div>
@@ -207,7 +196,7 @@ $(document).ready(function(){
   </div>
  </form>
  <div class="paid_people">
-   <h1>Profiles</h1>
+
 <?php
 //only start display profiles if and only if search is triggered
 if(isset($_POST['search'])){

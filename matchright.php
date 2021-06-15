@@ -7,7 +7,7 @@
   <section class="slider">
 	 <h3>Happy Marriage</h3>
 	 <div class="flexslider">
-		<ul class="slides">
+		<!--<ul class="slides">--><ul class="">
 		  <li>
 			<img src="images/s2.jpg" alt=""/>
 			<h4>Kasun & Anjali</h4>
@@ -27,6 +27,7 @@
 	  </div>
    </section>
 
+  <?php /*?>
    <div class="view_profile view_profile2">
         	<h3>View Recent Profiles</h3>
     <?php
@@ -54,4 +55,4 @@
       }
      ?>
            
-</div>
+</div><?php */?>

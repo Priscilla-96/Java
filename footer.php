@@ -2,7 +2,11 @@
     	<div class="container">
     		<div class="col-md-4 col_2">
     			<h4>About Us</h4>
-    			<p>"projectworlds Free learning videos and free projects to Learn programming languages like C,C++,Java, PHP ,  Android,  Kotlin,  and other computer subjects like Data Structure, DBMS, SQL. etc"</p>
+    			<p>"We are here to build emotion, connect people and create happy stories
+                We realize that it’s not a simple task 
+                to understand what options you have when it comes to contact with their help 
+                desk. We, therefore, find it helpful if we share some of our research work with 
+                you"</p>
     		</div>
     		<div class="col-md-2 col_2">
     			<h4>Help & Support</h4>
@@ -32,7 +36,8 @@
     		</div>
     		<div class="clearfix"> </div>
     		<div class="copy">
-		      <p>Copyright © 2017 KAPU . All Rights Reserved  | Design by <a href="http://projectworlds.in">projectworlds</a>
+		      <p>Copyright © 2017 KAPU . All Rights Reserved  | Design by
+              <!-- <a href="http://projectworlds.in">projectworlds</a> -->
 </a> </p>
 	        </div>
     	</div>

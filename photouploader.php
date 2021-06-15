@@ -1,8 +1,16 @@
+<script type="text/javascript">
+  window.history.forward();
+  function noback(){
+     window.history.forward();
+  }
+</script>
 <?php include_once("includes/basic_includes.php");?>
 <?php include_once("functions.php"); ?>
+<?php require_once("includes/dbconn.php");?>
 <?php
 
 $id=$_GET['id'];
+
 if(isloggedin()){
  //do nothing stay here
 } else{
@@ -26,6 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){ uploadphoto($id); }
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<!-- Fade-in animation -->
+<link rel="stylesheet" href="css/animate.css">
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <link href='//fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
@@ -50,10 +60,10 @@ $(document).ready(function(){
 </head>
 <body>
 <!-- ============================  Navigation Start =========================== -->
-<?php include_once("includes/navigation.php");?>
+<?php include_once("includes/navigation2.php");?>
 <!-- ============================  Navigation End ============================ -->
 <div class="grid_3">
-  <div class="container">
+  <div class="container fadeInUp animated">
    <div class="breadcrumb1">
      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
@@ -61,15 +71,18 @@ $(document).ready(function(){
         <li class="current-page">Login</li>
      </ul>
    </div>
-   <div class="services">
+   <div class="services fadeInUp animated">
    	  <div class="col-sm-6 login_left">
 	   <form action="" method="post" enctype="multipart/form-data">
   	    <div class="form-item form-type-textfield form-item-name">
-	      <label for="edit-name">Upload Your Photo(Upto 4 images, Use 300 x 250 dimensions) <span class="form-required" title="This field is required.">*</span></label>
-	      <input type="file" id="edit-name" name="pic1" class="form-file required">
-        <input type="file" id="edit-name" name="pic2" class="form-file required">
-        <input type="file" id="edit-name" name="pic3" class="form-file required">
-        <input type="file" id="edit-name" name="pic4" class="form-file required">
+	      <label for="edit-name">Upload Your Photo(Use 300 x 250 dimensions) <span class="form-required" title="This field is required.">*</span></label>
+	      <input type="file" id="edit-name" name="pic1" class="form-file required" required>
+        <input type="file" id="edit-name" name="pic2" class="form-file required" required>
+        <input type="file" id="edit-name" name="pic3" class="form-file required" required>
+        <input type="file" id="edit-name" name="pic4" class="form-file required" required>
+        <label for="edit-name">Upload Your Identity Card Photo(Front And Back, Use 300 x 250 dimensions) <span class="form-required" title="This field is required.">*</span></label>
+        <input type="file" id="edit-name" name="idFront" class="form-file required" required>
+        <input type="file" id="edit-name" name="idBack" class="form-file required" required>
 	    </div>
 	    <div class="form-actions">
 	    	<input type="submit" id="edit-submit" name="op" value="Upload" class="btn_1 submit">

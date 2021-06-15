@@ -52,6 +52,10 @@ $row=mysqli_fetch_assoc($result);
 	$bros=$row['no_bro'];
 	$sis=$row['no_sis'];
 	$aboutme=$row['aboutme'];
+	$contactNo=$row['contact'];
+	$idNo=$row['Identity_card_no'];
+	
+	 	 
 
 //end of getting profile detils
 
@@ -61,6 +65,8 @@ $row=mysqli_fetch_assoc($result);
 	$pic2="";
 	$pic3="";
 	$pic4="";
+	$idFront="";
+	$idBack="";
 //getting image filenames from db
 $sql2="SELECT * FROM photos WHERE cust_id = $profileid";
 $result2 = mysqlexec($sql2);
@@ -70,6 +76,8 @@ if($result2){
 	$pic2=$row2['pic2'];
 	$pic3=$row2['pic3'];
 	$pic4=$row2['pic4'];
+	$idFront=$row2['id_card_front'];
+	$idBack=$row2['id_card_back'];
 }
 }else{
 	echo "<script>alert(\"Invalid Profile ID\")</script>";
@@ -90,6 +98,8 @@ if($result2){
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<!-- Fade-in animation -->
+<link rel="stylesheet" href="css/animate.css">
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <link href='//fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
@@ -117,7 +127,7 @@ $(document).ready(function(){
  <?php include_once("includes/navigation.php");?>
 <!-- ============================  Navigation End ============================ -->
 <div class="grid_3">
-  <div class="container">
+  <div class="container fadeInUp animated">
    <div class="breadcrumb1">
      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
@@ -125,9 +135,11 @@ $(document).ready(function(){
         <li class="current-page">View Profile</li>
      </ul>
    </div>
-   <div class="profile">
-   	 <div class="col-md-8 profile_left">
+   <div class="profile fadeInUp animated">
+   	 <div class="col-md-12  profile_left">
+   	 	<!--
    	 	<h2>Profile Id : <?php echo $profileid;?></h2>
+   		-->
    	 	<div class="col_3">
    	        <div class="col-sm-4 row_2">
 				<div class="flexslider">
@@ -177,6 +189,10 @@ $(document).ready(function(){
 							<td class="day_label">Education :</td>
 							<td class="day_value closed"><span><?php echo $education;?></span></td>
 						</tr>
+				        <tr class="opened">
+							<td class="day_label">Contact No :</td>
+							<td class="day_value"><?php echo $contactNo;?></td>
+						</tr>
 				    </tbody>
 				</table>
 				</div>
@@ -188,6 +204,7 @@ $(document).ready(function(){
 				  <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">About Myself</a></li>
 				  <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Family Details</a></li>
 				  <li role="presentation"><a href="#profile1" role="tab" id="profile-tab1" data-toggle="tab" aria-controls="profile1">Partner Preference</a></li>
+				  <li role="presentation"><a href="#profile2" role="tab" id="profile-tab1" data-toggle="tab" aria-controls="profile1">Identification Card</a></li>
 			   </ul>
 			   <div id="myTabContent" class="tab-content">
 				  <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
@@ -273,13 +290,12 @@ $(document).ready(function(){
 				    	<div class="col-md-6 basic_1-left">
 				    	  <table class="table_working_hours">
 				        	<tbody>
-				        		<tr class="opened">
-									<td class="day_label">Caste :</td>
-									<td class="day_value"><?php echo $caste;?></td>
+								<tr class="opened_1">
+									<td class="day_label">Religion :</td>
+									<td class="day_value"><?php echo $religion;?></td>
 								</tr>
 							    <tr class="opened">
-									<td class="day_label">
- of Birth :</td>
+									<td class="day_label">Date of Birth :</td>
 									<td class="day_value closed"><span><?php echo $dob;?></span></td>
 								</tr>
 							</tbody>
@@ -288,9 +304,9 @@ $(document).ready(function(){
 				         <div class="col-md-6 basic_1-left">
 				          <table class="table_working_hours">
 				        	<tbody>
-				        		<tr class="opened_1">
-									<td class="day_label">Religion :</td>
-									<td class="day_value"><?php echo $religion;?></td>
+				        		<tr class="opened">
+									<td class="day_label">Caste :</td>
+									<td class="day_value"><?php echo $caste;?></td>
 								</tr>
 							    <tr class="opened">
 									<td class="day_label">Sub Caste :</td>
@@ -358,6 +374,28 @@ $(document).ready(function(){
 				         </div>
 				       </div>
 				    </div>
+				 </div>
+
+				  <div role="tabpanel" class="tab-pane fade" id="profile2" aria-labelledby="profile-tab2">
+				    <div class="basic_1 basic_2">
+				       <div class="basic_1-left">
+				       	<div class="container">
+				       		<div class="row">
+				       			<div class="col-md-6">
+				       				<span>Identity Card Front</span><br><br>
+				       				<img style="width: 60%;" src="profile/<?php echo $profileid;?>/<?php echo $idFront;?>" />
+				       			</div>
+				       			<div class="col-md-6">
+				       				<span>Identity Card Back</span><br><br>
+				       				<img style="width: 60%;" src="profile/<?php echo $profileid;?>/<?php echo $idBack;?>" />
+				       			</div>
+				       		</div>
+				       	</div>
+				    	  
+				        </div>
+				     </div>
+				 </div>
+
 				 </div>
 
 <?php
@@ -450,44 +488,7 @@ $descr=$row['descr'];
 		  </div>
 	   </div>
    	 </div>
-     <div class="col-md-4 profile_right">
-     <!-- 	<div class="newsletter">
-		   <form>
-			  <input type="text" name="ne" size="30" required="" placeholder="Enter Profile ID :">
-			  <input type="submit" value="Go">
-		   </form>
-        </div> -->
-        <div class="view_profile view_profile2">
-        	<h3>View Recent Profiles</h3>
-    <?php
-     $sql="SELECT * FROM customer ORDER BY profilecreationdate ASC";
-      $result=mysqlexec($sql);
-      $count=1;
-      while($row=mysqli_fetch_assoc($result)){
-            $profid=$row['cust_id'];
-          //getting photo
-          $sql="SELECT * FROM photos WHERE cust_id=$profid";
-          $result2=mysqlexec($sql);
-          $photo=mysqli_fetch_assoc($result2);
-          $pic=$photo['pic1'];
-          echo "<ul class=\"profile_item\">";
-            echo"<a href=\"view_profile.php?id={$profid}\">";
-              echo "<li class=\"profile_item-img\"><img src=\"profile/". $profid."/".$pic ."\"" . "class=\"img-responsive\" alt=\"\"/></li>";
-               echo "<li class=\"profile_item-desc\">";
-                  echo "<h4>" . $row['firstname'] . " " . $row['lastname'] . "</h4>";
-                  echo "<p>" . $row['age']. "Yrs," . $row['religion'] . "</p>";
-                  echo "<h5>" . "View Full Profile" . "</h5>";
-               echo "</li>";
-      echo "</a>";
-      echo "</ul>";
-      $count++;
-      }
-     ?>
-           
-</div>
-       
-        </div>
-       <div class="clearfix"> </div>
+     
     </div>
   </div>
 </div>

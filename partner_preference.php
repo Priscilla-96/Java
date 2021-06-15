@@ -52,6 +52,8 @@ writepartnerprefs($id);
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<!-- Fade-in animation -->
+<link rel="stylesheet" href="css/animate.css">
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <link href='//fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
@@ -79,7 +81,7 @@ $(document).ready(function(){
  <?php include_once("includes/navigation.php");?>
 <!-- ============================  Navigation End ============================ -->
 <div class="grid_3">
-  <div class="container">
+  <div class="container fadeInUp animated">
    <div class="breadcrumb1">
      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
@@ -87,7 +89,7 @@ $(document).ready(function(){
         <li class="current-page">Partner Prefernce</li>
      </ul>
    </div>
-   <div class="profile">
+   <div class="profile fadeInUp animated">
    	 <div class="col-md-12 profile_left">   	 	
 		<div class="col_4">
 		    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
@@ -129,9 +131,9 @@ $(document).ready(function(){
 									<td class="day_value closed">
 									<div class="select-block1">
 						                <select name="colour">
-						                    <option value="">Black</option>
-						                    <option value="">Fair</option> 
-						               		<option value="">Normal</option> 
+						                    <option value="Black">Black</option>
+						                    <option value="Fair">Fair</option> 
+						               		<option value="Normal">Normal</option> 
 						                </select>
 								    </div>
 								    </td>
@@ -166,27 +168,21 @@ $(document).ready(function(){
 	                 				</div></span>
 	                  			</td>
 								</tr>
+								
+
 								<tr class="opened">
 									<td class="day_label">Caste :</td>
-									<td class="day_value closed">
-									<div class="select-block1">
-	                    				<select name="caste">
-			                   				<option value="Roman Cathaolic">Roman Cathaolic</option>
-						                    <option value="Latin Catholic">Latin Catholic</option>
-						                    <option value="Penthecost">Penthecost</option>
-						                    <option value="Mappila">Sunni</option>
-						                    <option value="Thiyya">Dewma</option>  
-					                    </select>
-		                 			</div></td>
+									<td class="day_value closed"> <input type="text" id="edit-name" name="caste" value="" size="60" maxlength="60" value="<?php echo $occupation;?>" class="form-text"></td>
 								</tr>
+
 								<tr class="opened">
 									<td class="day_label">Mother Tongue :</td>
 									<td class="day_value closed">
 									<div class="select-block1">
 						                <select name="mothertounge">
-						                    <option value="">Tamil</option>
-						                    <option value="">Sinhala</option> 
-						               		<option value="">English</option> 
+						                    <option value="Tamil">Tamil</option>
+						                    <option value="Sinhala">Sinhala</option> 
+						               		<option value="English">English</option> 
 						                </select>
 								    </div>
 								    </td>
@@ -196,10 +192,10 @@ $(document).ready(function(){
 									<td class="day_value closed"><div class="select-block1">
 						                <select name="education">
 						                    <option value="Primary">Primary</option>
-						                    <option value="Tenth level">Ordinary level</option> 
-						               		<option value="+2">Advance Level</option> 
+						                    <option value="Ordinary level">Ordinary level</option> 
+						               		<option value="Advance Level">Advance Level</option> 
 						               		<option value="Degree">Degree</option> 
-						               		<option value="PG">Diploma</option> 
+						               		<option value="Diploma">Diploma</option> 
 						               		<option value="Doctorate">Doctorate</option> 
 						                </select>
 								    </div>
@@ -215,9 +211,9 @@ $(document).ready(function(){
 										<div class="select-block1">
 						                    <select name="country">
 							                    <option value="Not Applicable">Country</option>
-							                    <option value="Hindu">India</option>
-							                    <option value="Christian">Srilanka</option>
-							                    <option value="Muslim">UAE</option>
+							                    <option value="India">India</option>
+							                    <option value="Srilanka">Srilanka</option>
+							                    <option value="UAE">UAE</option>
 						                    </select>
 						                 </div>
 						            </td>

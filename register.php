@@ -1,3 +1,9 @@
+<script type="text/javascript">
+  window.history.forward();
+  function noback(){
+     window.history.forward();
+  }
+</script>
 <?php include_once("includes/basic_includes.php");?>
 <?php include_once("functions.php"); ?>
 <?php register(); ?>
@@ -15,6 +21,8 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<!-- Fade-in animation -->
+<link rel="stylesheet" href="css/animate.css">
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <link href='//fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
@@ -42,7 +50,7 @@ $(document).ready(function(){
 <?php include_once("includes/navigation.php");?>
 <!-- ============================  Navigation End ============================ -->
 <div class="grid_3">
-  <div class="container">
+  <div class="container  fadeInUp animated">
    <div class="breadcrumb1">
      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
@@ -50,28 +58,27 @@ $(document).ready(function(){
         <li class="current-page">Register</li>
      </ul>
    </div>
-   <div class="services">
+   <div class="services  fadeInUp animated">
    	  <div class="col-sm-6 login_left">
 	     <form action="" method="POST">
 	  	    <div class="form-group">
 		      <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
-		      <input type="text" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required">
+		      <input type="text" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required" required>
 		    </div>
 		    <div class="form-group">
 		      <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
-		      <input type="password" id="edit-pass" name="pass" size="60" maxlength="128" class="form-text required">
+		      <input type="password" id="edit-pass" name="pass" size="60" maxlength="128" class="form-text required" required>
 		    </div>
 		    <div class="form-group">
 		      <label for="edit-name">Email <span class="form-required" title="This field is required.">*</span></label>
-		      <input type="text" id="edit-name" name="email" value="" size="60" maxlength="60" class="form-text required">
+		      <input type="email" id="edit-name" name="email" value="" size="60" maxlength="60" class="form-text required" required>
 		    </div>
 		    <div class="age_select">
-		      <label for="edit-pass">Age <span class="form-required" title="This field is required.">*</span></label>
+		      <label for="edit-pass">Date Of Birth <span class="form-required" title="This field is required.">*</span></label>
 		        <div class="age_grid">
 		         <div class="col-sm-4 form_box">
                   <div class="select-block1">
-                    <select name="day">
-	                    <option value="">Date</option>
+                    <select name="day" required>
 	                     <option value="1">1</option>
 		                    <option value="2">2</option>
 		                    <option value="3">3</option>
@@ -108,8 +115,7 @@ $(document).ready(function(){
             </div>
             <div class="col-sm-4 form_box2">
                    <div class="select-block1">
-                    <select name="month">
-	                    <option value="">Month</option>
+                    <select name="month" required>
 	                    <option value="01">January</option>
 	                    <option value="02">February</option>
 	                    <option value="03">March</option>
@@ -127,8 +133,7 @@ $(document).ready(function(){
                  </div>
                  <div class="col-sm-4 form_box1">
                    <div class="select-block1">
-                    <select name="year">
-	                    <option value="">Year</option>
+                    <select name="year" required>
 		                    <option value="1980">1980</option>
 		                    <option value="1981">1981</option>
 		                    <option value="1981">1981</option>
@@ -161,14 +166,14 @@ $(document).ready(function(){
                   </div>
                   <div class="clearfix"> </div>
                  </div>
-              </div>
+              </div><br>
               <div class="form-group form-group1">
-                <label class="col-sm-7 control-lable" for="sex">Sex : </label>
-                <div class="col-sm-5">
+                <label class="col-sm-3 control-lable" for="sex">Gender : </label>
+                <div class="col-sm-6">
                     <div class="radios">
 				        <label for="radio-01" class="label_radio">
 				            <input type="radio" name="gender" value="male" checked> Male
-				        </label>
+				        </label>&nbsp&nbsp&nbsp
 				        <label for="radio-02" class="label_radio">
 				            <input type="radio" name="gender" value="female"> Female
 				        </label>

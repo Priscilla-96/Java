@@ -5,29 +5,10 @@
         <div class="container">
            <div class="navigation">
              <nav id="colorNav">
-			   <ul>
-				<li class="green">
-				  <a href="#" class="icon-home"></a>
-				  <ul>
-				  <?php 
-				  if(isloggedin()){
-				  	$id=$_SESSION['id'];
-				  	echo "<li><a href=\"userhome.php?id=$id\">Home</a></li>";
-				  	echo "<li><a href=\"logout.php\">Logout</a></li>";
-				  }
-				  else{
-				  	echo "<li><a href=\"login.php\">Login</a></li>";
-				  	echo "<li><a href=\"register.php\">Register</a></li>";
-				  }
-
-				  ?>
-					
-				  </ul>
-				</li>
-			   </ul>
+			   
              </nav>
            </div>
-           <a class="brand" href="index.php"><img src="images/icon.png" height=60px" alt="logo"></a>
+           <a class="brand" href="index.php"><img src="images/icon.png" height="60px" alt="logo"></a>
            <div class="pull-right">
           	<nav class="navbar nav_bottom" role="navigation">
  
@@ -44,9 +25,13 @@
 		   <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 		        <ul class="nav navbar-nav nav_1">
+
 		            <li><a href="index.php">Home</a></li>
 		            <li><a href="about.php">About</a></li>
-		    		
+		            <li><a href="search.php">Search</a></li>
+		            <li><a href="faq.php">Faq</a></li>
+		            
+		    		<!--
 					<li class="dropdown">
 		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search<span class="caret"></span></a>
 		              <ul class="dropdown-menu" role="menu">
@@ -55,8 +40,25 @@
 		                <li><a href="faq.php">Faq</a></li>
 		                
 		              </ul>
-		            </li>
+		            </li>-->
 		            <li class="last"><a href="contact.php">Contacts</a></li>
+
+		            <li>
+		        		<?php 
+						  if(isloggedin()){
+						  	$id=$_SESSION['id'];
+						  	$nam = $_SESSION['username'];
+						  	echo "<li><a href=\"userhome.php?id=$id\">Profile</a></li>";
+						  	echo "<li><a style='color: limegreen;font-weight: bold;font-size: 15px;'  href=\"userhome.php?id=$id\">".$nam."</a></li>";
+						  	echo "<li><a style='background-color: red' href=\"logout.php\">Logout</a></li>";
+						  }
+						  else{
+						  	echo "<li><a  style='background-color: green' href=\"login.php\">Login</a></li>";
+						  	echo "<li><a style='background-color: orange' href=\"register.php\">Register</a></li>";
+						  }
+						?>
+		        	</li>
+		        	
 		        </ul>
 		     </div><!-- /.navbar-collapse -->
 		    </nav>

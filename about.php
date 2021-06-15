@@ -14,6 +14,9 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
+<!-- Fade-in animation -->
+<link rel="stylesheet" href="css/animate.css">
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <link href='//fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
@@ -41,7 +44,7 @@ $(document).ready(function(){
  <?php include_once("includes/navigation.php");?>
 <!-- ============================  Navigation End ============================ -->
 <div class="grid_3">
-  <div class="container">
+  <div class="container fadeInUp animated">
    <div class="breadcrumb1">
      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
@@ -50,25 +53,34 @@ $(document).ready(function(){
      </ul>
    </div>
    <div class="about">
-   	  <div class="col-md-6 about_left">
+   	  <div class="col-md-6 about_left  fadeInUp animated">
    	  	<img src="images/a3.jpg" class="img-responsive" alt=""/>
    	  </div>
-   	  <div class="col-md-6 about_right">
+   	  <div class="col-md-6 about_right  fadeInUp animated">
    	  	<h1>About us</h1>
-   	  	<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+   	  	<p class=" fadeInUp animated" style="font-size: 16px">We are here to build emotion, connect people and create happy stories. Online
+		dating sites are the way to go for people seeking love or to meet singles while 
+		they don’t know where to find them. There are lots of online dating sites available 
+		which makes it . <br><br>
+		As a result, the customer service desk recommends that customers should 
+		consider contacting them via their website. We realize that it’s not a simple task 
+		to understand what options you have when it comes to contact with their help 
+		desk. We, therefore, find it helpful if we share some of our research work with 
+		you.</p>
    	  	<div class="accordation">
 		   <div class="jb-accordion-wrapper">
-				<div class="jb-accordion-title">Accordion 1 <button type="button" class="jb-accordion-button" data-toggle="collapse" data-target="#accordion-1-"><i class="fa fa-angle-down"> </i></button></div>
+				<div class="jb-accordion-title">Why Choose Us?<button type="button" class="jb-accordion-button" data-toggle="collapse" data-target="#accordion-1-"><i class="fa fa-angle-down"> </i></button></div>
 				<p><!-- /.accordion-title -->
 				</p><div id="accordion-1-" class="jb-accordion-content collapse in" style="height: auto;">
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae...</p>
+				<p class=" fadeInUp animated" style="font-size: 16px">There are lots of online dating sites available which makes it difficult to choose 
+					the one which can give you a serious partner....</p>
 				</div>
 				<p><!-- /.collapse --></p>
 			</div>
 			<div class="jb-accordion-wrapper">
-				<div class="jb-accordion-title">Accordion2 <button type="button" class="jb-accordion-button" data-toggle="collapse" data-target="#accordion2-"><i class="fa fa-angle-down"> </i></button></div>
+				<div class="jb-accordion-title">How We’re different <button type="button" class="jb-accordion-button" data-toggle="collapse" data-target="#accordion2-"><i class="fa fa-angle-down"> </i></button></div>
 				<p><!-- /.accordion-title -->
-				</p><div id="accordion2-" class="jb-accordion-content collapse ">
+				</p><div id="accordion2-" class="jb-accordion-content collapse fadeInUp animated">
 				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt </p>
 				</div>
 				<p><!-- /.collapse --></p>
@@ -76,7 +88,7 @@ $(document).ready(function(){
 			<div class="jb-accordion-wrapper">
 				<div class="jb-accordion-title">Accordion3<button type="button" class="jb-accordion-button" data-toggle="collapse" data-target="#accordion3"><i class="fa fa-angle-down"> </i></button></div>
 				<p><!-- /.accordion-title -->
-				</p><div id="accordion3" class="jb-accordion-content collapse ">
+				</p><div id="accordion3" class="jb-accordion-content collapse fadeInUp animated">
 				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt </p>
 				</div>
 				<p><!-- /.collapse --></p>

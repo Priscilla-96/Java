@@ -3518,3 +3518,8 @@ ul.feature_list.feature_list1 {
     margin-bottom: 1em;
 }
 }
+
+/* new animation css */
+.animate-box {
+  opacity: 0;
+}
