@@ -59,7 +59,7 @@ $(document).ready(function(){
      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
-        <li class="current-page">Regular Search</li>
+        <li class="current-page">Find Your Match</li>
      </ul>
    </div>
    <!--<script type="text/javascript">
@@ -73,7 +73,7 @@ $(document).ready(function(){
 <div class="col-md-9 search_left fadeInUp animated">
   <form action="priceoptions.php" method="post">	
    <div class="form_but1 fadeInUp animated">
-	<label class="col-sm-5 control-lable1" for="sex">Gender : </label>
+	<label class="col-sm-5 control-lable1" for="sex">Groom or Bride : </label>
 	<div class="col-sm-7 form_radios fadeInUp animated">
 		<input type="radio" class="radio_1" name="sex" value="male" <?php echo "checked";?>/> Groom &nbsp;&nbsp;
 		<input type="radio" class="radio_1" name="sex" value="female"/> Bride

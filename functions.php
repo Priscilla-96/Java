@@ -199,7 +199,7 @@ function processprofile_form($id){
 	
 	$religion=$_POST['religion'];
 	$caste = $_POST['caste'];
-	$subcaste=$_POST['subcaste'];
+	//$subcaste=$_POST['subcaste'];
 	
 	$country = $_POST['country'];
 	$state=$_POST['state'];
@@ -214,18 +214,18 @@ function processprofile_form($id){
 	$drink=$_POST['drink'];
 	$smoke=$_POST['smoke'];
 	$mothertounge=$_POST['mothertounge'];
-	$bloodgroup=$_POST['bloodgroup'];
+	//$bloodgroup=$_POST['bloodgroup'];
 	$weight=$_POST['weight'];
 	$height=$_POST['height'];
 	$colour=$_POST['colour'];
 	$diet=$_POST['diet'];
 	$occupation=$_POST['occupation'];
 	$occupationdescr=$_POST['occupationdescr'];
-	$fatheroccupation=$_POST['fatheroccupation'];
-	$motheroccupation=$_POST['motheroccupation'];
+	//$fatheroccupation=$_POST['fatheroccupation'];
+	//$motheroccupation=$_POST['motheroccupation'];
 	$income=$_POST['income'];
-	$bros=$_POST['bros'];
-	$sis=$_POST['sis'];
+	//$bros=$_POST['bros'];
+	//$sis=$_POST['sis'];
 	$aboutme=$_POST['aboutme'];
 	$contactNo=$_POST['contactNo'];
 	$identityCardNo=$_POST['identityCardNo'];
@@ -290,9 +290,9 @@ if(mysqli_num_rows($result)>=1){
 	$sql = "INSERT 
 				INTO
 				   customer
-				   (cust_id, email, age, sex, religion, caste, subcaste, district, state, country, maritalstatus, profilecreatedby, education, education_sub, firstname, lastname, body_type, physical_status, drink, mothertounge, colour, weight, height, blood_group, diet, smoke,   dateofbirth, occupation, occupation_descr, annual_income, fathers_occupation, mothers_occupation, no_bro, no_sis, aboutme, contact, Identity_card_no, profilecreationdate) 
+				   (cust_id, email, age, sex, religion, caste, district, state, country, maritalstatus, profilecreatedby, education, education_sub, firstname, lastname, body_type, physical_status, drink, mothertounge, colour, weight, height, diet, smoke,   dateofbirth, occupation, occupation_descr, annual_income, aboutme, contact, Identity_card_no, profilecreationdate) 
 				VALUES
-				   ('$id','$email', '$age', '$sex', '$religion', '$caste', '$subcaste', '$district', '$state', '$country', '$maritalstatus', '$profileby', '$education', '$edudescr', '$fname', '$lname', '$bodytype', '$physicalstatus', '$drink', '$mothertounge', '$colour', '$weight', '$height', '$bloodgroup', '$diet', '$smoke', '$dob', '$occupation', '$occupationdescr', '$income', '$fatheroccupation', '$motheroccupation', '$bros', '$sis', '$aboutme', $contactNo, $identityCardNo, CURDATE())
+				   ('$id','$email', '$age', '$sex', '$religion', '$caste',  '$district', '$state', '$country', '$maritalstatus', '$profileby', '$education', '$edudescr', '$fname', '$lname', '$bodytype', '$physicalstatus', '$drink', '$mothertounge', '$colour', '$weight', '$height',  '$diet', '$smoke', '$dob', '$occupation', '$occupationdescr', '$income',  '$aboutme', $contactNo, $identityCardNo, CURDATE())
 			";
 	if (mysqli_query($conn,$sql)) {
 	  echo "<script> window.location=\"photouploader.php?id={$id}\"</script>";
@@ -311,7 +311,7 @@ if(mysqli_num_rows($result)>=1){
 	 
 }
 
-//function update profile details
+//function update bride/groom details
 function processprofileupdate_form($id){
    
 	$fname=$_POST['fname'];
@@ -326,7 +326,7 @@ function processprofileupdate_form($id){
 	
 	$religion=$_POST['religion'];
 	$caste = $_POST['caste'];
-	$subcaste=$_POST['subcaste'];
+	//$subcaste=$_POST['subcaste'];
 	
 	$country = $_POST['country'];
 	$state=$_POST['state'];
@@ -341,18 +341,18 @@ function processprofileupdate_form($id){
 	$drink=$_POST['drink'];
 	$smoke=$_POST['smoke'];
 	$mothertounge=$_POST['mothertounge'];
-	$bloodgroup=$_POST['bloodgroup'];
+	//$bloodgroup=$_POST['bloodgroup'];
 	$weight=$_POST['weight'];
 	$height=$_POST['height'];
 	$colour=$_POST['colour'];
 	$diet=$_POST['diet'];
 	$occupation=$_POST['occupation'];
 	$occupationdescr=$_POST['occupationdescr'];
-	$fatheroccupation=$_POST['fatheroccupation'];
-	$motheroccupation=$_POST['motheroccupation'];
+	//$fatheroccupation=$_POST['fatheroccupation'];
+	//$motheroccupation=$_POST['motheroccupation'];
 	$income=$_POST['income'];
-	$bros=$_POST['bros'];
-	$sis=$_POST['sis'];
+	//$bros=$_POST['bros'];
+	//$sis=$_POST['sis'];
 	$aboutme=$_POST['aboutme'];
 	$contactNo=$_POST['contactNo'];
 	$identityCardNo=$_POST['identityCardNo'];
@@ -373,8 +373,8 @@ if(mysqli_num_rows($result)>=1){
 		   sex = '$sex',
 		   religion = '$religion',
 		   caste = '$caste',
-		   subcaste = '$subcaste',
-		   blood_group = '$bloodgroup',
+		  
+		   
 		   diet = '$diet',
 		   height = '$height',			
 
@@ -398,10 +398,7 @@ if(mysqli_num_rows($result)>=1){
 		   occupation = '$occupation', 
 		   occupation_descr = '$occupationdescr', 
 		   annual_income = '$income', 
-		   fathers_occupation = '$fatheroccupation',
-		   mothers_occupation = '$motheroccupation',
-		   no_bro = '$bros', 
-		   no_sis = '$sis', 
+		   
 		   aboutme = '$aboutme', 
 		   contact  = '$contactNo', 
 		   Identity_card_no = '$identityCardNo'
@@ -417,6 +414,53 @@ if(mysqli_num_rows($result)>=1){
 
 	}
 }
+
+//function update bride/groom details
+function processprofiledetailsupdate_form($id){
+   
+	$usernamee=$_POST['usernamee'];
+	$passwordd=$_POST['passwordd'];
+	$sex=$_POST['sex'];
+	$email=$_POST['email'];
+	
+		$day=$_POST['day'];
+		$month=$_POST['month'];
+		$year=$_POST['year'];
+	$dob=$year ."-" . $month . "-" .$day ;
+	
+	
+
+
+	require_once("includes/dbconn.php");
+	 $sql="SELECT cust_id FROM customer WHERE cust_id=$id";
+	$result=mysqlexec($sql);
+
+if(mysqli_num_rows($result)>=1){
+	//there is already a profile in this table for loggedin customer
+	//update the data
+	$sql="UPDATE
+   			users 
+		SET
+		   email = '$email',
+		   username = '$usernamee',
+		   gender = '$sex',
+		   password = '$passwordd',
+		   dateofbirth = '$dob'
+		WHERE id=$id; "
+		   ;
+	  	 $result=mysqlexec($sql);
+	   	if ($result) {
+	   		echo "<script>alert(\"Successfully Updated Profile details\")</script>";
+	   		echo "<script> window.location=\"userhome.php?id=$id\"</script>";
+		}else {
+		  	echo "Error: " . $sql . "<br>" . $conn->error;
+		}
+
+	}
+}
+
+
+
 
 //function for upload photo
 

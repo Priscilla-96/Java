@@ -71,11 +71,12 @@ $(document).ready(function(){
 		        <ul class="nav navbar-nav nav_1">
 		            <li><a href="view_profile.php?id=<?php echo $id;?>">View Profile</a></li>
                 <li><a href="partner_preference.php?id=<?php echo $id;?>">Partner Preference</a></li>
-
-                <li><a href="updateprofile.php?id=<?php echo $id;?>">Edit Profile Details</a></li>
-                <li><a href="updateimages.php?id=<?php echo $id;?>">Change Profile Images</a></li>
+                <li><a href="updateprofile.php?id=<?php echo $id;?>">Edit Groom/Bride Details</a></li>
+                <li><a href="updateimages.php?id=<?php echo $id;?>">Change Groom/Bride Images</a></li>
                 <li><a href="uploadIdImages.php?id=<?php echo $id;?>">Change ID Images</a></li>
-            <li><a href="unlockedprofiles.php?id=<?php echo $id;?>">Unlocked Profiles</a></li>
+                <li><a href="unlockedprofiles.php?id=<?php echo $id;?>">Unlocked Profiles</a></li>
+                <li><a href="editUserProfile.php?id=<?php echo $id;?>">Edit profile</a></li>
+                
                 
 		        </ul>
 		</div>

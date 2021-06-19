@@ -44,7 +44,8 @@
 						  	$id=$_SESSION['id'];
 						  	$nam = $_SESSION['username'];
 						  	
-						  	echo "<li style='color: limegreen;font-weight: bold;font-size: 25px;'>".$nam."</li>";
+						  	echo "<li style='color: limegreen;font-weight: bold;font-size: 25px;'>".$nam."&nbsp&nbsp&nbsp&nbsp&nbsp</li>";
+						  	
 						  	echo "<li><a style='background-color: red' href=\"logout.php\">Logout</a></li>";
 						  }
 						  else{

@@ -13,6 +13,15 @@ $id=$_SESSION['id'];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		processprofile_form($id);
 }
+
+
+//getting partner prefernce
+$sql = "SELECT *  FROM users WHERE id = $id";
+$result = mysqlexec($sql);
+$row= mysqli_fetch_assoc($result);
+
+$email=$row['email'];
+
 ?>
 
 
@@ -62,7 +71,7 @@ $(document).ready(function(){
      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
-        <li class="current-page">Create Your Profile</li>
+        <li class="current-page">Add Groom/Bride Details</li>
      </ul>
    </div>
    <div class="services">
@@ -88,7 +97,7 @@ $(document).ready(function(){
 		    </div>
 		    <div class="form-group col-sm-6">
 		      <label for="edit-name">Email <span class="form-required" title="This field is required.">*</span></label>
-		      <input type="email" id="edit-name" name="email" value="" size="60" maxlength="60" class="form-text required" required>
+		      <input type="email" id="edit-name" name="email"  value="<?php echo $email; ?>" size="60" maxlength="60" class="form-text required" required>
 		    </div>
 
 	    <div class="form-group col-sm-6">
@@ -154,6 +163,26 @@ $(document).ready(function(){
 	                 <div class="col-sm-4 form_box1">
 	                   <div class="select-block1">
 	                    <select name="year">
+	                    	<option value="1960">1960</option>
+		                    <option value="1961">1961</option>
+		                    <option value="1962">1962</option>
+		                    <option value="1963">1963</option>
+		                    <option value="1964">1964</option>
+		                    <option value="1965">1965</option>
+		                    <option value="1966">1966</option>
+		                    <option value="1967">1967</option>
+		                    <option value="1968">1968</option>
+		                    <option value="1969">1969</option>
+		                    <option value="1970">1970</option>
+							<option value="1971">1971</option>
+		                    <option value="1972">1972</option>
+		                    <option value="1973">1973</option>
+		                    <option value="1974">1974</option>
+		                    <option value="1975">1975</option>
+		                    <option value="1976">1976</option>
+		                    <option value="1977">1977</option>
+		                    <option value="1978">1978</option>
+		                    <option value="1979">1979</option>
 		                    <option value="1980">1980</option>
 		                    <option value="1981">1981</option>
 		                    <option value="1981">1981</option>
@@ -206,18 +235,13 @@ $(document).ready(function(){
 	                  </div>
 	            </div>
 	         
-	            <div class="col-sm-4 form_box2">
+	            <div class="col-sm-8 form_box2">
 	                   <div class="select-block1">
 	                   	<input type="text" name="caste" size="60" maxlength="128" class="form-text required" placeholder="Caste">
 	                    
 	                  </div>
 	                 </div>
-	                 <div class="col-sm-4 form_box1">
-	                   <div class="select-block1">
-	                   	<input type="text" name="subcaste" size="60" maxlength="128" class="form-text required" placeholder="Sub caste">
-	                    
-	                   </div>
-	                  </div>
+	                 
 	                  <div class="clearfix"> </div>
 	                 </div>
 	              </div>
@@ -398,7 +422,7 @@ $(document).ready(function(){
 			    </div>
 		    </div>
 		    
-		    <div class="form-group col-sm-2">
+		    <div class="form-group col-sm-4">
 		      <label for="edit-name">Mother Tounge<span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
 	                <select name="mothertounge">
@@ -410,33 +434,6 @@ $(document).ready(function(){
 			    </div>
 		    </div>
 		    <div class="form-group col-sm-2">
-		      <label for="edit-name">Blood Group<span class="form-required" title="This field is required.">*</span></label>
-			    <div class="select-block1">
-	                <select name="bloodgroup">
-	                	<option value="Not Defined">Not Defined</option>
-	                    <option value="A+">A+</option>
-	                    <option value="A-">A-</option> 
-	               		<option value="B+">B+</option>
-	               		<option value="B-">B-</option> 
-	               		<option value="AB+">AB+</option>
-	                    <option value="AB-">AB-</option> 
-	               		<option value="O+">O+</option>
-	                    <option value="O-">O-</option>  
-	                </select>
-			    </div>
-		    </div>
-		    <div class="form-group col-sm-2">
-		      <label for="edit-name">Weight <span class="form-required" title="This field is required."></span></label>
-			  <input type="text" id="edit-name" placeholder="In kilograms" name="weight" value="" size="60" maxlength="60" class="form-text">
-		    </div>
-		    <!-- sixth Row ends-->
-		    <!-- Seventh Row starts-->
-		    <div class="col-lg-12">
-		    <div class="form-group col-sm-2">
-		      <label for="edit-name">Height <span class="form-required" title="This field is required."></span></label>
-			  <input type="text" id="edit-name" placeholder="In centimeters"  name="height" value="" size="60" maxlength="60" class="form-text">
-		    </div>
-		   	<div class="form-group col-sm-2">
 		      <label for="edit-name">Skin Colour<span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
 	                <select name="colour">
@@ -447,6 +444,19 @@ $(document).ready(function(){
 	                </select>
 			    </div>
 		    </div>
+
+		    <!-- sixth Row ends-->
+		    <!-- Seventh Row starts-->
+		    <div class="col-lg-12">
+		    <div class="form-group col-sm-2">
+		      <label for="edit-name">Height <span class="form-required" title="This field is required."></span></label>
+			  <input type="text" id="edit-name" placeholder="In centimeters"  name="height" value="" size="60" maxlength="60" class="form-text">
+		    </div>
+		    <div class="form-group col-sm-2">
+		      <label for="edit-name">Weight <span class="form-required" title="This field is required."></span></label>
+			  <input type="text" id="edit-name" placeholder="In kilograms" name="weight" value="" size="60" maxlength="60" class="form-text">
+		    </div>
+		   	
 		    <div class="form-group col-sm-2">
 		      <label for="edit-name">Diet<span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
@@ -492,45 +502,7 @@ $(document).ready(function(){
   
            <!-- nineth Row starts-->
            <div class="col-lg-12">
-            <div class="form-group col-sm-3">
-		    		<label for="edit-name">Fathers Occupation <span class="form-required" title="This field is required."></span></label>
-			  		<input type="text" id="edit-name" name="fatheroccupation" value="" size="60" maxlength="500" class="form-text">
-		   </div>
-           <div class="form-group col-sm-3">
-		      <label for="edit-name">Mothers Occupation <span class="form-required" title="This field is required."></span></label>
-			  <input type="text" id="edit-name" name="motheroccupation" value="" size="60" maxlength="500" class="form-text">
-		    </div>
-		    
-          <div class="form-group col-sm-3">
-		      <label for="edit-name">No . Of sisters<span class="form-required" title="This field is required.">*</span></label>
-			    <div class="select-block1">
-	                <select name="sis">
-	                	<option value="0">0</option>
-	                    <option value="1">1</option>
-	                    <option value="2">2</option> 
-	                    <option value="3">3</option> 
-	                    <option value="4">4</option> 
-	                    <option value="5">5</option>
-	                    <option value="6">6</option> 
-	                    <option value="7">7</option> 	
-	                </select>
-			    </div>
-		    </div>
-		    <div class="form-group col-sm-3">
-		      <label for="edit-name">No . Of brothers<span class="form-required" title="This field is required.">*</span></label>
-			    <div class="select-block1">
-	                <select name="bros">
-	                    <option value="0">0</option>
-	                    <option value="1">1</option>
-	                    <option value="2">2</option> 
-	                    <option value="3">3</option> 
-	                    <option value="4">4</option> 
-	                    <option value="5">5</option>
-	                    <option value="6">6</option> 
-	                    <option value="7">7</option>  	
-	                </select>
-			    </div>
-		    </div>
+            
 		    <div class="form-group">
 		    	<label for="about me">About Me<span class="form-required" title="This field is required.">*</span></label>
 		    	<textarea rows="5" name="aboutme" placeholder="Write about you" class="form-text"></textarea>

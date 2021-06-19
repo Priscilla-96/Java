@@ -1,4 +1,4 @@
-<script type="text/javascript">
+ <script>
   window.history.forward();
   function noback(){
      window.history.forward();
@@ -6,12 +6,99 @@
 </script>
 <?php include_once("includes/basic_includes.php");?>
 <?php include_once("functions.php"); ?>
-<?php register(); ?>
+
+<?php 
+if(! isloggedin()){
+   header("location:login.php");
+}
+
+$id=$_GET['id'];
+//safty purpose copy the get id
+$profileid=$id;
+	//getting profile details from db
+$sql="SELECT * FROM users WHERE id = $profileid";
+$result = mysqlexec($sql);
+if($result){
+$row=mysqli_fetch_assoc($result);
+
+	$username=$row['username'];
+	$password=$row['password'];
+	$sex=$row['gender'];
+	$email=$row['email'];
+	$dob=$row['dateofbirth'];
+	//breaking the date of birth into days months years
+		$day= substr($dob, 8,2);
+		$month= substr($dob, 5,2);
+		$year= substr($dob, 0,4);
+
+		//converting month numeric variable to it's relevent string 
+		switch ($month) {
+			case '01':
+				$monthInLttrs= "January";
+				break;
+			case '02':
+				$monthInLttrs= "February";
+				break;
+			case '03':
+				$monthInLttrs= "March";
+				break;
+			case '04':
+				$monthInLttrs= "April";
+				break;
+			case '05':
+				$monthInLttrs= "May";
+				break;
+			case '06':
+				$monthInLttrs= "June";
+				break;
+			case '07':
+				$monthInLttrs= "July";
+				break;
+			case '08':
+				$monthInLttrs= "August";
+				break;
+			case '09':
+				$monthInLttrs= "September";
+				break;
+			case '10':
+				$monthInLttrs= "October";
+				break;
+			case '11':
+				$monthInLttrs= "November";
+				break;
+			case '12':
+				$monthInLttrs= "December";
+				break;
+			
+			
+			default:
+				$monthInLttrs= "January";
+				break;
+		}
+		
+	
+//end of getting profile detils
+
+}else{
+	echo "<script>alert(\"Invalid Profile ID\")</script>";
+}
+
+
+ ?>
+<?php
+	$id=$_SESSION['id'];	
+
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		processprofiledetailsupdate_form($id);
+	}
+?>
+
+
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Find Your Perfect Partner - KAPU Datings
- | Register :: KAPU Datings
+<title>Find Your Perfect Partner - KAPU Dating
+ | Register :: Make My Love
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -55,31 +142,54 @@ $(document).ready(function(){
      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
-        <li class="current-page">Register</li>
+        <li class="current-page">Edit My Profile Details</li>
      </ul>
    </div>
    <div class="services  fadeInUp animated">
-   	  <div class="col-sm-6 login_left">
+   	  <div class="col-sm-12 login_left">
 	     <form action="" method="POST">
-	  	    <div class="form-group">
-		      <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
-		      <input type="text" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required" required>
+	  	    <div class="form-group col-sm-6">
+		      <label for="edit-name">Login User Name <span class="form-required" title="This field is required.">*</span></label>
+		      <input type="text" id="edit-name" name="usernamee" value="<?php echo $username; ?>" size="60" maxlength="60" class="form-text required" required>
 		    </div>
-		    <div class="form-group">
-		      <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
-		      <input type="password" id="edit-pass" name="pass" size="60" maxlength="128" class="form-text required" required>
+		    <div class="form-group col-sm-4">
+		      <label for="edit-pass">Login Password <span class="form-required" title="This field is required.">*</span></label>
+		      <input type="text" id="edit-last" name="passwordd" size="60" value="<?php echo $password; ?>" maxlength="128" class="form-text required" required>
 		    </div>
-		    <div class="form-group">
+		     <div class="form-group col-sm-2">
+		      <label for="edit-name">Gender <span class="form-required" title="This field is required.">*</span></label>
+			    <div class="select-block1">
+	                <select name="sex">
+	                	<?php
+	                		if ($sex == "male") {
+	                		 	echo "<option value='male' selected>Male</option>
+	                    		<option value='female'>Female</option> ";
+	                		 } else{
+	                		 	echo "<option value='female' selected>Female</option>
+	                		 	<option value='male'>Male</option>
+	                    		 ";
+	                		 }
+	                	?>
+	                    
+	               
+	                </select>
+			    </div>
+		    </div>
+		    <div class="form-group col-sm-6">
 		      <label for="edit-name">Email <span class="form-required" title="This field is required.">*</span></label>
-		      <input type="email" id="edit-name" name="email" value="" size="60" maxlength="60" class="form-text required" required>
+		      <input type="email" id="edit-name" name="email" value="<?php echo $email; ?>" size="60" maxlength="60" class="form-text required" required>
 		    </div>
-		    <div class="age_select">
-		      <label for="edit-pass">Date Of Birth <span class="form-required" title="This field is required.">*</span></label>
-		        <div class="age_grid">
-		         <div class="col-sm-4 form_box">
-                  <div class="select-block1">
-                    <select name="day" required>
-	                     <option value="01">1</option>
+
+	    <div class="form-group col-sm-6">
+			    <div class="age_select">
+			      <label for="edit-pass">
+ 					Date Of Birth <span class="form-required" title="This field is required.">*</span></label>
+			        <div class="age_grid">
+			         <div class="col-sm-4 form_box">
+	                  <div class="select-block1">
+	                    <select name="day" >
+		                    <option value="<?php echo $day; ?>"><?php echo $day; ?></option>
+		                    <option value="01">1</option>
 		                    <option value="02">2</option>
 		                    <option value="03">3</option>
 		                    <option value="04">4</option>
@@ -110,31 +220,33 @@ $(document).ready(function(){
 		                    <option value="29">29</option>
 		                    <option value="30">30</option>
 		                    <option value="31">31</option>
-                    </select>
-                  </div>
-            </div>
-            <div class="col-sm-4 form_box2">
-                   <div class="select-block1">
-                    <select name="month" required>
-	                    <option value="01">January</option>
-	                    <option value="02">February</option>
-	                    <option value="03">March</option>
-	                    <option value="04">April</option>
-	                    <option value="05">May</option>
-	                    <option value="06">June</option>
-	                    <option value="07">July</option>
-	                    <option value="08">August</option>
-	                    <option value="09">September</option>
-	                    <option value="10">October</option>
-	                    <option value="11">November</option>
-	                    <option value="12">December</option>
-                    </select>
-                  </div>
-                 </div>
-                 <div class="col-sm-4 form_box1">
-                   <div class="select-block1">
-                    <select name="year" required>
-                    	<option value="1960">1960</option>
+	                    </select>
+	                  </div>
+	            </div>
+	            <div class="col-sm-4 form_box2">
+	                   <div class="select-block1">
+	                    <select name="month">
+		                    <option value="<?php echo $month; ?>"><?php echo $monthInLttrs; ?></option>
+		                    <option value="01">January</option>
+		                    <option value="02">February</option>
+		                    <option value="03">March</option>
+		                    <option value="04">April</option>
+		                    <option value="05">May</option>
+		                    <option value="06">June</option>
+		                    <option value="07">July</option>
+		                    <option value="08">August</option>
+		                    <option value="09">September</option>
+		                    <option value="10">October</option>
+		                    <option value="11">November</option>
+		                    <option value="12">December</option>
+	                    </select>
+	                  </div>
+	                 </div>
+	                 <div class="col-sm-4 form_box1">
+	                   <div class="select-block1">
+	                    <select name="year">
+		                    <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
+		                    <option value="1960">1960</option>
 		                    <option value="1961">1961</option>
 		                    <option value="1962">1962</option>
 		                    <option value="1963">1963</option>
@@ -181,46 +293,56 @@ $(document).ready(function(){
 		                    <option value="2004">2004</option>
 		                    <option value="2005">2005</option>
 		                    <option value="2006">2006</option>
-                    </select>
-                   </div>
-                  </div>
-                  <div class="clearfix"> </div>
-                 </div>
-              </div><br>
-              <div class="form-group form-group1">
-                <label class="col-sm-3 control-lable" for="sex">Gender : </label>
-                <div class="col-sm-6">
-                    <div class="radios">
-				        <label for="radio-01" class="label_radio">
-				            <input type="radio" name="gender" value="male" checked> Male
-				        </label>&nbsp&nbsp&nbsp
-				        <label for="radio-02" class="label_radio">
-				            <input type="radio" name="gender" value="female"> Female
-				        </label>
-	                </div>
-                </div>
-                <div class="clearfix"> </div>
-             </div>
-			  
-			  <div class="form-actions">
-			    <input type="submit" id="edit-submit" name="op" value="Submit" class="btn_1 submit">
+	                    </select>
+	                   </div>
+	                  </div>
+	                  <div class="clearfix"> </div>
+	                 </div>
+	              </div>
+            </div>
+           
+
+            
+  
+           <!-- nineth Row starts-->
+           <div class="col-lg-12">
+          
+		    <div class="form-actions">
+			    <input type="submit" id="edit-submit" name="op" value="Submit" class="btn_1 submit"><br><br><br>
 			  </div>
+			  </div>
+             <!-- nineth Row ends-->
+         <hr/>
+			  
+
 		 </form>
 	  </div>
-	  <div class="col-sm-6">
-	     <ul class="sharing">
-			<li><a href="#" class="facebook" title="Facebook"><i class="fa fa-boxed fa-fw fa-facebook"></i> Share on Facebook</a></li>
-		  	<li><a href="#" class="twitter" title="Twitter"><i class="fa fa-boxed fa-fw fa-twitter"></i> Tweet</a></li>
-		  	<li><a href="#" class="google" title="Google"><i class="fa fa-boxed fa-fw fa-google-plus"></i> Share on Google+</a></li>
-		  	<li><a href="#" class="linkedin" title="Linkedin"><i class="fa fa-boxed fa-fw fa-linkedin"></i> Share on LinkedIn</a></li>
-		  	<li><a href="#" class="mail" title="Email"><i class="fa fa-boxed fa-fw fa-envelope-o"></i> E-mail</a></li>
-		 </ul>
-	  </div>
+	 <div class="breadcrumb1">
+     <ul>
+        <a href="index.php"><i class="fa fa-home home_1"></i></a>
+        <span class="divider">&nbsp;|&nbsp;</span>
+        <li class="current-page">Delete profile</li>
+     </ul>
+   </div>
+   <div class="col-lg-12">
+          
+		    <div class="form-actions">
+		    	<form action="deletealldata.php?id=<?php $id ?>" method="get">
+		    	
+			    <input type="submit" id="edit-submit" name="delete" value="Delete" class="btn_1 submit">
+			    <input type="hidden" name="del" value="<?php echo $id ?>">
+			    <br><br><br>
+			</form>
+			  </div>
+			  </div>
 	  <div class="clearfix"> </div>
    </div>
+
   </div>
 </div>
 
 
 <?php include_once("footer.php");?>
 
+</body>
+</html>	
