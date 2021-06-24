@@ -76,6 +76,8 @@ if($result2){
 	$pic2=$row2['pic2'];
 	$pic3=$row2['pic3'];
 	$pic4=$row2['pic4'];
+	$idFront=$row2['id_card_front'];
+	$idBack=$row2['id_card_back'];
 }
 }else{
 	echo "<script>alert(\"Invalid Profile ID\")</script>";
@@ -130,7 +132,7 @@ $(document).ready(function(){
      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
-        <a href="unlockedprofiles.php?id=<?php echo $id ?>"><span style="color: black;">Back</span></a>
+        <a href="userhome.php?id=<?php echo $id ?>"><span style="color: black;">Back</span></a>
         <span class="divider">&nbsp;|&nbsp;</span>
         <li class="current-page">View Profile</li>
      </ul>
@@ -207,7 +209,7 @@ $(document).ready(function(){
 				  <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">About Myself</a></li>
 				 
 				  <li role="presentation"><a href="#profile1" role="tab" id="profile-tab1" data-toggle="tab" aria-controls="profile1">Partner Preference</a></li>
-				 
+				  <li role="presentation"><a href="#profile2" role="tab" id="profile-tab1" data-toggle="tab" aria-controls="profile2">Identification Card</a></li>
 			   </ul>
 			   <div id="myTabContent" class="tab-content">
 				  <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
@@ -344,6 +346,25 @@ $(document).ready(function(){
 				  </div>
 				 
 
+				  <div role="tabpanel" class="tab-pane fade" id="profile2" aria-labelledby="profile-tab2">
+				    <div class="basic_1 basic_2">
+				       <div class="basic_1-left">
+				       	<div class="container">
+				       		<div class="row">
+				       			<div class="col-md-6">
+				       				<span>Identity Card Front</span><br><br>
+				       				<img style="width: 60%;" src="profile/<?php echo $profileid;?>/<?php echo $idFront;?>" />
+				       			</div>
+				       			<div class="col-md-6">
+				       				<span>Identity Card Back</span><br><br>
+				       				<img style="width: 60%;" src="profile/<?php echo $profileid;?>/<?php echo $idBack;?>" />
+				       			</div>
+				       		</div>
+				       	</div>
+				    	  
+				        </div>
+				     </div>
+				 </div>
 
 				 
 

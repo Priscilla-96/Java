@@ -169,6 +169,8 @@ $(document).ready(function(){
      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
+        <a href="userhome.php?id=<?php echo $id ?>"><span style="color: black;">Back</span></a>
+        <span class="divider">&nbsp;|&nbsp;</span>
         <li class="current-page">Edit Groom/Bride Details</li>
      </ul>
    </div>
