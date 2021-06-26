@@ -449,7 +449,7 @@ $(document).ready(function(){
             <div class="form-group col-sm-2">
 		      <label for="edit-name">Age<span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
-			    	<input type="text" name="age" size="60" value="<?php echo $age; ?>" maxlength="128" class="form-text required" required>
+			    	<input type="number" name="age" size="60" value="<?php echo $age; ?>" maxlength="128" class="form-text required" required>
 	                
 			    </div>
 		    </div>
@@ -622,7 +622,7 @@ $(document).ready(function(){
 		   </div>
            <div class="form-group col-sm-4">
 		      <label for="edit-name">Contact No <span class="form-required" title="This field is required."></span></label>
-			  <input type="text" id="edit-name" name="contactNo" value="<?php echo $contactNo; ?>" size="60" maxlength="500" class="form-text" required>
+			  <input type="tel" id="edit-name" name="contactNo" value="<?php echo $contactNo; ?>" size="60" maxlength="500" class="form-text" required>
 		    </div>
 		    <div class="form-group col-sm-4">
 		    		<label for="edit-name">National Identity Card No <span class="form-required" title="This field is required."></span></label>

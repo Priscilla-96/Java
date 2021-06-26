@@ -97,27 +97,27 @@ $(document).ready(function(){
         <div class="row">
           <div class="col-sm-3"> 
               <img style="width: 100%" src="profile/<?php echo $profileid;?>/<?php echo $pic1;?>" />
-              <br><br><br><label for="edit-name">Select New Image<span class="form-required" title="This field is required.">*</span><br></label>
+              <br><br><br><label for="edit-name">Select New Image <p style="font-size: 13px">(Image Formats png, jpeg, jpg)</p><span class="form-required" title="This field is required."></span><br></label>
               <input type="hidden" value="<?php echo $pic1;?>" name="a">
-              <input type="file" id="edit-name" name="pic1" class="form-file required"><br><br>
+              <input type="file" id="edit-name" name="pic1" class="form-file required" accept="image/png, image/jpg, image/jpeg"><br><br>
             </div>
           <div class="col-sm-3">
               <img style="width: 100%" src="profile/<?php echo $profileid;?>/<?php echo $pic2;?>" />
-              <br><br><br><label for="edit-name">Select New Image<span class="form-required" title="This field is required.">*</span><br></label>
+              <br><br><br><label for="edit-name">Select New Image <p style="font-size: 13px">(Image Formats png, jpeg, jpg)</p><span class="form-required" title="This field is required."></span><br></label>
               <input type="hidden" value="<?php echo $pic2;?>" name="b">
-              <input type="file" id="edit-name" name="pic2" class="form-file required"><br><br>
+              <input type="file" id="edit-name" name="pic2" class="form-file required" accept="image/png, image/jpg, image/jpeg"><br><br>
             </div>
           <div class="col-sm-3">
               <img style="width: 100%" src="profile/<?php echo $profileid;?>/<?php echo $pic3;?>" />
-              <br><br><br><label for="edit-name">Select New Image<span class="form-required" title="This field is required.">*</span><br></label>
+              <br><br><br><label for="edit-name">Select New Image <p style="font-size: 13px">(Image Formats png, jpeg, jpg)</p><span class="form-required" title="This field is required."></span><br></label>
               <input type="hidden" value="<?php echo $pic3;?>" name="c">
-              <input type="file" id="edit-name" name="pic3" class="form-file required"><br><br>
+              <input type="file" id="edit-name" name="pic3" class="form-file required" accept="image/png, image/jpg, image/jpeg"><br><br>
             </div>
           <div class="col-sm-3"> 
               <img style="width: 100%" src="profile/<?php echo $profileid;?>/<?php echo $pic4;?>" />
-              <br><br><br><label for="edit-name">Select New Image<span class="form-required" title="This field is required.">*</span><br></label>
+              <br><br><br><label for="edit-name">Select New Image <p style="font-size: 13px">(Image Formats png, jpeg, jpg)</p><span class="form-required" title="This field is required."></span><br></label>
               <input type="hidden" value="<?php echo $pic4;?>" name="d">
-              <input type="file" id="edit-name" name="pic4" class="form-file required"><br><br>
+              <input type="file" id="edit-name" name="pic4" class="form-file required" accept="image/png, image/jpg, image/jpeg"><br><br>
             </div> 
         </div>
 	    </div>

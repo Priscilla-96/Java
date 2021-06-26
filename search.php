@@ -167,7 +167,7 @@ $(document).ready(function(){
   </div><?php */?>
   <div class="form_but1 fadeInUp animated">
     <label class="col-sm-5 control-lable1" for="Mother Tongue">Mother Tongue : </label>
-    <div class="col-sm-7 form_radios">
+    <div class="col-sm-5 form_radios">
       <div class="select-block1 fadeInUp animated">
         <select name="mothertounge">
             <option value="Sinhala">Sinhala</option>
@@ -181,18 +181,18 @@ $(document).ready(function(){
   </div>
   <div class="form_but1 fadeInUp animated">
 	<label class="col-sm-5 control-lable1" for="Age">Age : </label>
-	<div class="col-sm-7 form_radios ">
+	<div class="col-sm-5 form_radios ">
 	  <div class="col-sm-5 input-group1">
-        <input class="form-control has-dark-background" name="agemin" id="slider-name" placeholder="18" type="text" required=""/>
+        <input class="form-control has-dark-background" name="agemin" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="slider-name" maxlength="2" placeholder="18" type="text" required=""/>
       </div>
       
       <div class="col-sm-5 input-group1">
-        <input class="form-control has-dark-background" name="agemax" id="slider-name" placeholder="40" type="text" required=""/>
+        <input class="form-control has-dark-background" name="agemax" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="2" id="slider-name" placeholder="50" type="text" required=""/><br><br>
       </div>
       <div class="clearfix"> </div>
 	</div>
 	<div class="clearfix"> </div>
-  <input type="submit" name="search" value="Search"/>
+  <input style="width: 60%;min-width: 280px;" type="submit" class="btn btn-primary" name="search" value="Search"/>
   </div>
  </form>
  <div class="paid_people">

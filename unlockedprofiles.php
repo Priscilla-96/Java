@@ -127,8 +127,56 @@ while ($row = mysqli_fetch_assoc($result))
       $mt=$row2['mothertounge'];
     }
 
+    //new part
+echo '
+    <div class="col-sm-3">
+      <div class="card zoom cont"  style="width: 22rem; height: 22rem;">
+        <a style="text-decoration: none;" href="view_profile.php?id='.$profid.'" >
+          <img style="width:50%" name="image" src="profile/'. $profid.'/'.$pic .'" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+        <br>
+          <h4 class="card-title">'.$fn.'  '.$ln.'</h4>
+          <p class="card-title">Mother Tounge :  '.$mt.'</p>
+          <p class="card-title">Age : '.$age.'</p>
+        </div>
+      </div>
+    </div>
+';
+    /*
+     echo '
+     <div class="col-lg-4">
+      <div class="card" style="width: 10rem; height: rem;">
+        <a href=\"view_profile.php?id=$profid\">
+          <img style="width:100%" src="profile/'. $profid.'/'.$pic .'" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to content.</p>
+          </div>
+        </a>
+      </div>
+      </div>'
+*/
+      /*
+        <div class="card mb-3">
+        <a href=\"view_profile.php?id=$profid\">
+          <div class="col-md-3">
+            <img style="width:100%; height:300px" src="profile/'. $profid.'/'.$pic .'" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-3">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </a>
+      </div>
+      */
+
+      ;
+
     // printing left side profile
-    echo "<div class=\"col-sm-4 fadeInUp animated\">";
+/*    echo "<div class=\"col-sm-4 fadeInUp animated\">";
         echo "<ul class=\"profile_item fadeInUp animated\">";
             echo "<a href=\"view_profile.php?id=$profid\">";
                 echo "<li class=\"profile_item-img\"><img src=\"profile/". $profid."/".$pic ."\"" . "class=\"img-responsive\"" ;
@@ -142,7 +190,7 @@ while ($row = mysqli_fetch_assoc($result))
                 echo "</li>";
             echo "</a>";
         echo "</ul>";
-    echo "</div>"; // end
+    echo "</div>";*/ // end
     
   } //loop end
   echo "</div>"; //row end

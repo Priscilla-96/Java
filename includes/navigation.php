@@ -4,7 +4,7 @@
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
-               /* pageLanguage: 'en',*/ includedLanguages: 'en,si,ar,bn,de,te,ta,gu,th,uk,ur',
+               /* pageLanguage: 'en',*/ includedLanguages: 'en,si,ar,bn,de,te,ta,gu,th,uk',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
         }

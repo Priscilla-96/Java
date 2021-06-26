@@ -102,53 +102,92 @@ $(document).ready(function(){
      <div class="row">
         <div class="col-md-3">
           <div class="card" >
-            <img src="images/IMG_6616.jpg" class="card-img-top" alt="...">
+            <img style="width:100%;" src="images/priceOptImages/one11.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <div class="alert alert-warning" role="alert">
                 Get Details of 5 Profiles
               </div>
+              <form action="searchresults.php" method="post"  target="blank">
 
-                            <a href="searchresults.php?amin=<?php echo $agemin ?>&amax=<?php echo $agemax ?>&maritalstatus=<?php echo $maritalstatus ?>&mothertounge=<?php echo $mothertounge ?>&sex=<?php echo $sex ?>&limit=1" class="btn btn-primary" target="blank">Find Your Match</a> 
-
+                  <input type="hidden" name="amin" value="<?php echo $agemin ?>">
+                  <input type="hidden" name="amax" value="<?php echo $agemax ?>">
+                  <input type="hidden" name="maritalstatus" value="<?php echo $maritalstatus ?>">
+                  <input type="hidden" name="mothertounge" value="<?php echo $mothertounge ?>">
+                  <input type="hidden" name="sex" value="<?php echo $sex ?>">
+                  <input type="hidden" name="limith" value="1">
+                  
+                 <input style="width: 100%;height:60px;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
+              </form>
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        
+          <div class="col-md-3">
           <div class="card" >
-            <img src="images/IMG_6616(1).jpg" class="card-img-top" alt="...">
+            <img style="width:100%;" src="images/priceOptImages/one21.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <div class="alert alert-warning" role="alert">
                Get Details of 13 Profiles
               </div>
-              
-              <a href="searchresults.php?amin=<?php echo $agemin ?>&amax=<?php echo $agemax ?>&maritalstatus=<?php echo $maritalstatus ?>&mothertounge=<?php echo $mothertounge ?>&sex=<?php echo $sex ?>&limit=2" class="btn btn-primary" target="blank">Find Your Match</a>
+              <form action="searchresults.php" method="post"  target="blank">
+
+                  <input type="hidden" name="amin" value="<?php echo $agemin ?>">
+                  <input type="hidden" name="amax" value="<?php echo $agemax ?>">
+                  <input type="hidden" name="maritalstatus" value="<?php echo $maritalstatus ?>">
+                  <input type="hidden" name="mothertounge" value="<?php echo $mothertounge ?>">
+                  <input type="hidden" name="sex" value="<?php echo $sex ?>">
+                  <input type="hidden" name="limith" value="2">
+                  
+                  <input style="width: 100%;height:60px;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
+              </form>
+
             </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="card" >
-            <img src="images/IMG_6616(2).jpg" class="card-img-top" alt="...">
+            <img style="width:100%;" src="images/priceOptImages/one31.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <div class="alert alert-warning" role="alert">
                 Get Details of 30 Profiles
               </div>
-              
-              <a href="searchresults.php?amin=<?php echo $agemin ?>&amax=<?php echo $agemax ?>&maritalstatus=<?php echo $maritalstatus ?>&mothertounge=<?php echo $mothertounge ?>&sex=<?php echo $sex ?>&limit=3" class="btn btn-primary" target="blank">Find Your Match</a>
+              <form action="searchresults.php" method="post"  target="blank">
+
+                  <input type="hidden" name="amin" value="<?php echo $agemin ?>">
+                  <input type="hidden" name="amax" value="<?php echo $agemax ?>">
+                  <input type="hidden" name="maritalstatus" value="<?php echo $maritalstatus ?>">
+                  <input type="hidden" name="mothertounge" value="<?php echo $mothertounge ?>">
+                  <input type="hidden" name="sex" value="<?php echo $sex ?>">
+                  <input type="hidden" name="limith" value="3">
+                  
+                 <input style="width: 100%;height:60px;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
+              </form>
             </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="card" >
-            <img src="images/IMG_6616(3).jpg" class="card-img-top" alt="...">
+            <img style="width:100%;" src="images/priceOptImages/one41.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <div class="alert alert-warning" role="alert">
                 Get Details of 40 Profiles
               </div>
+              <form action="searchresults.php" method="post"  target="blank">
+
+                  <input type="hidden" name="amin" value="<?php echo $agemin ?>">
+                  <input type="hidden" name="amax" value="<?php echo $agemax ?>">
+                  <input type="hidden" name="maritalstatus" value="<?php echo $maritalstatus ?>">
+                  <input type="hidden" name="mothertounge" value="<?php echo $mothertounge ?>">
+                  <input type="hidden" name="sex" value="<?php echo $sex ?>">
+                  <input type="hidden" name="limith" value="4">
+                  
+                 <input style="width: 100%;height:60px;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
+              </form>
               
-              <a href="searchresults.php?amin=<?php echo $agemin ?>&amax=<?php echo $agemax ?>&maritalstatus=<?php echo $maritalstatus ?>&mothertounge=<?php echo $mothertounge ?>&sex=<?php echo $sex ?>&limit=4" class="btn btn-primary" target="blank">Find Your Match</a>
             </div>
           </div>
         </div>
+        
     </div>
 
   </div>

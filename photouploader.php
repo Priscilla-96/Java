@@ -75,14 +75,14 @@ $(document).ready(function(){
    	  <div class="col-sm-6 login_left">
 	   <form action="" method="post" enctype="multipart/form-data">
   	    <div class="form-item form-type-textfield form-item-name">
-	      <label for="edit-name">Upload Your Photo(Use 300 x 250 dimensions) <span class="form-required" title="This field is required.">*</span></label>
-	      <input type="file" id="edit-name" name="pic1" class="form-file required" required>
-        <input type="file" id="edit-name" name="pic2" class="form-file required" required>
-        <input type="file" id="edit-name" name="pic3" class="form-file required" required>
-        <input type="file" id="edit-name" name="pic4" class="form-file required" required>
-        <label for="edit-name">Upload Your Identity Card Photo(Front And Back, Use 300 x 250 dimensions) <span class="form-required" title="This field is required.">*</span></label>
-        <input type="file" id="edit-name" name="idFront" class="form-file required" required>
-        <input type="file" id="edit-name" name="idBack" class="form-file required" required>
+	      <label for="edit-name">Upload Bride ?Groom Images <p style="font-size: 13px">(Image Formats png, jpeg, jpg)</p> <span class="form-required" title="This field is required."></span></label>
+	      <input type="file" id="edit-name" name="pic1" class="form-file required"  accept="image/png, image/jpg, image/jpeg" required>
+        <input type="file" id="edit-name" name="pic2" class="form-file required"  accept="image/png, image/jpg, image/jpeg" required>
+        <input type="file" id="edit-name" name="pic3" class="form-file required"  accept="image/png, image/jpg, image/jpeg" required>
+        <input type="file" id="edit-name" name="pic4" class="form-file required"  accept="image/png, image/jpg, image/jpeg" required>
+        <label for="edit-name">Upload Your Identity Card Images <p style="font-size: 13px">(Image Formats png, jpeg, jpg)</p> <span class="form-required" title="This field is required."></span></label>
+        <input type="file" id="edit-name" name="idFront" class="form-file required"  accept="image/png, image/jpg, image/jpeg" required>
+        <input type="file" id="edit-name" name="idBack" class="form-file required"  accept="image/png, image/jpg, image/jpeg" required>
 	    </div>
 	    <div class="form-actions">
 	    	<input type="submit" id="edit-submit" name="op" value="Upload" class="btn_1 submit">

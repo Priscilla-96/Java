@@ -13,16 +13,7 @@
 			<h4>Kasun & Anjali</h4>
 			<p>It is a long established fact that a reader will be distracted by the readable</p>
 		  </li>
-		  <li>
-			<img src="images/s1.jpg" alt=""/>
-			<h4>Afzal & Fathima</h4>
-			<p>It is a long established fact that a reader will be distracted by the readable</p>
-		  </li>
-		  <li>
-			<img src="images/s3.jpg" alt=""/>
-			<h4>Ram & Thamanna</h4>
-			<p>It is a long established fact that a reader will be distracted by the readable</p>
-		  </li>
+		  
 	    </ul>
 	  </div>
    </section>

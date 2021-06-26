@@ -14,12 +14,13 @@ if(isloggedin()){} else{
 }
 
     //get passed data and filter
-    $agemin=$_GET['amin'];
-    $agemax=$_GET['amax'];
-    $maritalstatus=$_GET['maritalstatus'];
-    $mothertounge=$_GET['mothertounge'];
-    $sex = $_GET['sex'];
-    $limit = $_GET['limit'];
+    $agemin=$_POST['amin'];
+    $agemax=$_POST['amax'];
+    $maritalstatus=$_POST['maritalstatus'];
+    $mothertounge=$_POST['mothertounge'];
+    $sex = $_POST['sex'];
+    $limit = $_POST['limith'];
+
     
     $sql="SELECT * FROM customer WHERE 
     sex='$sex' 
@@ -129,16 +130,16 @@ while ($row = mysqli_fetch_assoc($result))
     // printing profile details
     echo "<div class=\"col-sm-4\">";
         echo "<ul class=\"profile_item\">";
-            echo "<input type='checkbox' class='game' value='". $profid."' name='data[]' >";
-                echo "<li class=\"profile_item-img\"><img src=\"profile/". $profid."/".$pic ."\"" . "class=\"img-responsive\"" ;
+             echo "<li class=\"profile_item-img\"><img src=\"profile/". $profid."/".$pic ."\"" . "class=\"img-responsive\"" ;
                 echo "alt=\"\"/></li>";
-                
+                echo "<input type='checkbox' class='game' value='". $profid."' name='data[]' >";
+               
                 echo "<li class=\"profile_item-desc\">";
                 echo "<h4>" . $row['firstname'] . " " . $row['lastname'] . "</h4>";
                 echo "<p>" . $row['age']. "Yrs</p>";
                 echo "<p>" . $row['mothertounge']. "</p>";
-                echo "<h5>" . "View Full Profile" . "</h5>";
-                echo "</li>";
+                
+                echo "</li><br>";
         echo "</ul>";
     echo "</div>"; // end
     
@@ -146,8 +147,11 @@ while ($row = mysqli_fetch_assoc($result))
   echo "</div>"; //row end
 ?>
 
-<input type="submit" name="" value="View Profiles">
+<div style="text-align: center;"><br>
+  <input  style="width: 30%;min-width: 280px;" class="btn btn-primary" type="submit" name="" value="View Profiles">
     
+</div>
+
 </form>
 </div>
 </div>
