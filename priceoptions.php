@@ -93,7 +93,7 @@ $(document).ready(function(){
     
   
    </div>
-    <div class="alert alert-success" role="alert">
+    <div style="text-align: center;" class="alert alert-success" role="alert">
       <?php echo $count." Profiles Found Matching Your Description!"; ?>
     </div>
 
@@ -102,7 +102,7 @@ $(document).ready(function(){
      <div class="row">
         <div class="col-md-3">
           <div class="card" >
-            <img style="width:100%;" src="images/priceOptImages/one11.jpg" class="card-img-top" alt="...">
+            <img style="width:100%;" src="images/priceOptImages/bronze.png" class="card-img-top" alt="...">
             <div class="card-body">
               <div class="alert alert-warning" role="alert">
                 Get Details of 5 Profiles
@@ -114,7 +114,7 @@ $(document).ready(function(){
                   <input type="hidden" name="maritalstatus" value="<?php echo $maritalstatus ?>">
                   <input type="hidden" name="mothertounge" value="<?php echo $mothertounge ?>">
                   <input type="hidden" name="sex" value="<?php echo $sex ?>">
-                  <input type="hidden" name="limith" value="1">
+                  <input type="hidden" name="limith" value="5">
                   
                  <input style="width: 100%;height:60px;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
               </form>
@@ -124,10 +124,10 @@ $(document).ready(function(){
         
           <div class="col-md-3">
           <div class="card" >
-            <img style="width:100%;" src="images/priceOptImages/one21.jpg" class="card-img-top" alt="...">
+            <img style="width:100%;" src="images/priceOptImages/silver.png" class="card-img-top" alt="...">
             <div class="card-body">
               <div class="alert alert-warning" role="alert">
-               Get Details of 13 Profiles
+               Get Details of 12 Profiles
               </div>
               <form action="searchresults.php" method="post"  target="blank">
 
@@ -136,7 +136,7 @@ $(document).ready(function(){
                   <input type="hidden" name="maritalstatus" value="<?php echo $maritalstatus ?>">
                   <input type="hidden" name="mothertounge" value="<?php echo $mothertounge ?>">
                   <input type="hidden" name="sex" value="<?php echo $sex ?>">
-                  <input type="hidden" name="limith" value="2">
+                  <input type="hidden" name="limith" value="12">
                   
                   <input style="width: 100%;height:60px;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
               </form>
@@ -146,7 +146,7 @@ $(document).ready(function(){
         </div>
         <div class="col-md-3">
           <div class="card" >
-            <img style="width:100%;" src="images/priceOptImages/one31.jpg" class="card-img-top" alt="...">
+            <img style="width:100%;" src="images/priceOptImages/gold.png" class="card-img-top" alt="...">
             <div class="card-body">
               <div class="alert alert-warning" role="alert">
                 Get Details of 30 Profiles
@@ -158,7 +158,7 @@ $(document).ready(function(){
                   <input type="hidden" name="maritalstatus" value="<?php echo $maritalstatus ?>">
                   <input type="hidden" name="mothertounge" value="<?php echo $mothertounge ?>">
                   <input type="hidden" name="sex" value="<?php echo $sex ?>">
-                  <input type="hidden" name="limith" value="3">
+                  <input type="hidden" name="limith" value="30">
                   
                  <input style="width: 100%;height:60px;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
               </form>
@@ -167,10 +167,10 @@ $(document).ready(function(){
         </div>
         <div class="col-md-3">
           <div class="card" >
-            <img style="width:100%;" src="images/priceOptImages/one41.jpg" class="card-img-top" alt="...">
+            <img style="width:100%;" src="images/priceOptImages/platinum.png" class="card-img-top" alt="...">
             <div class="card-body">
               <div class="alert alert-warning" role="alert">
-                Get Details of 40 Profiles
+                Get Details of 60 Profiles
               </div>
               <form action="searchresults.php" method="post"  target="blank">
 
@@ -179,7 +179,7 @@ $(document).ready(function(){
                   <input type="hidden" name="maritalstatus" value="<?php echo $maritalstatus ?>">
                   <input type="hidden" name="mothertounge" value="<?php echo $mothertounge ?>">
                   <input type="hidden" name="sex" value="<?php echo $sex ?>">
-                  <input type="hidden" name="limith" value="4">
+                  <input type="hidden" name="limith" value="60">
                   
                  <input style="width: 100%;height:60px;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
               </form>

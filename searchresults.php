@@ -132,14 +132,16 @@ while ($row = mysqli_fetch_assoc($result))
         echo "<ul class=\"profile_item\">";
              echo "<li class=\"profile_item-img\"><img src=\"profile/". $profid."/".$pic ."\"" . "class=\"img-responsive\"" ;
                 echo "alt=\"\"/></li>";
-                echo "<input type='checkbox' class='game' value='". $profid."' name='data[]' >";
                
                 echo "<li class=\"profile_item-desc\">";
-                echo "<h4>" . $row['firstname'] . " " . $row['lastname'] . "</h4>";
-                echo "<p>" . $row['age']. "Yrs</p>";
-                echo "<p>" . $row['mothertounge']. "</p>";
+                 echo "<input  style='display:inline-block;float:left;' type='checkbox' class='game' value='". $profid."' name='data[]' >";
+                echo "<h4 style='color:black'>&nbsp&nbsp Select</h4>";
                 
-                echo "</li><br>";
+                echo "<h4 style='color:black'>" . $row['firstname'] . " " . $row['lastname'] . "</h4>";
+                echo "<p>Age : " . $row['age']. "Yrs</p>";
+                echo "<p>Mother Tounge : " . $row['mothertounge']. "</p>";
+                
+                echo "</li><br><br>";
         echo "</ul>";
     echo "</div>"; // end
     
@@ -148,7 +150,10 @@ while ($row = mysqli_fetch_assoc($result))
 ?>
 
 <div style="text-align: center;"><br>
-  <input  style="width: 30%;min-width: 280px;" class="btn btn-primary" type="submit" name="" value="View Profiles">
+  <div style="text-align: center;" class="alert alert-danger" role="alert">
+      <?php echo"You Can Select Upto ". $limit." Profiles Before Proceeding"; ?>
+    </div>
+  <input  style="width: 30%;min-width: 280px;" class="btn btn-primary" type="submit" name="" value="Unlock Profiles">
     
 </div>
 
