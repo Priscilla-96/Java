@@ -125,11 +125,11 @@
 						  	$nam = $_SESSION['username'];
 						  	echo "<li><a href=\"userhome.php?id=$id\">Profile</a></li>";
 						  	/*echo "<li><a style='color: limegreen;font-weight: bold;font-size: 15px;'  href=\"userhome.php?id=$id\">".$nam."</a></li>";*/
-						  	echo "<li><a style='background-color: red' href=\"logout.php\">Logout</a></li>";
+						  	echo "<li><a class='btn btn-danger' href=\"logout.php\">Logout</a></li>";
 						  }
 						  else{
-						  	echo "<li><a  style='background-color: green' href=\"login.php\">Login</a></li>";
-						  	echo "<li><a style='background-color: orange' href=\"register.php\">Register</a></li>";
+						  	echo "<li><a class='btn btn-success'   href=\"login.php\">Login</a></li>";
+						  	echo "<li><a class='btn btn-warning' href=\"register.php\">Register</a></li>";
 						  }
 						?>
 		        	</li>
