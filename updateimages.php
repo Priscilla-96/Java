@@ -64,6 +64,17 @@ $(document).ready(function(){
     );
 });
 </script>
+<style type="text/css">
+  .custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  input[type="file"] {
+    display: none;
+  }
+</style>
 </head>
 <body>
 <!-- ============================  Navigation Start =========================== -->
@@ -95,12 +106,101 @@ $(document).ready(function(){
   	    <div class="form-item form-type-textfield form-item-name">
 	      <label for="edit-name">Current Images<span class="form-required" title="This field is required.">*</span><br><br></label>
         <div class="row">
-          <div class="col-sm-3"> 
+          <!-- Profile pic-->
+            <div class="col-sm-3"> 
+                <img style="width: 100%" src="profile/<?php echo $profileid;?>/<?php echo $pic1;?>" />
+                <div class="row">
+                  <div style="text-align: center;" class="col-sm-12">
+                    <br><label  style="width: 90%" class="custom-file-upload btn btn-success">
+                      <input type="hidden" value="<?php echo $pic1;?>" name="a">
+                      <input type="file" id="file1" name="pic1" accept="image/png, image/jpg, image/jpeg" />
+                        Select New Profile Picture
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div style="text-align: center;" class="col-sm-12">
+                    <br><label  style="width: 90%"  id="word1"></label><br>
+                    <img style="width: 100%" id="image1" />
+                    <br>
+                    <hr><br>
+                  </div>
+                </div>
+              </div>
+              <!-- first pic-->
+            <div class="col-sm-3"> 
+                <img style="width: 100%" src="profile/<?php echo $profileid;?>/<?php echo $pic2;?>" />
+                <div class="row">
+                  <div style="text-align: center;" class="col-sm-12">
+                    <br><label  style="width: 90%" class="custom-file-upload btn btn-success">
+                      <input type="hidden" value="<?php echo $pic2;?>" name="b">
+                      <input type="file" id="file2" name="pic2" accept="image/png, image/jpg, image/jpeg" />
+                        Select New Picture
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div style="text-align: center;" class="col-sm-12">
+                    <br><label  style="width: 90%"  id="word2"></label><br>
+                    <img style="width: 100%" id="image2" />
+                    <br>
+                    <hr><br>
+                  </div>
+                </div>
+              </div>
+              <!-- second pic-->
+            <div class="col-sm-3"> 
+                <img style="width: 100%" src="profile/<?php echo $profileid;?>/<?php echo $pic3;?>" />
+                <div class="row">
+                  <div style="text-align: center;" class="col-sm-12">
+                    <br><label  style="width: 90%" class="custom-file-upload btn btn-success">
+                      <input type="hidden" value="<?php echo $pic3;?>" name="c">
+                      <input type="file" id="file3" name="pic3" accept="image/png, image/jpg, image/jpeg" />
+                        Select New Picture
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div style="text-align: center;" class="col-sm-12">
+                    <br><label  style="width: 90%"  id="word3"></label><br>
+                    <img style="width: 100%" id="image3" />
+                    <br>
+                    <hr><br>
+                  </div>
+                </div>
+              </div>
+              <!-- third pic-->
+            <div class="col-sm-3"> 
+                <img style="width: 100%" src="profile/<?php echo $profileid;?>/<?php echo $pic4;?>" />
+                <div class="row">
+                  <div style="text-align: center;" class="col-sm-12">
+                    <br><label  style="width: 90%" class="custom-file-upload btn btn-success">
+                      <input type="hidden" value="<?php echo $pic4;?>" name="d">
+                      <input type="file" id="file4" name="pic4" accept="image/png, image/jpg, image/jpeg" />
+                        Select New Picture
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div style="text-align: center;" class="col-sm-12">
+                    <br><label  style="width: 90%"  id="word4"></label><br>
+                    <img style="width: 100%" id="image4" />
+                    <br>
+                    <hr><br>
+                  </div>
+                </div>
+              </div>
+             
+
+            <!--
+              <div class="col-sm-3"> 
               <img style="width: 100%" src="profile/<?php echo $profileid;?>/<?php echo $pic1;?>" />
               <br><br><br><label for="edit-name">Select New Image <p style="font-size: 13px">(Image Formats png, jpeg, jpg)</p><span class="form-required" title="This field is required."></span><br></label>
               <input type="hidden" value="<?php echo $pic1;?>" name="a">
               <input type="file" id="edit-name" name="pic1" class="form-file required" accept="image/png, image/jpg, image/jpeg"><br><br>
             </div>
+            
+
           <div class="col-sm-3">
               <img style="width: 100%" src="profile/<?php echo $profileid;?>/<?php echo $pic2;?>" />
               <br><br><br><label for="edit-name">Select New Image <p style="font-size: 13px">(Image Formats png, jpeg, jpg)</p><span class="form-required" title="This field is required."></span><br></label>
@@ -118,7 +218,7 @@ $(document).ready(function(){
               <br><br><br><label for="edit-name">Select New Image <p style="font-size: 13px">(Image Formats png, jpeg, jpg)</p><span class="form-required" title="This field is required."></span><br></label>
               <input type="hidden" value="<?php echo $pic4;?>" name="d">
               <input type="file" id="edit-name" name="pic4" class="form-file required" accept="image/png, image/jpg, image/jpeg"><br><br>
-            </div> 
+            </div> -->
         </div>
 	    </div>
 	    <div class="form-actions">
@@ -145,3 +245,31 @@ $(window).load(function() {
   });
 });
 </script>   
+<script>
+  document.getElementById('file1').onchange = function () {
+  var src1 = URL.createObjectURL(this.files[0])
+  document.getElementById('image1').src = src1
+  document.getElementById('word1').innerHTML = 'Selected Profile Picture';
+}
+</script>
+<script>
+  document.getElementById('file2').onchange = function () {
+  var src2 = URL.createObjectURL(this.files[0])
+  document.getElementById('image2').src = src2
+  document.getElementById('word2').innerHTML = 'Selected Picture';
+}
+</script>
+<script>
+  document.getElementById('file3').onchange = function () {
+  var src3 = URL.createObjectURL(this.files[0])
+  document.getElementById('image3').src = src3
+  document.getElementById('word3').innerHTML = 'Selected Picture';
+}
+</script>
+<script>
+  document.getElementById('file4').onchange = function () {
+  var src4 = URL.createObjectURL(this.files[0])
+  document.getElementById('image4').src = src4
+  document.getElementById('word4').innerHTML = 'Selected Picture';
+}
+</script>

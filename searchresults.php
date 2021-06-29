@@ -1,9 +1,4 @@
-<script type="text/javascript">
-  window.history.forward();
-  function noback(){
-     window.history.forward();
-  }
-</script>
+
 <?php include_once("includes/basic_includes.php");?>
 <?php include_once("functions.php"); ?>
 <?php
@@ -43,6 +38,12 @@ if(isloggedin()){} else{
 <head>
 <title>Find Your Perfect Partner - KAPU Dating  | User Home :: Kapu Dating
 </title>
+<script type="text/javascript">
+  window.history.forward();
+  function noback(){
+     window.history.forward();
+  }
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -108,6 +109,9 @@ $(document).ready(function(){
    
      <div class="row">
            <div class="paid_people">
+            <div style="text-align: center;" class="alert alert-danger" role="alert">
+      <?php echo"You Can Select Upto ". $limit." Profiles Before Proceeding, Check The Box  ''<input type='checkbox' checked>''  To Select A Profile"; ?><br>
+    </div>
    <h1>Profiles</h1>
    </div>
   </div>
@@ -134,10 +138,10 @@ while ($row = mysqli_fetch_assoc($result))
                 echo "alt=\"\"/></li>";
                
                 echo "<li class=\"profile_item-desc\">";
-                 echo "<input  style='display:inline-block;float:left;' type='checkbox' class='game' value='". $profid."' name='data[]' >";
-                echo "<h4 style='color:black'>&nbsp&nbsp Select</h4>";
+                 echo "<input  style='display:inline-block;float:left;margin-top:0;' type='checkbox' class='game' value='". $profid."' name='data[]' >";
+                echo "<h4 style='color:black;'>&nbsp&nbsp Select</h4>";
                 
-                echo "<h4 style='color:black'>" . $row['firstname'] . " " . $row['lastname'] . "</h4>";
+                echo "<p>" . $row['firstname'] . " " . $row['lastname'] . "</p>";
                 echo "<p>Age : " . $row['age']. "Yrs</p>";
                 echo "<p>Mother Tounge : " . $row['mothertounge']. "</p>";
                 
@@ -149,11 +153,11 @@ while ($row = mysqli_fetch_assoc($result))
   echo "</div>"; //row end
 ?>
 
-<div style="text-align: center;"><br>
+<div style="text-align: center;">
   <div style="text-align: center;" class="alert alert-danger" role="alert">
-      <?php echo"You Can Select Upto ". $limit." Profiles Before Proceeding"; ?>
+      <?php echo"One Time Selection Only!"; ?>
     </div>
-  <input  style="width: 30%;min-width: 280px;" class="btn btn-primary" type="submit" name="" value="Unlock Profiles">
+  <input  style="width: 30%;min-width: 280px;" class="btn btn-primary" type="submit" name="" value="Unlock Selected Profiles">
     
 </div>
 

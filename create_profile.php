@@ -331,7 +331,7 @@ $(document).ready(function(){
             <div class="form-group col-sm-2">
 		      <label for="edit-name">Age<span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
-			    	<input type="text" name="age" size="60" maxlength="128" class="form-text required" required>
+			    	<input type="text" name="age" size="60" maxlength="2" class="form-text required"  oninput="this.value=this.value.replace(/[^0-9]/g,'');" required>
 	                
 			    </div>
 		    </div>
@@ -450,11 +450,11 @@ $(document).ready(function(){
 		    <div class="col-lg-12">
 		    <div class="form-group col-sm-2">
 		      <label for="edit-name">Height <span class="form-required" title="This field is required."></span></label>
-			  <input type="text" id="edit-name" placeholder="In centimeters"  name="height" value="" size="60" maxlength="60" class="form-text">
+			  <input type="text" id="edit-name" placeholder="In centimeters"  name="height" value="" size="60" maxlength="60"  oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-text">
 		    </div>
 		    <div class="form-group col-sm-2">
 		      <label for="edit-name">Weight <span class="form-required" title="This field is required."></span></label>
-			  <input type="text" id="edit-name" placeholder="In kilograms" name="weight" value="" size="60" maxlength="60" class="form-text">
+			  <input type="text" id="edit-name" placeholder="In kilograms" name="weight" value="" size="60" maxlength="6"  oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-text">
 		    </div>
 		   	
 		    <div class="form-group col-sm-2">
@@ -470,7 +470,7 @@ $(document).ready(function(){
 		    </div>
 		    <div class="form-group col-sm-2">
 		      <label for="edit-name">Annual Income <span class="form-required" title="This field is required."></span></label>
-			  <input type="text" id="edit-name" placeholder="In Rupees" name="income" value="" size="60" maxlength="60" class="form-text">
+			  <input type="text" id="edit-name" placeholder="In Sri Lankan Rupees" name="income" value=""  oninput="this.value=this.value.replace(/[^0-9]/g,'');" size="60" maxlength="7" class="form-text">
 		    </div>
 		    <div class="form-group col-sm-4">
 		      <label for="edit-name">Occupation <span class="form-required" title="This field is required."></span></label>
@@ -490,7 +490,7 @@ $(document).ready(function(){
 		   </div>
            <div class="form-group col-sm-4">
 		      <label for="edit-name">Contact No <span class="form-required" title="This field is required."></span></label>
-			  <input type="text" id="edit-name" name="contactNo" value="" size="60" maxlength="500" class="form-text" required>
+			  <input type="text" id="edit-name" name="contactNo" value="" size="60" maxlength="500"  oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-text" required>
 		    </div>
 		    <div class="form-group col-sm-4">
 		    		<label for="edit-name">National Identity Card No <span class="form-required" title="This field is required."></span></label>

@@ -3,6 +3,12 @@
 <html>
 <head>
 <title>KAPU Dating</title>
+<script type="text/javascript">
+  window.history.forward();
+  function noback(){
+     window.history.forward();
+  }
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 

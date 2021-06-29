@@ -138,14 +138,7 @@ function register(){
 	$uname=$_POST['name'];
 	$pass=$_POST['pass'];
 	$email=$_POST['email'];
-	$day=$_POST['day'];
-	$month=$_POST['month'];
-	$year=$_POST['year'];
-		$day=$_POST['day'];
-		$month=$_POST['month'];
-		$year=$_POST['year'];
-	$dob=$year ."-" . $month . "-" .$day ;
-	$gender=$_POST['gender'];
+	
 	require_once("includes/dbconn.php");
 
 	$sql1 = "select * from users where username= '$uname'";
@@ -153,12 +146,12 @@ function register(){
 				$resultcheck = mysqli_num_rows($result);
 
 				if ($resultcheck >0) {
-					echo "<script> window.location=\"register.php?AlreadyExist\"</script>";
+					echo "<script> window.location=\"register.php?mes=exist\"</script>";
 				}
 				else{
-					$sql = "INSERT INTO users ( profilestat, username, password, email, dateofbirth, gender, userlevel) 
+					$sql = "INSERT INTO users ( profilestat, username, password, email, userlevel) 
 			VALUES
-			   (0, '$uname', '$pass', '$email', '$dob', '$gender', 0)";
+			   (0, '$uname', '$pass', '$email', 0)";
 
 			$result = mysqlexec($sql);
 				if ($result) {
@@ -726,13 +719,14 @@ function updatephoto($id){
 		    imagecopyresampled( $dst, $src, 0, 0, 0, 0, $new_width, $new_height, $width, $height );
 		    
 		    imagepng( $dst, $pic10 );
-		   move_uploaded_file($_FILES['pic1']['tmp_name'], $target1);
-			unlink($apath);
+		    unlink($apath);
+		   	move_uploaded_file($_FILES['pic1']['tmp_name'], $target1);
+			
 			echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
 		    }else{
-
+		    	unlink($apath);
 				move_uploaded_file($_FILES['pic1']['tmp_name'], $target1);
-				unlink($apath);
+				
 				echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
 		    }
 
@@ -761,13 +755,14 @@ function updatephoto($id){
 		    imagecopyresampled( $dst, $src, 0, 0, 0, 0, $new_width, $new_height, $width, $height );
 		    
 		    imagepng( $dst, $pic20 );
+		    	unlink($bpath);
 		   		move_uploaded_file($_FILES['pic2']['tmp_name'], $target2);
-				unlink($bpath);
+				
 				echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
 		    }else{
-
+		    	unlink($bpath);
 				move_uploaded_file($_FILES['pic2']['tmp_name'], $target2);
-				unlink($bpath);
+				
 				echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
 		    }
 
@@ -795,13 +790,14 @@ function updatephoto($id){
 		    imagecopyresampled( $dst, $src, 0, 0, 0, 0, $new_width, $new_height, $width, $height );
 		    
 		    imagepng( $dst, $pic30 );
+		    	unlink($cpath);
 		   		move_uploaded_file($_FILES['pic3']['tmp_name'], $target3);
-				unlink($cpath);
+				
 				echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
 		    }else{
-
+		    	unlink($cpath);
 				move_uploaded_file($_FILES['pic3']['tmp_name'], $target3);
-				unlink($cpath);
+				
 				echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
 		    }
 
@@ -829,13 +825,14 @@ function updatephoto($id){
 		    imagecopyresampled( $dst, $src, 0, 0, 0, 0, $new_width, $new_height, $width, $height );
 		    
 		    imagepng( $dst, $pic40 );
+		    	unlink($dpath);
 		   		move_uploaded_file($_FILES['pic4']['tmp_name'], $target4);
-				unlink($dpath);
+				
 				echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
 		    }else{
-
+		    	unlink($dpath);
 				move_uploaded_file($_FILES['pic4']['tmp_name'], $target4);
-				unlink($dpath);
+				
 				echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
 		    }
 
@@ -930,14 +927,14 @@ function updateIdPhoto($id){
 		    imagecopyresampled( $dst, $src, 0, 0, 0, 0, $new_width, $new_height, $width, $height );
 		    
 		    imagepng( $dst, $pic10 );
-		   		
+		   		unlink($apath);
 				move_uploaded_file($_FILES['pic1']['tmp_name'], $target1);
-				unlink($apath);
+				
 				echo "<script> window.location=\"uploadidimages.php?id=$id\"</script>";
 		    }else{
-
+		    	unlink($apath);
 				move_uploaded_file($_FILES['pic1']['tmp_name'], $target1);
-				unlink($apath);
+				
 				echo "<script> window.location=\"uploadidimages.php?id=$id\"</script>";
 		    }
 
@@ -965,13 +962,14 @@ function updateIdPhoto($id){
 		    imagecopyresampled( $dst, $src, 0, 0, 0, 0, $new_width, $new_height, $width, $height );
 		    
 		    imagepng( $dst, $pic20 );
+		    	unlink($bpath);
 		   		move_uploaded_file($_FILES['pic2']['tmp_name'], $target2);
-				unlink($bpath);
+				
 				echo "<script> window.location=\"uploadidimages.php?id=$id\"</script>";
 		    }else{
-
+		    	unlink($bpath);
 				move_uploaded_file($_FILES['pic2']['tmp_name'], $target2);
-				unlink($bpath);
+				
 				echo "<script> window.location=\"uploadidimages.php?id=$id\"</script>";
 		    }
 
