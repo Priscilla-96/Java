@@ -285,7 +285,7 @@ if(mysqli_num_rows($result)>=1){
 				   customer
 				   (cust_id, email, age, sex, religion, caste, district, state, country, maritalstatus, profilecreatedby, education, education_sub, firstname, lastname, body_type, physical_status, drink, mothertounge, colour, weight, height, diet, smoke,   dateofbirth, occupation, occupation_descr, annual_income, aboutme, contact, Identity_card_no, profilecreationdate) 
 				VALUES
-				   ('$id','$email', '$age', '$sex', '$religion', '$caste',  '$district', '$state', '$country', '$maritalstatus', '$profileby', '$education', '$edudescr', '$fname', '$lname', '$bodytype', '$physicalstatus', '$drink', '$mothertounge', '$colour', '$weight', '$height',  '$diet', '$smoke', '$dob', '$occupation', '$occupationdescr', '$income',  '$aboutme', $contactNo, $identityCardNo, CURDATE())
+				   ('$id','$email', '$age', '$sex', '$religion', '$caste',  '$district', '$state', '$country', '$maritalstatus', '$profileby', '$education', '$edudescr', '$fname', '$lname', '$bodytype', '$physicalstatus', '$drink', '$mothertounge', '$colour', '$weight', '$height',  '$diet', '$smoke', '$dob', '$occupation', '$occupationdescr', '$income',  '$aboutme', $contactNo, '$identityCardNo', CURDATE())
 			";
 	if (mysqli_query($conn,$sql)) {
 	  echo "<script> window.location=\"photouploader.php?id={$id}\"</script>";

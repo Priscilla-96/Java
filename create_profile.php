@@ -492,9 +492,10 @@ $(document).ready(function(){
 		      <label for="edit-name">Contact No <span class="form-required" title="This field is required."></span></label>
 			  <input type="text" id="edit-name" name="contactNo" value="" size="60" maxlength="500"  oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-text" required>
 		    </div>
-		    <div class="form-group col-sm-4">
+		   
+		   <div class="form-group col-sm-4">
 		    		<label for="edit-name">National Identity Card No <span class="form-required" title="This field is required."></span></label>
-			  		<input type="text" id="edit-name" name="identityCardNo" value="" size="60" maxlength="500" class="form-text" required>
+			  		<input type="text" id="edit-name" name="identityCardNo" value="" size="30" maxlength="500" class="form-text" required>
 		   </div>
 		    
 			</div>
