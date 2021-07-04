@@ -1,6 +1,5 @@
-# online-matrimonial-project-in-php
-visit my website 
-http://projectworlds.in/online-matrimonial-project-in-php/
+# online-matrimonial-project-
+
 
 Online Matrimonial Website is an online web portal that enables a user to find partners by choice.
 It is a free project on PHP in which a user needs to 
