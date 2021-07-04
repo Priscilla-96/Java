@@ -1,9 +1,4 @@
-<script type="text/javascript">
-  window.history.forward();
-  function noback(){
-     window.history.forward();
-  }
-</script>
+
 <?php include_once("includes/basic_includes.php");?>
 <?php include_once("functions.php"); ?>
 <?php require_once("includes/dbconn.php");?>
@@ -26,6 +21,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){ uploadphoto($id); }
 <title>Find Your Perfect Partner - KAPU Datings
  | Login :: Make My Love
 </title>
+<script type="text/javascript">
+  window.history.forward();
+  function noback(){
+     window.history.forward();
+  }
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -83,7 +84,7 @@ $(document).ready(function(){
      </ul>
    </div>
    <div class="services fadeInUp animated">
-   	  <div class="col-sm-8 login_left">
+   	  <div class="col-sm-7 login_left">
 	   <form action="" method="post" enctype="multipart/form-data">
   	    <div class="form-item form-type-textfield form-item-name">
 	      <label for="edit-name">Upload Bride ?Groom Images <p style="font-size: 13px">(Image Formats png, jpeg, jpg)</p> <span class="form-required" title="This field is required."></span></label><br><br>
@@ -186,15 +187,32 @@ $(document).ready(function(){
 	    </div>
 	   </form>
 	  </div>
-	  <div class="col-sm-4">
-	    <ul class="sharing">
-			<li><a href="#" class="facebook" title="Facebook"><i class="fa fa-boxed fa-fw fa-facebook"></i> Share on Facebook</a></li>
-		  	<li><a href="#" class="twitter" title="Twitter"><i class="fa fa-boxed fa-fw fa-twitter"></i> Tweet</a></li>
-		  	<li><a href="#" class="google" title="Google"><i class="fa fa-boxed fa-fw fa-google-plus"></i> Share on Google+</a></li>
-		  	<li><a href="#" class="linkedin" title="Linkedin"><i class="fa fa-boxed fa-fw fa-linkedin"></i> Share on LinkedIn</a></li>
-		  	<li><a href="#" class="mail" title="Email"><i class="fa fa-boxed fa-fw fa-envelope-o"></i> E-mail</a></li>
-		</ul>
+	  <div class="col-sm-5">
+      <img style="width: 100%" src="images/background/illutration.png">
+	    
 	  </div>
+    <div class="row">
+      <div style="text-align: center;" class="col-sm-12">
+        <ul class="sharing">
+      <br>
+        <div class="col-sm-3">
+          <li><a href="#" class="facebook" title="Facebook"><i class="fa fa-boxed fa-fw fa-facebook"></i>Find Kapu on Facebook</a></li>
+        </div>
+        <div class="col-sm-3">
+          <li><a href="#" class="twitter" title="Twitter"><i class="fa fa-boxed fa-fw fa-twitter"></i>Find Kapu on Twitter</a></li>
+        </div>
+        <div class="col-sm-3">
+          <li><a href="#" class="google" title="Google"><i class="fa fa-boxed fa-fw fa-google-plus"></i> Share on Google+</a></li>
+        </div>
+        <div class="col-sm-3">
+          <li><a href="#" class="linkedin" title="Linkedin"><i class="fa fa-boxed fa-fw fa-linkedin"></i> Share on LinkedIn</a></li>
+        </div>
+
+      
+    </ul>
+      </div>
+      
+    </div>
 	  <div class="clearfix"> </div>
    </div>
   </div>

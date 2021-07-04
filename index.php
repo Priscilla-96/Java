@@ -36,6 +36,12 @@ $(document).ready(function(){
     );
 });
 </script>
+<style> 
+	.cc{
+		background-image: url(images/background/right-shape.png);
+		width: 100%;
+	}
+</style>
 </head>
 <body>
 <!-- ============================  Navigation Start =========================== -->
@@ -61,226 +67,111 @@ $(document).ready(function(){
   </div>
  
 </div> 
+<br><br>
+	<!-- new code-->
+	<!-- stages -->
+	<div class="cc">
+		<div class="container">
+		<div style="text-align: center;" class="elementor-widget-container">
+				<h2 style="font-size: 50px;" class="elementor-heading-title elementor-size-default">Find your Special Someone</h2>
+				<h3 style="opacity: 70%;" class="elementor-heading-title elementor-size-default">Someone is there Somewhere who dreams of you!</h3><br><br>
+			</div>
+		<div class="row">
+			<div style="text-align: center;" class="col-sm-3">
+				<img style="width: 80%" src="images/background/icon2.png">
+				<div class="elementor-widget-container"><br>
+					<h3 style="opacity: 80%;" class="elementor-image-box-title">Signup</h3><br>
+				</div>
+			</div>
+			<div class="col-sm-1">
+				
+			</div>
+			<div style="text-align: center;" class="col-sm-3">
+				<img style="width: 80%;" src="images/background/illutration.png">
+				<div class="elementor-widget-container"><br>
+					<h3 style="opacity: 80%;" class="elementor-image-box-title">Search</h3><br>
+				</div>
+			</div>
+			<div class="col-sm-1">
+				
+			</div>
+			<div style="text-align: center;" class="col-sm-4">
+				<img style="width: 71%" src="images/background/aimg3.png">
+				<div class="elementor-widget-container"><br>
+					<h3 style="opacity: 80%;" class="elementor-image-box-title">Find Love</h3><br>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<br><br><hr style="width: 80%; "><br><br>
+	<!-- stages end -->
 
-<div class="grid_2  fadeInUp animated">
+	<!-- stage 2 start -->
+	<div class="cc">
 	<div class="container">
-		<h2>Success Stories</h2>
-       	<div class="heart-divider">
-			<span class="grey-line"></span>
-			<i class="fa fa-heart pink-heart"></i>
-			<i class="fa fa-heart grey-heart"></i>
-			<span class="grey-line"></span>
-        </div>
-        <div class="row_1">
-	     <div class="col-md-8 suceess_story">
-	         <ul> 
-			   <li>
-				  	<div class="suceess_story-date">
-						<span class="entry-1">Dec 20, 2015</span>
-					</div>
-					<div class="suceess_story-content-container">
-						<figure class="suceess_story-content-featured-image">
-						   <img width="75" height="75" src="images/7.jpg" class="img-responsive" alt=""/>				            
-					    </figure>
-						<div class="suceess_story-content-info">
-				        	<h4><a href="#">Lorem & Ipsum</a></h4>				        	
-				        	<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,.<a href="#">More...</a></p>
-				        </div>
-				    </div>
-				</li>
-	            <li>
-				  	<div class="suceess_story-date">
-						<span class="entry-1">Dec 20, 2015</span>
-					</div>
-					<div class="suceess_story-content-container">
-						<figure class="suceess_story-content-featured-image">
-						   <img width="75" height="75" src="images/8.jpg" class="img-responsive" alt=""/>				            
-					    </figure>
-						<div class="suceess_story-content-info">
-				        	<h4><a href="#">Lorem & Ipsum</a></h4>				        	
-				        	<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,.<a href="#">More...</a></p>
-				        </div>
-				    </div>
-				</li>
-	            <li>
-				  	<div class="suceess_story-date">
-						<span class="entry-1">Dec 20, 2015</span>
-					</div>
-					<div class="suceess_story-content-container">
-						<figure class="suceess_story-content-featured-image">
-						   <img width="75" height="75" src="images/9.jpg" class="img-responsive" alt=""/>				            
-					    </figure>
-						<div class="suceess_story-content-info">
-				        	<h4><a href="#">Lorem & Ipsum</a></h4>				        	
-				        	<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,.<a href="#">More...</a></p>
-				        </div>
-				    </div>
-				</li>
-	            <li>
-				  	<div class="suceess_story-date">
-						<span class="entry-1">Dec 20, 2015</span>
-					</div>
-					<div class="suceess_story-content-container">
-						<figure class="suceess_story-content-featured-image">
-						   <img width="75" height="75" src="images/10.jpg" class="img-responsive" alt=""/>				            
-					    </figure>
-						<div class="suceess_story-content-info">
-				        	<h4><a href="#">Lorem & Ipsum</a></h4>				        	
-				        	<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,.<a href="#">More...</a></p>
-				        </div>
-				    </div>
-				</li>
-	            <li>
-				  	<div class="suceess_story-date">
-						<span class="entry-1">Dec 20, 2015</span>
-					</div>
-					<div class="suceess_story-content-container">
-						<figure class="suceess_story-content-featured-image">
-						   <img width="75" height="75" src="images/11.jpg" class="img-responsive" alt=""/>				            
-					    </figure>
-						<div class="suceess_story-content-info">
-				        	<h4><a href="#">Lorem & Ipsum</a></h4>				        	
-				        	<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,.<a href="#">More...</a></p>
-				        </div>
-				    </div>
-				</li>
-	            <li>
-				  	<div class="suceess_story-date">
-						<span class="entry-1">Dec 20, 2015</span>
-					</div>
-					<div class="suceess_story-content-container">
-						<figure class="suceess_story-content-featured-image">
-						   <img width="75" height="75" src="images/12.jpg" class="img-responsive" alt=""/>				            
-					    </figure>
-						<div class="suceess_story-content-info">
-				        	<h4><a href="#">Lorem & Ipsum</a></h4>				        	
-				        	<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,.<a href="#">More...</a></p>
-				        </div>
-				    </div>
-				</li>
-	            <li>
-				  	<div class="suceess_story-date">
-						<span class="entry-1">Dec 20, 2015</span>
-					</div>
-					<div class="suceess_story-content-container">
-						<figure class="suceess_story-content-featured-image">
-						   <img width="75" height="75" src="images/13.jpg" class="img-responsive" alt=""/>				            
-					    </figure>
-						<div class="suceess_story-content-info">
-				        	<h4><a href="#">Lorem & Ipsum</a></h4>				        	
-				        	<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,.<a href="#">More...</a></p>
-				        </div>
-				    </div>
-				</li>
-	        </ul>
-	    </div>
-	    <div class="col-md-4 row_1-right">
-	      <h3>News & Events</h3>
-	        <div class="box_1">
-		      <figure class="thumbnail1"><img width="170" height="155" src="images/14.jpg" class="img-responsive" alt=""/></figure>
-			  <div class="extra-wrap">
-				<div class="post-meta">
-					<span class="day">
-					<time datetime="2014-05-25T10:15:43+00:00">25</time>
-					</span>
-					<span class="month">
-					<time datetime="2014-05-25T10:11:51+00:00">May</time>
-					</span>
+		<div class="row">
+			<div class="about">
+		   	  <div class="col-md-6 about_left  fadeInUp animated">
+		   	  	<img style="width: 100%" src="images/background/img.png" class="attachment-large size-large" alt="" loading="lazy" srcset="images/background/img.png 520w, https://slkapu.com/wp-content/uploads/2021/05/img-300x219.png 300w" class="img-responsive" alt=""/>
+
+		   	  </div>
+		   	  <div class="col-md-6 about_right  fadeInUp animated">
+		   	  	<div style="text-align: center;a" class="elementor-widget-container">
+						<h2 class="elementor-heading-title elementor-size-default">Start Flirting</h2><br>
 				</div>
-				<h4 class="post-title"><a href="#">There are many variations of passages</a></h4>
-				<div class="clearfix"> </div>
-				<div class="post-content">The standard chunk of Lorem Ipsum used since the 1500s..</div>
-				<a href="#" class="vertical">Read More</a>
-			  </div>
-	        </div>
-	        <div class="box_1">
-		      <figure class="thumbnail1"><img width="170" height="155" src="images/15.jpg" class="img-responsive" alt=""/></figure>
-			  <div class="extra-wrap">
-				<div class="post-meta">
-					<span class="day">
-					<time datetime="2014-05-25T10:15:43+00:00">25</time>
-					</span>
-					<span class="month">
-					<time datetime="2014-05-25T10:11:51+00:00">May</time>
-					</span>
+		   	  	<p class=" fadeInUp animated" style="font-size: 16px">
+					In our modern day and age dating apps have become an integral part of our lives. They allow you to check the profile of singles living near you, to chat with them, to meet them and maybe to fall in love. <br><br>
+					If you’re searching for a simple dating app with free features allowing to meet singles, you’re in good hands with kapu. With kapu you get all you need from a mobile dating app, which presents you thousands of users through your smartphone in a very pleasant experience.
+				</p>		   	  	
+		   	  </div>
+		   </div>
+		</div>
+	</div>
+	</div>
+	<br><br><hr style="width: 80%; "><br>
+	<!-- stage 2 end -->
+
+	<div class="container">
+		<div style="text-align: center;" class="elementor-widget-container">
+				<h2 style="font-size: 50px;" class="elementor-heading-title elementor-size-default">Why Choose Us?</h2><br>	
+			</div>
+		<div class="row">
+			<div style="text-align: center;" class="col-sm-4">
+				<img style="width: 50%" src="images/background/shield.png">
+				<div class="elementor-widget-container"><br>
+					<h3 class="elementor-image-box-title">Protection</h3><br>
+					<p class="elementor-image-box-description">Our safety is provided by leading anti-scam system in the industry</p><br>
 				</div>
-				<h4 class="post-title"><a href="#">There are many variations of passages</a></h4>
-				<div class="clearfix"> </div>
-				<div class="post-content">The standard chunk of Lorem Ipsum used since the 1500s..</div>
-				<a href="#" class="vertical">Read More</a>
-			  </div>
-	        </div>
-	        <div class="box_2">
-		      <figure class="thumbnail1"><img width="170" height="155" src="images/1.jpg" class="img-responsive" alt=""/></figure>
-			  <div class="extra-wrap">
-				<div class="post-meta">
-					<span class="day">
-					<time datetime="2014-05-25T10:15:43+00:00">25</time>
-					</span>
-					<span class="month">
-					<time datetime="2014-05-25T10:11:51+00:00">May</time>
-					</span>
+			</div>
+			<div style="text-align: center;" class="col-sm-4">
+				<img style="width: 50%" src="images/background/chat-1.png">
+				<div class="elementor-widget-container"><br>
+					<h3 class="elementor-image-box-title">Communication</h3><br>
+					<p class="elementor-image-box-description">Chat, send letters, call, share your photos and videos</p><br>
 				</div>
-				<h4 class="post-title"><a href="#">There are many variations of passages</a></h4>
-				<div class="clearfix"> </div>
-				<div class="post-content">The standard chunk of Lorem Ipsum used since the 1500s..</div>
-				<a href="#" class="vertical">Read More</a>
-			  </div>
-	        </div>
-	        <div class="religion">
-               <div class="religion_1-title">Religion :</div>
-			   <a href="#" target="_blank" class="religion_1" title="Hindu Matrimonial" style="padding-left:0px !important;">Hindu</a>
-			    <span>|</span><a href="#" target="_blank" class="religion_1" title="Muslim Matrimonial">Muslim</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Christian Matrimonial">Christian</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Sikh Matrimonial">Sinhala</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Inter Religion Matrimonial">Inter Religion</a>
-	        </div>
-	        <div class="religion">
-               <div class="religion_1-title">Country :</div>
-			   <a href="#" target="_blank" class="religion_1" title="Hindu Matrimonial" style="padding-left:0px !important;">Srilanka</a>
-			    <span>|</span><a href="#" target="_blank" class="religion_1" title="Muslim Matrimonial">Australia</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Christian Matrimonial">Russia</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Sikh Matrimonial">India</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Inter Religion Matrimonial">Kuwait</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Inter Religion Matrimonial">Uk</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Inter Religion Matrimonial">View All</a>
-	        </div>
-	        <div class="religion">
-               <div class="religion_1-title">Caste :</div>
-			   <a href="#" target="_blank" class="religion_1" title="Hindu Matrimonial" style="padding-left:0px !important;">Brahmin</a>
-			    <span>|</span><a href="#" target="_blank" class="religion_1" title="Muslim Matrimonial">Kapu</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Christian Matrimonial">Kamma</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Sikh Matrimonial">Padmasali</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Inter Religion Matrimonial">Reddy</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Inter Religion Matrimonial">View All</a>
-	        </div>
-	        <div class="religion">
-               <div class="religion_1-title">Regional :</div>
-			   <a href="#" target="_blank" class="religion_1" title="Hindu Matrimonial" style="padding-left:0px !important;">Urdu</a>
-			    <span>|</span><a href="#" target="_blank" class="religion_1" title="Muslim Matrimonial">Hindi</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Christian Matrimonial">Musim</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Sikh Matrimonial">Sinhalese</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Inter Religion Matrimonial">Tamil</a>
-			 	<span>|</span><a href="#" target="_blank" class="religion_1" title="Inter Religion Matrimonial">View All</a>
-	        </div>
-	     </div>
-	     <div class="clearfix"> </div>
-	   </div> 
-	  </div>
-    </div>
+			</div>
+			<div style="text-align: center;" class="col-sm-4">
+				<img style="width: 50%" src="images/background/check-1.png">
+				<div class="elementor-widget-container"><br>
+					<h3 class="elementor-image-box-title">Verification</h3><br>
+					<p class="elementor-image-box-description">All members are personally confirmed by our staff to prove they are real</p><br>
+				</div>
+			</div>
+		</div>
+	</div><br>
+		
+	<!-- new code end-->
+
+	<!-- guest message-->
     <div class="bg">
 		<div class="container"> 
 			<h3>Guest Messages</h3>
-			<div class="heart-divider">
-				<span class="grey-line"></span>
-				<i class="fa fa-heart pink-heart"></i>
-				<i class="fa fa-heart grey-heart"></i>
-				<span class="grey-line"></span>
-            </div>
+			
             <div class="col-sm-6">
             	<div class="bg_left">
-            		<h4>But I must explain</h4>
-            		<h5>Friend of Bride</h5>
+            		<h4>Guest Message 1</h4>
+            		<h5>Guest 1 Name</h5>
             		<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             	   <ul class="team-socials">
                     <li><a href="#"><span class="icon-social "><i class="fa fa-facebook"></i></span></a></li>
@@ -291,8 +182,8 @@ $(document).ready(function(){
             </div>
             <div class="col-sm-6">
             	<div class="bg_left">
-            		<h4>But I must explain</h4>
-            		<h5>Friend of Groom</h5>
+            		<h4>Guest Message 2</h4>
+            		<h5>Guest 2 Name</h5>
             		<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             	   <ul class="team-socials">
                     <li><a href="#"><span class="icon-social "><i class="fa fa-facebook"></i></span></a></li>
@@ -304,5 +195,6 @@ $(document).ready(function(){
             <div class="clearfix"> </div>
 		</div>
 	</div>
+	<!-- guest message end-->
 	
     <?php include_once 'footer.php'; ?>

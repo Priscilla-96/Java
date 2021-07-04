@@ -44,12 +44,19 @@ $(document).ready(function(){
     );
 });
 </script>
+<style> 
+  .cc{
+    background-image: url(images/background/right-shape.png);
+    width: 100%;
+  }
+</style>
 </head>
 <body>
 <!-- ============================  Navigation Start =========================== -->
  <?php include_once("includes/navigation.php");?>
 <!-- ============================  Navigation End ============================ -->
-<div class="grid_3">
+  <div class="cc">
+  <div class="grid_3">
   <div class="container  fadeInUp animated">
    <div class="breadcrumb1">
      <ul>
@@ -58,31 +65,44 @@ $(document).ready(function(){
         <li class="current-page">Contact</li>
      </ul>
    </div>
+
    <div class="grid_5  fadeInUp animated">
-      <p>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient. montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit.</p>
-      <address class="addr row">
-        <dl class="grid_4">
-            <dt>Address :</dt>
-            <dd>
-                8901 Nulla Pariatur, <br>
-                Ipsum, D05 87GR.
-            </dd>
-        </dl>
-        <dl class="grid_4">
-            <dt>Telephones :</dt>
-            <dd>
-                +0774200428 <br>
-                011245368
-            </dd>
-        </dl>
-        <dl class="grid_4">
-            <dt>E-mail :</dt>
-            <dd><a href="malito:mail@demolink.org">info@matkapu.com</a></dd>
-        </dl>
-      </address>
+
+    <!-- new code -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="elementor-widget-container">
+            <h1 class="elementor-heading-title elementor-size-default">Contact Us</h1> 
+                <p style="font-size: 18px">We are here to build emotion, connect people and create happy stories. Online dating sites are the way to go for people seeking love or to meet singles while they don’t know where to find them. There are lots of online dating sites available which makes it .</p><br><br>
+                <div class="row">
+                  <div class="col-md-5">Address</div>
+                  <div class="col-md-7">8901 Nulla Pariatur, <br>Ipsum, D05 87GR.</div>
+                </div><br>
+                <div class="row">
+                  <div class="col-md-5">Telephones :</div>
+                  <div class="col-md-7">+0774200428 <br>011245368</div>
+                </div><br>
+                <div class="row">
+                  <div class="col-md-5">E-mail :</div>
+                  <div class="col-md-7">info@matkapu.com</div>
+                </div><br>
+                
+              
+        </div>
+          </div>
+          <div class="col-md-6">
+            <img style="width: 100%" src="images/background/about-page-left.html.png" class="attachment-large size-large" alt="" loading="lazy" srcset="images/background/about-page-left.html.png 520w, https://slkapu.com/wp-content/uploads/2021/05/about-page-left.html-300x219.png 300w" class="img-responsive" alt=""/>
+          </div>
+        </div>
+      </div>
+    <!-- new code end -->
+      
+      
     </div>
    </div>
-</div>
+</div></div>
 <div class="about_middle">
   <div class="container">
 	 <h2>Contact Form</h2>

@@ -109,16 +109,29 @@ $(document).ready(function(){
 			  <div class="form-actions">
 			    <input type="submit" id="edit-submit" name="op" value="Submit" class="btn_1 submit">
 			  </div>
-		 </form>
+		 </form><br>
+		  <ul class="sharing">
+		      <br>
+		      <div class="row">
+		        <div class="col-sm-6">
+		          <li><a href="#" class="facebook" title="Facebook"><i class="fa fa-boxed fa-fw fa-facebook"></i>Find Kapu on Facebook</a></li>
+		        </div>
+		        <div class="col-sm-6">
+		          <li><a href="#" class="twitter" title="Twitter"><i class="fa fa-boxed fa-fw fa-twitter"></i>Find Kapu on Twitter</a></li>
+		        </div>
+		      </div>
+		      <div class="row">
+		        <div class="col-sm-6">
+		          <li><a href="#" class="google" title="Google"><i class="fa fa-boxed fa-fw fa-google-plus"></i> Share on Google+</a></li>
+		        </div>
+		        <div class="col-sm-6">
+		          <li><a href="#" class="linkedin" title="Linkedin"><i class="fa fa-boxed fa-fw fa-linkedin"></i> Share on LinkedIn</a></li>
+		        </div>
+		      </div>
+		    </ul>
 	  </div>
-	  <div class="col-sm-6">
-	     <ul class="sharing">
-			<li><a href="#" class="facebook" title="Facebook"><i class="fa fa-boxed fa-fw fa-facebook"></i> Share on Facebook</a></li>
-		  	<li><a href="#" class="twitter" title="Twitter"><i class="fa fa-boxed fa-fw fa-twitter"></i> Tweet</a></li>
-		  	<li><a href="#" class="google" title="Google"><i class="fa fa-boxed fa-fw fa-google-plus"></i> Share on Google+</a></li>
-		  	<li><a href="#" class="linkedin" title="Linkedin"><i class="fa fa-boxed fa-fw fa-linkedin"></i> Share on LinkedIn</a></li>
-		  	<li><a href="#" class="mail" title="Email"><i class="fa fa-boxed fa-fw fa-envelope-o"></i> E-mail</a></li>
-		 </ul>
+	  <div style="text-align: center;" class="col-sm-6">
+	     <img style="width: 90%" src="images/background/aimg3.png">
 	  </div>
 	  <div class="clearfix"> </div>
    </div>

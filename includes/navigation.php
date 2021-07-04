@@ -101,7 +101,7 @@
 		            <li><a href="index.php">Home</a></li>
 		            <li><a href="about.php">About</a></li>
 		            <li><a href="search.php">Search</a></li>
-		            <li><a href="faq.php">Faq</a></li>
+		            <!--<li><a href="faq.php">Faq</a></li>-->
 		            
 
 		           
@@ -116,7 +116,7 @@
 		                
 		              </ul>
 		            </li>-->
-		            <li class="last"><a href="contact.php">Contacts</a></li>
+		            <li class="last"><a href="contact.php">Contact</a></li>
 
 		            <li>
 		        		<?php 

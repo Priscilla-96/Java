@@ -91,13 +91,18 @@ $(document).ready(function(){
     });
     
 </script>
-
+<style> 
+  .cc{
+    background-image: url(images/background/right-shape.png);
+    width: 100%;
+  }
+</style>
 </head>
 <body>
 <!-- ============================  Navigation Start =========================== -->
  <?php include_once("includes/navigation.php");?>
 <!-- ============================  Navigation End ============================ -->
-<div class="grid_3">
+<div class="grid_3 cc">
   <div class="container">
    <div class="breadcrumb1">
      <ul>
@@ -132,7 +137,7 @@ while ($row = mysqli_fetch_assoc($result))
     $pic=$photo['pic1'];
 
     // printing profile details
-    echo "<div class=\"col-sm-4\">";
+    echo "<div style='background-color: white;border-radius: 50px;' class=\"col-sm-4\">";
         echo "<ul class=\"profile_item\">";
              echo "<li class=\"profile_item-img\"><img src=\"profile/". $profid."/".$pic ."\"" . "class=\"img-responsive\"" ;
                 echo "alt=\"\"/></li>";

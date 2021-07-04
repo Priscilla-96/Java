@@ -48,12 +48,18 @@ $(document).ready(function(){
     );
 });
 </script>
+<style> 
+  .cc{
+    background-image: url(images/background/right-shape.png);
+    width: 100%;
+  }
+</style>
 </head>
 <body>
 <!-- ============================  Navigation Start =========================== -->
  <?php include_once("includes/navigation.php");?>
 <!-- ============================  Navigation End ============================ -->
-<div class="grid_3">
+<div class="grid_3 cc">
   <div class="container fadeInUp animated">
    <div class="breadcrumb1 ">
      <ul>
@@ -70,8 +76,12 @@ $(document).ready(function(){
       });
     });
    </script>-->
-<div class="col-md-9 search_left fadeInUp animated">
-  <form action="priceoptions.php" method="post">	
+<div class="col-md-7 search_left fadeInUp animated">
+  <form action="priceoptions.php" method="post">
+  <div class="elementor-widget-container">
+        <h3 style="font-size: 40px;opacity: 70%;" class="elementor-heading-title elementor-size-default">Find your Special Someone</h3>
+        <br>
+      </div>	
    <div class="form_but1 fadeInUp animated">
 	<label class="col-sm-5 control-lable1" for="sex">Groom or Bride : </label>
 	<div class="col-sm-7 form_radios fadeInUp animated">
@@ -192,7 +202,7 @@ $(document).ready(function(){
       <div class="clearfix"> </div>
 	</div>
 	<div class="clearfix"> </div>
-  <input style="width: 60%;min-width: 280px;" type="submit" class="btn btn-primary" name="search" value="Search"/>
+  <input style="width: 80%;min-width: 280px;" type="submit" class="btn btn-primary" name="search" value="Search"/>
   </div>
  </form>
  <div class="paid_people">
@@ -265,8 +275,8 @@ while ($row = mysqli_fetch_assoc($result))
   </div>
 </div>
 <!-- Match Right Starts -->
-<div class="col-md-3 match_right">
-  <?php include_once("matchright.php");?>
+<div class="col-md-5">
+  <img style="width: 100%" src="images/background/illutration.png" class="attachment-large size-large" alt="" loading="lazy" srcset="images/background/illutration.png 520w, https://slkapu.com/wp-content/uploads/2021/05/illutration-300x219.png 300w" class="img-responsive" alt=""/>
 </div>
 <!-- Match Right ends -->
      <div class="clearfix"> </div>
