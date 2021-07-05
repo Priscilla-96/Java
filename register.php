@@ -1,10 +1,7 @@
-
-
 <?php
-
 	if (!isset($_GET['mes'])) {
 	    $message=null;
-	  }else{
+	}else{
       $signupCheck = $_GET['mes'];
       if ($signupCheck == "exist") {
         $message='Username Already Exist!';
@@ -12,12 +9,10 @@
       else{
         $message=null;
       }
-}
-	
+	}
 ?>
 
 <?php include_once("includes/basic_includes.php");?>
-
 <?php include_once("functions.php"); ?>
 <?php register(); ?>
 <!DOCTYPE HTML>
@@ -63,20 +58,27 @@ $(document).ready(function(){
     );
 });
 </script>
+<style> 
+  .cc{
+    background-image: url(images/background/right-shape.png);
+    width: 100%;
+  }
+</style>
 </head>
 <body>
-<!-- ============================  Navigation Start =========================== -->
+<!-- Navigation Start -->
 <?php include_once("includes/navigation.php");?>
-<!-- ============================  Navigation End ============================ -->
-<div class="grid_3">
-  <div class="container  fadeInUp animated">
-   <div class="breadcrumb1">
-     <ul>
-        <a href="index.php"><i class="fa fa-home home_1"></i></a>
-        <span class="divider">&nbsp;|&nbsp;</span>
-        <li class="current-page">Register</li>
-     </ul>
-   </div>
+<!-- Navigation End-->
+
+<div class="grid_3 cc">
+   <div class="container  fadeInUp animated">
+	    <div class="breadcrumb1">
+	     <ul>
+	        <a href="index.php"><i class="fa fa-home home_1"></i></a>
+	        <span class="divider">&nbsp;|&nbsp;</span>
+	        <li class="current-page">Register</li>
+	     </ul>
+	    </div>
    <div class="services  fadeInUp animated">
    	  <div class="col-sm-6 login_left">
 	     <form action="" method="POST">

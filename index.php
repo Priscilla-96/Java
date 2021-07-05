@@ -3,8 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Find Your Perfect Partner - KAPU | Home :: 
-</title>
+<title>Find Your Perfect Partner - KAPU | Home </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -22,54 +21,48 @@
 <!--font-Awesome-->
 <link href="css/font-awesome.css" rel="stylesheet"> 
 <!--font-Awesome-->
-<script>
-$(document).ready(function(){
-    $(".dropdown").hover(            
-        function() {
-            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
-            $(this).toggleClass('open');        
-        },
-        function() {
-            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
-            $(this).toggleClass('open');       
-        }
-    );
-});
-</script>
-<style> 
-	.cc{
-		background-image: url(images/background/right-shape.png);
-		width: 100%;
-	}
-</style>
+	<script>
+	$(document).ready(function(){
+	    $(".dropdown").hover(            
+	        function() {
+	            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+	            $(this).toggleClass('open');        
+	        },
+	        function() {
+	            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+	            $(this).toggleClass('open');       
+	        }
+	    );
+	});
+	</script>
+	<!-- background image style -->
+	<style> 
+		.cc{
+			background-image: url(images/background/right-shape.png);
+			width: 100%;
+		}
+	</style>
 </head>
+
 <body>
-<!-- ============================  Navigation Start =========================== -->
+<!-- Navigation Start -->
  <?php include_once("includes/navigation.php");?>
-<!-- ============================  Navigation End ============================ -->
+<!-- Navigation End -->
+
 <div class="banner fadeInUp animated">
   <div class="container">
     <div class="banner_info fadeInUp animated">
       <h3>Welcome to Kapu Datings</h3>
-
+      	<!-- Home page banner button -->
       		<?php 
-				if(isloggedin()){
-					$id=$_SESSION['id'];
-					//echo "<a href=\"userhome.php?id=$id\">Profile</a>";
-				}
-				else{
-					//echo "<a  style='background-color: green' href=\"login.php\">Login</a>";
-					echo "<a href='register.php' class='hvr-shutter-out-horizontal'>Create your Profile</a>";
-				}
+				if(isloggedin()){ $id=$_SESSION['id']; }
+				else{echo "<a href='register.php' class='hvr-shutter-out-horizontal'>Create your Profile</a>";}
 			?>
-
     </div>
-  </div>
- 
-</div> 
-<br><br>
-	<!-- new code-->
-	<!-- stages -->
+  </div> 
+</div> <br><br>
+
+	<!-- stage 1 start -->
 	<div class="cc">
 		<div class="container">
 		<div style="text-align: center;" class="elementor-widget-container">
@@ -105,7 +98,7 @@ $(document).ready(function(){
 		</div>
 	</div>
 	<br><br><hr style="width: 80%; "><br><br>
-	<!-- stages end -->
+	<!-- stage 1 end -->
 
 	<!-- stage 2 start -->
 	<div class="cc">
@@ -132,6 +125,7 @@ $(document).ready(function(){
 	<br><br><hr style="width: 80%; "><br>
 	<!-- stage 2 end -->
 
+	<!-- stage 3 start -->
 	<div class="container">
 		<div style="text-align: center;" class="elementor-widget-container">
 				<h2 style="font-size: 50px;" class="elementor-heading-title elementor-size-default">Why Choose Us?</h2><br>	
@@ -160,24 +154,22 @@ $(document).ready(function(){
 			</div>
 		</div>
 	</div><br>
-		
-	<!-- new code end-->
+	<!-- stage 3 end -->
 
 	<!-- guest message-->
     <div class="bg">
 		<div class="container"> 
 			<h3>Guest Messages</h3>
-			
             <div class="col-sm-6">
             	<div class="bg_left">
             		<h4>Guest Message 1</h4>
             		<h5>Guest 1 Name</h5>
             		<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            	   <ul class="team-socials">
-                    <li><a href="#"><span class="icon-social "><i class="fa fa-facebook"></i></span></a></li>
-                    <li><a href="#"><span class="icon-social "><i class="fa fa-twitter"></i></span></a></li>
-                    <li><a href="#"><span class="icon-social"><i class="fa fa-google-plus"></i></span></a></li>
-                   </ul>
+            	    <ul class="team-socials">
+	                    <li><a href="#"><span class="icon-social "><i class="fa fa-facebook"></i></span></a></li>
+	                    <li><a href="#"><span class="icon-social "><i class="fa fa-twitter"></i></span></a></li>
+	                    <li><a href="#"><span class="icon-social"><i class="fa fa-google-plus"></i></span></a></li>
+                    </ul>
             	</div>
             </div>
             <div class="col-sm-6">
@@ -185,16 +177,18 @@ $(document).ready(function(){
             		<h4>Guest Message 2</h4>
             		<h5>Guest 2 Name</h5>
             		<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            	   <ul class="team-socials">
-                    <li><a href="#"><span class="icon-social "><i class="fa fa-facebook"></i></span></a></li>
-                    <li><a href="#"><span class="icon-social "><i class="fa fa-twitter"></i></span></a></li>
-                    <li><a href="#"><span class="icon-social"><i class="fa fa-google-plus"></i></span></a></li>
-                   </ul>
+            	    <ul class="team-socials">
+	                    <li><a href="#"><span class="icon-social "><i class="fa fa-facebook"></i></span></a></li>
+	                    <li><a href="#"><span class="icon-social "><i class="fa fa-twitter"></i></span></a></li>
+	                    <li><a href="#"><span class="icon-social"><i class="fa fa-google-plus"></i></span></a></li>
+                    </ul>
             	</div>
             </div>
+
+            <!-- space at the bottom -->
             <div class="clearfix"> </div>
 		</div>
 	</div>
 	<!-- guest message end-->
 	
-    <?php include_once 'footer.php'; ?>
+<?php include_once 'footer.php'; ?>

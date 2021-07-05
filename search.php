@@ -34,255 +34,239 @@ $result=search();
 <!--font-Awesome-->
 <link href="css/font-awesome.css" rel="stylesheet"> 
 <!--font-Awesome-->
-<script>
-$(document).ready(function(){
-    $(".dropdown").hover(            
-        function() {
-            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
-            $(this).toggleClass('open');        
-        },
-        function() {
-            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
-            $(this).toggleClass('open');       
-        }
-    );
-});
-</script>
-<style> 
-  .cc{
-    background-image: url(images/background/right-shape.png);
-    width: 100%;
-  }
-</style>
+  <script>
+  $(document).ready(function(){
+      $(".dropdown").hover(            
+          function() {
+              $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+              $(this).toggleClass('open');        
+          },
+          function() {
+              $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+              $(this).toggleClass('open');       
+          }
+      );
+  });
+  </script>
+   <!-- background image style -->
+   <style> 
+    .cc{
+      background-image: url(images/background/right-shape.png);
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-<!-- ============================  Navigation Start =========================== -->
+<!--  Navigation Start -->
  <?php include_once("includes/navigation.php");?>
-<!-- ============================  Navigation End ============================ -->
+<!--  Navigation End -->
+
+<!-- main area start -->
 <div class="grid_3 cc">
   <div class="container fadeInUp animated">
-   <div class="breadcrumb1 ">
-     <ul>
+    <div class="breadcrumb1 ">
+      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
         <li class="current-page">Find Your Match</li>
-     </ul>
-   </div>
-   <!--<script type="text/javascript">
-    $(function () {
-     $('#btnRadio').click(function () {
-          var checkedradio = $('[name="gr"]:radio:checked').val();
-          $("#sel").php("Selected Value: " + checkedradio);
-      });
-    });
-   </script>-->
-<div class="col-md-7 search_left fadeInUp animated">
-  <form action="priceoptions.php" method="post">
-  <div class="elementor-widget-container">
-        <h3 style="font-size: 40px;opacity: 70%;" class="elementor-heading-title elementor-size-default">Find your Special Someone</h3>
-        <br>
-      </div>	
-   <div class="form_but1 fadeInUp animated">
-	<label class="col-sm-5 control-lable1" for="sex">Groom or Bride : </label>
-	<div class="col-sm-7 form_radios fadeInUp animated">
-		<input type="radio" class="radio_1" name="sex" value="male" <?php echo "checked";?>/> Groom &nbsp;&nbsp;
-		<input type="radio" class="radio_1" name="sex" value="female"/> Bride
-		
-		<!--<hr />
-		<p id="sel"></p><br />
-		<input id="btnRadio" type="button" value="Get Selected Value" />-->
-	</div>
-	<div class="clearfix"> </div>
-  </div>
-  <div class="form_but1 fadeInUp animated">
-	<label class="col-sm-5 control-lable1" for="Marital Status">Marital Status : </label>
-	<div class="col-sm-7 form_radios fadeInUp animated">
-		<input type="radio" class="radio_1" name="maritalstatus" value="Single" <?php echo "checked" ?>/> Single &nbsp;&nbsp;
-		<input type="radio" class="radio_1" name="maritalstatus" value="Divorced" /> Divorced &nbsp;&nbsp;
-		<input type="radio" class="radio_1" name="maritalstatus" value="Married" /> Married &nbsp;&nbsp;
-		<input type="radio" class="radio_1" name="maritalstatus" value="Not Defined"/> Any
-		
-	</div>
-	<div class="clearfix"> </div>
-  </div>
-  <?php /*?>
-  <div class="form_but1">
-    <label class="col-sm-5 control-lable1" for="country">Country : </label>
-    <div class="col-sm-7 form_radios">
-      <div class="select-block1">
-        <select name="country">
-            <option value="">Country</option>
-            <option value="Srilanka">Srilanka</option> 
-            <option value="India">India</option> 
-            <option value="Australia">Australia</option> 
-            <option value="UAE">UAE</option> 
-            
-          </select>
-      </div>
+      </ul>
     </div>
-    <div class="clearfix"> </div>
-  </div>
-  <div class="form_but1">
-    <label class="col-sm-5 control-lable1" for="District / City">District / City : </label>
-    <div class="col-sm-7 form_radios">
-      <div class="select-block1">
-        <select name="district">
-            <option value="">District / City</option>
-            <option value="Wayanad">kalutara</option>
-            <option value="Calicut">Colombo</option>
-            <option value="Malappuram">Galle</option> 
-            <option value="Trivandrum">Jaffna</option> 
-            <option value="Kannur">Kandy</option> 
-            <option value="Kasargode">Kurunagale</option>
-        </select>
-      </div>
-    </div>
-    <div class="clearfix"> </div>
-  </div>
-  <div class="form_but1">
-    <label class="col-sm-5 control-lable1" for="State">State : </label>
-    <div class="col-sm-7 form_radios">
-      <div class="select-block1">
-        <select name="state">
-            <option value="">State</option>
-            <option value="Sothern">Southern</option>
-            <option value="Western">Western</option>
-            <option value="Nothern">Nothern</option>
-            <option value="Eastern">Eastern</option>
-        </select>
-      </div>
-    </div>
-    <div class="clearfix"> </div>
-  </div>
-  <div class="form_but1">
-    <label class="col-sm-5 control-lable1" for="Religion">Religion : </label>
-    <div class="col-sm-7 form_radios">
-      <div class="select-block1">
-        <select name="religion">
-            <option value="">Religion</option>
-            <option value="Hindu">Hindu</option>
-            <option value="sinhala">Sinhala</option>
-            <option value="Muslim-All">Muslim-All</option> 
-            <option value="Muslim-Shia">Muslim-Shia</option> 
-            <option value="Muslim-Sunni">Muslim-Sunni</option> 
-            <option value="Muslim-Others">Muslim-Others</option> 
-            <option value="Christian-All">Christian-All</option> 
-            <option value="Christian-Catholic">Christian-Catholic</option> 
-            <option value="Jewish">Jewish</option> 
-            <option value="Inter-Religion">Inter-Religion</option> 
-        </select>
-      </div>
-    </div>
-    <div class="clearfix"> </div>
-  </div><?php */?>
-  <div class="form_but1 fadeInUp animated">
-    <label class="col-sm-5 control-lable1" for="Mother Tongue">Mother Tongue : </label>
-    <div class="col-sm-5 form_radios">
-      <div class="select-block1 fadeInUp animated">
-        <select name="mothertounge">
-            <option value="Sinhala">Sinhala</option>
-            <option value="English">English</option>
-            <option value="Tamil">Tamil</option>
-            <option value="Hindi">Hindi</option>
-        </select>
-      </div>
-    </div>
-    <div class="clearfix"> </div>
-  </div>
-  <div class="form_but1 fadeInUp animated">
-	<label class="col-sm-5 control-lable1" for="Age">Age : </label>
-	<div class="col-sm-5 form_radios ">
-	  <div class="col-sm-5 input-group1">
-        <input class="form-control has-dark-background" name="agemin" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="slider-name" maxlength="2" placeholder="18" type="text" required=""/>
-      </div>
-      
-      <div class="col-sm-5 input-group1">
-        <input class="form-control has-dark-background" name="agemax" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="2" id="slider-name" placeholder="50" type="text" required=""/><br><br>
-      </div>
-      <div class="clearfix"> </div>
-	</div>
-	<div class="clearfix"> </div>
-  <input style="width: 80%;min-width: 280px;" type="submit" class="btn btn-primary" name="search" value="Search"/>
-  </div>
- </form>
- <div class="paid_people">
-
-<?php
-//only start display profiles if and only if search is triggered
-if(isset($_POST['search'])){
-
-//code to print matching profiles
-
-// couloumn count
-
-$c_count = '1';
-
-while ($row = mysqli_fetch_assoc($result))
-  {
-    
-    $profid=$row['cust_id'];
-    //getting photo for display
-    $sql="SELECT * FROM photos WHERE cust_id=$profid";
-    $result2=mysqlexec($sql);
-    $photo=mysqli_fetch_assoc($result2);
-    $pic=$photo['pic1'];
-  // printing left side profile
-  echo "<div class=\"row_1\">"; //starting row  
-  if ($c_count == '1')
-    {
-    
-    echo "<div class=\"col-sm-6 paid_people-left\">"; //left statrted
-    echo "<ul class=\"profile_item\">";
-    echo "<a href=\"view_profile.php?id=$profid\">";
-    echo "<li class=\"profile_item-img\"><img src=\"profile/". $profid."/".$pic ."\"" . "class=\"img-responsive\" alt=\"\"/></li>";
-    echo "<li class=\"profile_item-desc\">";
-    echo "<h4>" . $row['firstname'] . " " . $row['lastname'] . "</h4>";
-    echo "<p>" . $row['age']. "Yrs," . $row['religion'] . "</p>";
-    echo "<h5>" . "View Full Profile" . "</h5>";
-    echo "</li>";
-    echo "</a>";
-    echo "</ul>";
-    echo "</div>"; //left end
-    $c_count++;
-    }
-    else
-    {
-    echo "<div class=\"col-sm-6\">"; //right statrted
-    echo "<ul class=\"profile_item\">";
-    echo "<a href=\"view_profile.php?id=$profid\">";
-    echo "<li class=\"profile_item-img\"><img src=\"profile/". $profid."/".$pic ."\"" . "class=\"img-responsive\"" ;
-    echo "alt=\"\"/></li>";
-    echo "<li class=\"profile_item-desc\">";
-    echo "<h4>" . $row['firstname'] . " " . $row['lastname'] . "</h4>";
-    echo "<p>" . $row['age']. "Yrs," . $row['religion'] . "</p>";
-    echo "<h5>" . "View Full Profile" . "</h5>";
-    echo "</li>";
-    echo "</a>";
-    echo "</ul>";
-    echo "</div class=\"test\">"; //right end
-
-    // end of right side
-
-    
-    $c_count = '1';
-    }
-    echo "</div>"; //row end
-  } //loop end
-  
-}//end of if
-?>
    
-  </div>
-</div>
-<!-- Match Right Starts -->
-<div class="col-md-5">
-  <img style="width: 100%" src="images/background/illutration.png" class="attachment-large size-large" alt="" loading="lazy" srcset="images/background/illutration.png 520w, https://slkapu.com/wp-content/uploads/2021/05/illutration-300x219.png 300w" class="img-responsive" alt=""/>
-</div>
-<!-- Match Right ends -->
-     <div class="clearfix"> </div>
-  </div>
-</div>
+    <div class="col-md-7 search_left fadeInUp animated">
+      <form action="priceoptions.php" method="post">
+      <div class="elementor-widget-container">
+            <h3 style="font-size: 40px;opacity: 70%;" class="elementor-heading-title elementor-size-default">Find your Special Someone</h3>
+            <br>
+          </div>	
+       <div class="form_but1 fadeInUp animated">
+    	<label class="col-sm-5 control-lable1" for="sex">Groom or Bride : </label>
+      	<div class="col-sm-7 form_radios fadeInUp animated">
+      		<input type="radio" class="radio_1" name="sex" value="male" <?php echo "checked";?>/> Groom &nbsp;&nbsp;
+      		<input type="radio" class="radio_1" name="sex" value="female"/> Bride
+      	</div>
+      	<div class="clearfix"> </div>
+      </div>
+        <div class="form_but1 fadeInUp animated">
+      	<label class="col-sm-5 control-lable1" for="Marital Status">Marital Status : </label>
+        	<div class="col-sm-7 form_radios fadeInUp animated">
+        		<input type="radio" class="radio_1" name="maritalstatus" value="Single" <?php echo "checked" ?>/> Single &nbsp;&nbsp;
+        		<input type="radio" class="radio_1" name="maritalstatus" value="Divorced" /> Divorced &nbsp;&nbsp;
+        		<input type="radio" class="radio_1" name="maritalstatus" value="Married" /> Married &nbsp;&nbsp;
+        		<input type="radio" class="radio_1" name="maritalstatus" value="Not Defined"/> Any
+        	</div>
+      	 <div class="clearfix"> </div>
+        </div>
+      <?php /*?>
+      <div class="form_but1">
+        <label class="col-sm-5 control-lable1" for="country">Country : </label>
+        <div class="col-sm-7 form_radios">
+          <div class="select-block1">
+            <select name="country">
+                <option value="">Country</option>
+                <option value="Srilanka">Srilanka</option> 
+                <option value="India">India</option> 
+                <option value="Australia">Australia</option> 
+                <option value="UAE">UAE</option> 
+                
+              </select>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="form_but1">
+        <label class="col-sm-5 control-lable1" for="District / City">District / City : </label>
+        <div class="col-sm-7 form_radios">
+          <div class="select-block1">
+            <select name="district">
+                <option value="">District / City</option>
+                <option value="Wayanad">kalutara</option>
+                <option value="Calicut">Colombo</option>
+                <option value="Malappuram">Galle</option> 
+                <option value="Trivandrum">Jaffna</option> 
+                <option value="Kannur">Kandy</option> 
+                <option value="Kasargode">Kurunagale</option>
+            </select>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="form_but1">
+        <label class="col-sm-5 control-lable1" for="State">State : </label>
+        <div class="col-sm-7 form_radios">
+          <div class="select-block1">
+            <select name="state">
+                <option value="">State</option>
+                <option value="Sothern">Southern</option>
+                <option value="Western">Western</option>
+                <option value="Nothern">Nothern</option>
+                <option value="Eastern">Eastern</option>
+            </select>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="form_but1">
+        <label class="col-sm-5 control-lable1" for="Religion">Religion : </label>
+        <div class="col-sm-7 form_radios">
+          <div class="select-block1">
+            <select name="religion">
+                <option value="">Religion</option>
+                <option value="Hindu">Hindu</option>
+                <option value="sinhala">Sinhala</option>
+                <option value="Muslim-All">Muslim-All</option> 
+                <option value="Muslim-Shia">Muslim-Shia</option> 
+                <option value="Muslim-Sunni">Muslim-Sunni</option> 
+                <option value="Muslim-Others">Muslim-Others</option> 
+                <option value="Christian-All">Christian-All</option> 
+                <option value="Christian-Catholic">Christian-Catholic</option> 
+                <option value="Jewish">Jewish</option> 
+                <option value="Inter-Religion">Inter-Religion</option> 
+            </select>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div><?php */?>
+        <div class="form_but1 fadeInUp animated">
+          <label class="col-sm-5 control-lable1" for="Mother Tongue">Mother Tongue : </label>
+          <div class="col-sm-5 form_radios">
+            <div class="select-block1 fadeInUp animated">
+              <select name="mothertounge">
+                <option value="Sinhala">Sinhala</option>
+                <option value="English">English</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Hindi">Hindi</option>
+              </select>
+            </div>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="form_but1 fadeInUp animated">
+      	<label class="col-sm-5 control-lable1" for="Age">Age : </label>
+        	<div class="col-sm-5 form_radios ">
+        	  <div class="col-sm-5 input-group1">
+              <input class="form-control has-dark-background" name="agemin" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="slider-name" maxlength="2" placeholder="18" type="text" required=""/>
+            </div>          
+            <div class="col-sm-5 input-group1">
+                <input class="form-control has-dark-background" name="agemax" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="2" id="slider-name" placeholder="50" type="text" required=""/><br><br>
+            </div>
+            <div class="clearfix"> </div>
+        	</div>
+      	  <div class="clearfix"> </div>
+          <input style="width: 80%;min-width: 280px;" type="submit" class="btn btn-primary" name="search" value="Search"/>
+        </div>
+      </form>
+      <div class="paid_people">
 
+      <?php
+        //only start display profiles if and only if search is triggered
+        if(isset($_POST['search'])){
+
+        // couloumn count
+        $c_count = '1';
+
+        while ($row = mysqli_fetch_assoc($result))
+          {      
+            $profid=$row['cust_id'];
+            //getting photo to display
+            $sql="SELECT * FROM photos WHERE cust_id=$profid";
+            $result2=mysqlexec($sql);
+            $photo=mysqli_fetch_assoc($result2);
+            $pic=$photo['pic1'];
+
+            // printing left side profile
+            echo "<div class=\"row_1\">"; //starting row  
+            if ($c_count == '1')
+              {        
+                echo "<div class=\"col-sm-6 paid_people-left\">"; //left statrted
+                  echo "<ul class=\"profile_item\">";
+                  echo "<a href=\"view_profile.php?id=$profid\">";
+                    echo "<li class=\"profile_item-img\"><img src=\"profile/". $profid."/".$pic ."\"" . "class=\"img-responsive\" alt=\"\"/></li>";
+                    echo "<li class=\"profile_item-desc\">";
+                    echo "<h4>" . $row['firstname'] . " " . $row['lastname'] . "</h4>";
+                    echo "<p>" . $row['age']. "Yrs," . $row['religion'] . "</p>";
+                    echo "<h5>" . "View Full Profile" . "</h5>";
+                    echo "</li>";
+                  echo "</a>";
+                  echo "</ul>";
+                echo "</div>"; //left end
+                $c_count++;
+              }
+            else
+              {
+                echo "<div class=\"col-sm-6\">"; //right statrted
+                  echo "<ul class=\"profile_item\">";
+                  echo "<a href=\"view_profile.php?id=$profid\">";
+                    echo "<li class=\"profile_item-img\"><img src=\"profile/". $profid."/".$pic ."\"" . "class=\"img-responsive\"" ;
+                    echo "alt=\"\"/></li>";
+                    echo "<li class=\"profile_item-desc\">";
+                    echo "<h4>" . $row['firstname'] . " " . $row['lastname'] . "</h4>";
+                    echo "<p>" . $row['age']. "Yrs," . $row['religion'] . "</p>";
+                    echo "<h5>" . "View Full Profile" . "</h5>";
+                    echo "</li>";
+                  echo "</a>";
+                  echo "</ul>";
+                echo "</div class=\"test\">"; //right end
+
+                // end of right side
+                $c_count = '1';
+              }
+            echo "</div>"; //row end
+          } //end of while
+        }//end of if
+      ?>
+         
+      </div>
+    </div>
+    <!-- main area end -->
+
+    <!-- Match Right Starts -->
+    <div class="col-md-5">
+      <img style="width: 100%" src="images/background/illutration.png" class="attachment-large size-large" alt="" loading="lazy" srcset="images/background/illutration.png 520w, https://slkapu.com/wp-content/uploads/2021/05/illutration-300x219.png 300w" class="img-responsive" alt=""/>
+    </div>
+    <!-- Match Right ends -->
+    <div class="clearfix"> </div>
+  </div>
+</div>
 
 <?php include_once("footer.php");?>
 <!-- FlexSlider -->

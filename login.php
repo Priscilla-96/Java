@@ -41,62 +41,65 @@ $(document).ready(function(){
     );
 });
 </script>
+<style> 
+  .cc{
+    background-image: url(images/background/right-shape.png);
+    width: 100%;
+  }
+</style>
 </head>
 <body>
-<!-- ============================  Navigation Start =========================== -->
+<!-- Navigation Start -->
 <?php include_once("includes/navigation.php");?>
-<!-- ============================  Navigation End ============================ -->
-<div class="grid_3">
+<!-- Navigation End-->
+<div class="grid_3 cc">
   <div class="container  fadeInUp animated">
-   <div class="breadcrumb1">
-     <ul>
+    <div class="breadcrumb1">
+      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
         <li class="current-page">Login</li>
-     </ul>
-   </div>
-   <div class="services  fadeInUp animated">
+      </ul>
+    </div>
+    <div class="services  fadeInUp animated">
    	  <div class="col-sm-6 login_left">
-	   <form action="auth/auth.php?user=1" method="post">
-  	    <div class="form-item form-type-textfield form-item-name">
-	      <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
-	      <input type="text" id="edit-name" name="username" value="" size="60" maxlength="60" class="form-text required">
+  	    <form action="auth/auth.php?user=1" method="post">
+    	    <div class="form-item form-type-textfield form-item-name">
+  	      <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
+  	      <input type="text" id="edit-name" name="username" value="" size="60" maxlength="60" class="form-text required">
+  	      </div>
+    	    <div class="form-item form-type-password form-item-pass">
+    	      <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
+    	      <input type="password" id="edit-pass" name="password" size="60" maxlength="128" class="form-text required">
+    	    </div>
+    	    <div class="form-actions"><br>
+    	    	<input type="submit" id="edit-submit" name="op" value="Log in" class="btn_1 submit">
+    	    </div>
+  	    </form><br>
+        <ul class="sharing"><br>
+        <div class="row">
+          <div class="col-sm-6">
+            <li><a href="#" class="facebook" title="Facebook"><i class="fa fa-boxed fa-fw fa-facebook"></i>Find Kapu on Facebook</a></li>
+          </div>
+          <div class="col-sm-6">
+            <li><a href="#" class="twitter" title="Twitter"><i class="fa fa-boxed fa-fw fa-twitter"></i>Find Kapu on Twitter</a></li>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <li><a href="#" class="google" title="Google"><i class="fa fa-boxed fa-fw fa-google-plus"></i> Share on Google+</a></li>
+          </div>
+          <div class="col-sm-6">
+            <li><a href="#" class="linkedin" title="Linkedin"><i class="fa fa-boxed fa-fw fa-linkedin"></i> Share on LinkedIn</a></li>
+          </div>
+        </div>
+      </ul>
 	    </div>
-	    <div class="form-item form-type-password form-item-pass">
-	      <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
-	      <input type="password" id="edit-pass" name="password" size="60" maxlength="128" class="form-text required">
-	    </div>
-	    <div class="form-actions"><br>
-	    	<input type="submit" id="edit-submit" name="op" value="Log in" class="btn_1 submit">
-	    </div>
-	   </form><br>
-     <ul class="sharing">
-      <br>
-      <div class="row">
-        <div class="col-sm-6">
-          <li><a href="#" class="facebook" title="Facebook"><i class="fa fa-boxed fa-fw fa-facebook"></i>Find Kapu on Facebook</a></li>
-        </div>
-        <div class="col-sm-6">
-          <li><a href="#" class="twitter" title="Twitter"><i class="fa fa-boxed fa-fw fa-twitter"></i>Find Kapu on Twitter</a></li>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <li><a href="#" class="google" title="Google"><i class="fa fa-boxed fa-fw fa-google-plus"></i> Share on Google+</a></li>
-        </div>
-        <div class="col-sm-6">
-          <li><a href="#" class="linkedin" title="Linkedin"><i class="fa fa-boxed fa-fw fa-linkedin"></i> Share on LinkedIn</a></li>
-        </div>
-      </div>
-
-      
-    </ul>
-	  </div>
-	  <div style="text-align: center;" class="col-sm-6">
-      <img style="width: 90%" src="images/background/illutration.png">
-	  </div>
-	  <div class="clearfix"> </div>
-   </div>
+  	  <div style="text-align: center;" class="col-sm-6">
+        <img style="width: 90%" src="images/background/illutration.png">
+  	  </div>
+  	  <div class="clearfix"> </div>
+    </div>
   </div>
 </div>
 
