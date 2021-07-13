@@ -255,7 +255,6 @@ $(document).ready(function(){
 			         <div class="col-sm-4 form_box">
 	                  <div class="select-block1">
 	                    <select name="country">
-		                    <option value="Not Applicable">Country</option>
 		                    <option value="Srilanka">Srilanka</option>
 		                    <option value="Australia">Australia</option>
 		                    <option value="India">India</option>
@@ -266,9 +265,10 @@ $(document).ready(function(){
 	            </div>
 	         
 	            <div class="col-sm-4 form_box2">
+	            	<label for="edit-pass">Province <span class="form-required" title="This field is required.">*</span></label>
 	                   <div class="select-block1">
 	                    <select name="state">
-		                    <option value="">Province</option>
+	                    	
 		                    <option value="Western">Western</option>
 		                    <option value="Central">Central</option>
 		                    <option value="Southern">Southern</option>
@@ -282,9 +282,13 @@ $(document).ready(function(){
 	                  </div>
 	                 </div>
 	                 <div class="col-sm-4 form_box1">
+	                 	<label for="edit-pass">District <span class="form-required" title="This field is required.">*</span></label>
 	                   <div class="select-block1">
 	                    <select name="district">
-		                    <option value="">District</option>
+
+
+
+		                    <option value="Colombo">Colombo</option>
 		                    <option value="Jaffna">Jaffna</option>
 		                    <option value="Kilinochchi">Kilinochchi</option>
 		                    <option value="Mannar">Mannar</option>
@@ -295,7 +299,6 @@ $(document).ready(function(){
 		                    <option value="Kurunegala">Kurunegala</option>
 
 		                    <option value="Gampaha">Gampaha</option>
-		                    <option value="Colombo">Colombo</option>
 		                    <option value="Kalutara">Kalutara</option>
 
 		                    <option value="Anuradhapura">Anuradhapura</option>

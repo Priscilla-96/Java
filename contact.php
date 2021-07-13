@@ -50,6 +50,21 @@
       background-image: url(images/background/right-shape.png);
       width: 100%;
     }
+    .ce{
+      background-image: url(images/background/heartshape.png);
+      min-width: 100%;
+      max-height: 100%;
+      opacity: 200%;
+      background-color: hotpink;
+    }
+    .cf{
+      background-image: url(images/background/heartshape.png);
+      min-width: 100%;
+      max-height: 100%;
+      opacity: 200%;
+     
+      opacity: 100%;
+    }
   </style>
 </head>
 <body>
@@ -101,7 +116,7 @@
   </div>
 
   <!-- inputs start -->
-  <div class="about_middle">
+  <div class="about_middle cf">
     <div class="container">
   	 <h2>Contact Form</h2>
   	  <form id="contact-form" class="contact-form">
@@ -110,7 +125,7 @@
             <input type="text" class="text" placeholder="" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}">
             <input type="text" class="text" placeholder="" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
             <textarea value="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
-            <input name="submit" type="submit" id="submit" value="Submit">
+            <input class="ce" name="submit" type="submit" id="submit" value="Submit">
           </fieldset>
         </form>
     </div>
