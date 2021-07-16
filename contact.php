@@ -3,7 +3,7 @@
 <?php if(isloggedin()){
  //do nothing stay here
 } else{
-   header("location:login.php");
+   header("location:login.php?mes=contact");
 }
  ?>
 

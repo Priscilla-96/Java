@@ -43,13 +43,13 @@ if($count==1){
 							if ($uplded==1 ) {
 								header("location:../userhome.php?id={$row['id']}");
 							}else{
-								header("location:../photouploader.php?id={$row['id']}");
+								header("location:../photouploader.php?id={$row['id']}&mes=next");
 							}
 							
 						}//end cheking for images	
 					
 				}else{
-					header("location:../create_profile.php?id={$row['id']}");
+					header("location:../create_profile.php?id={$row['id']}&mes=next");
 				}
 				
 			}	
@@ -60,6 +60,6 @@ if($count==1){
 }
 else {
 echo "Wrong Username or Password";
-header('Location: ../login.php');
+header('Location: ../login.php?mes=err');
 }
 ?>

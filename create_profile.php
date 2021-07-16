@@ -22,6 +22,20 @@ $row= mysqli_fetch_assoc($result);
 
 $email=$row['email'];
 
+if (!isset($_GET['mes'])) {
+      $message=null;
+      $color="";
+  }else{
+  	$signupCheck = $_GET['mes'];
+  	if ($signupCheck == "next") {
+        $message='Fill The following Details To Proceed';
+        $color="blue";
+    }else{
+        $message=null;
+        $color="";
+    }
+  }
+
 ?>
 
 
@@ -69,14 +83,23 @@ $(document).ready(function(){
   <div class="container">
    <div class="breadcrumb1">
      <ul>
+     	<?php
+            if($message){
+              if ($color=="blue") {
+                echo '  <div style="text-align: center;" class="alert alert-warning" role="alert">'.$message.'<br>
+                  </div>';
+              		}
+          		}
+              ?>
+            <br>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
-        <span class="divider">&nbsp;|&nbsp;</span>
+        <span class="divider">&nbsp;|&nbsp;</span>        
         <li class="current-page">Add Groom/Bride Details To Proceed</li>
      </ul>
    </div>
    <div class="services">
    	  <div class="col-sm-12 login_left">
-	     <form action="" method="POST">
+	     <form action="" method="POST">	     	
 	  	    <div class="form-group col-sm-6">
 		      <label for="edit-name">First Name <span class="form-required" title="This field is required.">*</span></label>
 		      <input type="text" id="edit-name" name="fname" value="" size="60" maxlength="60" class="form-text required" required>

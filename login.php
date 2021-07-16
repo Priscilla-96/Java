@@ -1,4 +1,31 @@
 <?php include_once("functions.php");?>
+
+<?php
+  if (!isset($_GET['mes'])) {
+      $message=null;
+      $color="";
+  }else{
+      $signupCheck = $_GET['mes'];
+      if ($signupCheck == "err") {
+        $message='Username or Password incorrect! ';
+        $color="red";
+      }elseif ($signupCheck == "regsuccess") {
+        $message='Successfully Registerd! Login To Continue ';
+        $color="green";
+      }elseif ($signupCheck == "search") {
+        $message='Please Login To Start Searching For That Special Someone';
+        $color="yellow";
+      }elseif ($signupCheck == "contact") {
+        $message='Please Login To Get In Contact With Us';
+        $color="blue";
+      }
+      else{
+        $message=null;
+        $color="";
+      }
+  }
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -65,12 +92,36 @@ $(document).ready(function(){
    	  <div class="col-sm-6 login_left">
   	    <form action="auth/auth.php?user=1" method="post">
     	    <div class="form-item form-type-textfield form-item-name">
+            <!--Error message-->
+
+          <?php
+            if($message){
+              if ($color=="red") {
+                echo '  <div style="text-align: center;" class="alert alert-danger" role="alert">'.$message.'<br>
+                  </div>';
+              }elseif ($color=="green") {
+                echo '  <div style="text-align: center;" class="alert alert-success" role="alert">
+              '.$message.'<br>
+                  </div>';
+              }elseif ($color=="yellow") {
+                echo '  <div style="text-align: center;" class="alert alert-info" role="alert">
+              '.$message.'<br>
+                  </div>';
+              }elseif ($color=="blue") {
+                echo '  <div style="text-align: center;" class="alert alert-info" role="alert">
+              '.$message.'<br>
+                  </div>';
+              }
+
+              
+                }
+                ?>
   	      <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
-  	      <input type="text" id="edit-name" name="username" value="" size="60" maxlength="60" class="form-text required">
+  	      <input type="text" id="edit-name" name="username" value="" size="60" maxlength="20" class="form-text required" required>
   	      </div>
     	    <div class="form-item form-type-password form-item-pass">
     	      <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
-    	      <input type="password" id="edit-pass" name="password" size="60" maxlength="128" class="form-text required">
+    	      <input type="password" id="edit-pass" name="password" size="60" maxlength="20" class="form-text required" required>
     	    </div>
     	    <div class="form-actions"><br>
     	    	<input type="submit" id="edit-submit" name="op" value="Log in" class="btn_1 submit">

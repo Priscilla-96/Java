@@ -9,7 +9,7 @@ if(isloggedin()){} else{
 $id=$_SESSION['id'];
 
     //select unlocked profiles for this user    
-    $sql="SELECT * FROM unlocked_profiles WHERE cust_id  = '$id'";
+    $sql="SELECT * FROM unlocked_profiles WHERE cust_id  = '$id' ORDER BY created_date DESC";
 
     $result = mysqlexec($sql);
     /* if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -17,6 +17,17 @@ $id=$_SESSION['id'];
    // echo "<script> window.location=\"searchresults.php?result=$result\"</script>";
     //return $result;
     }*/
+
+    if (!isset($_GET['mes'])) {
+      $message=null;
+    }else{
+      $signupCheck = $_GET['mes'];
+      if ($signupCheck == "unlckd") {
+          $message='The Profiles You Selected Were Unlocked';
+      }else{
+          $message=null;
+      }
+    }
 ?>
 
 
@@ -84,17 +95,24 @@ $(document).ready(function(){
   <div class="container fadeInUp animated">
    <div class="breadcrumb1">
      <ul>
+      <?php
+            if($message){              
+              echo '  <div style="text-align: center;" class="alert alert-success" role="alert">'.$message.'<br>
+              </div>';              
+              }
+              ?>
+            <br>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
         <a href="userhome.php?id=<?php echo $id ?>"><span style="color: black;">Back</span></a>
         <span class="divider">&nbsp;|&nbsp;</span>
-        <li class="current-page">Unlocked Profiles</li>
+        <li class="current-page">Unlocked Profiles / Select Any Profile To View Details</li>
      </ul>
    </div>
    
      <div class="row ">
            <div class="paid_people fadeInUp animated">
-   <h1>Unlocked Profiles</h1>
+   <h1>Unlocked Profiles</h1><br>
    </div>
   </div>
 

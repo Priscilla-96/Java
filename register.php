@@ -4,7 +4,7 @@
 	}else{
       $signupCheck = $_GET['mes'];
       if ($signupCheck == "exist") {
-        $message='Username Already Exist!';
+        $message='Username Already Exist! ';
       }
       else{
         $message=null;
@@ -86,13 +86,11 @@ $(document).ready(function(){
 		      <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label><br>
 		      <!--Error message-->
 
-		      
-
 		      <?php
                 if($message){
                   echo '	<div style="text-align: center;" class="alert alert-danger" role="alert">
 			    	'.$message.'<br>
-			    </div>';
+			    ';
                 }
                 ?>
 		      <input type="text" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required" required>

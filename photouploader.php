@@ -12,6 +12,20 @@ if(isloggedin()){
    header("location:login.php");
 }
 
+if (!isset($_GET['mes'])) {
+      $message=null;
+      $color="";
+  }else{
+    $signupCheck = $_GET['mes'];
+    if ($signupCheck == "next") {
+        $message='Upload All Images To Proceed';
+        $color="blue";
+    }else{
+        $message=null;
+        $color="";
+    }
+  }
+
 //calling photo uploader function
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){ uploadphoto($id); }
 ?>
@@ -77,10 +91,21 @@ $(document).ready(function(){
 <div class="grid_3">
   <div class="container fadeInUp animated">
    <div class="breadcrumb1">
+
      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
+
         <li class="current-page">Login</li>
+         <?php
+            if($message){
+              if ($color=="blue") {
+                echo '  <div style="text-align: center;" class="alert alert-info" role="alert">'.$message.'<br>
+                  </div>';
+                  }
+              }
+              ?>
+            <br>
      </ul>
    </div>
    <div class="services fadeInUp animated">

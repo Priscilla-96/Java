@@ -12,8 +12,8 @@ if ($_GET['data'] !="") {
 
         $result = mysqlexec($sql);
             if ($result) {
-                echo "<script>alert(\"Profile Details Unlocked\")</script>";
-                echo "<script> window.location=\"unlockedprofiles.php\"</script>";
+                
+                echo "<script> window.location=\"unlockedprofiles.php?mes=unlckd\"</script>";
             }
             else{
                 echo "Error";
