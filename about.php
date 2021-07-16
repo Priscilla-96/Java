@@ -84,7 +84,7 @@
 	   	</div>
 	    <div class="about">
 	   	    <div class="col-md-6 about_left  fadeInUp animated">
-	   	  		<img style="width: 100%" src="images/background/about-page-left.html.png" class="attachment-large size-large" alt="" loading="lazy" srcset="images/background/about-page-left.html.png 520w, https://slkapu.com/wp-content/uploads/2021/05/about-page-left.html-300x219.png 300w" class="img-responsive" alt=""/>
+	   	  		<img style="width: 100%" src="images/img/Wedding-1024x681.jpeg" class="attachment-large size-large" alt="" loading="lazy" srcset="images/img/Wedding-1024x681.jpeg 520w, https://slkapu.com/wp-content/uploads/2021/05/about-page-left.html-300x219.png 300w" class="img-responsive" alt=""/>
 	   	    </div>
 	   	    <div class="col-md-6 about_right  fadeInUp animated">
 	   	  		<div class="elementor-widget-container">
@@ -104,12 +104,14 @@
     </div>
 </div>
 
+
+<hr style="width: 80%; ">
 <!-- new code design -->
 <div class="container">
 	<div class="row">
 		<div style="text-align: center;" class="col-md-12">
 			<div class="elementor-widget-container">
-				<h2 class="elementor-heading-title elementor-size-default">Why Choose Us?</h2><br>	
+				<h2 class="elementor-heading-title elementor-size-default">What We Offer</h2><br>	
 			</div>
 			<div class="elementor-element elementor-element-968e6e9 elementor-widget elementor-widget-text-editor" data-id="968e6e9" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
@@ -177,8 +179,40 @@
 </div>
 
 <!-- new code end-->
+<hr style="width: 80%; "><br>
+<!-- stage 3 start -->
+	<div class="container">
+		<div style="text-align: center;" class="elementor-widget-container"><br>
+				<h2 class="elementor-heading-title elementor-size-default">Why Choose Us?</h2><br><br>
+			</div>
+		<div class="row">
+			<div style="text-align: center;" class="col-sm-4">
+				<img style="width: 50%" src="images/background/shield.png">
+				<div class="elementor-widget-container"><br>
+					<h3 class="elementor-image-box-title">Protection</h3><br>
+					<p class="elementor-image-box-description">Our safety is provided by leading anti-scam system in the industry</p><br>
+				</div>
+			</div>
+			<div style="text-align: center;" class="col-sm-4">
+				<img style="width: 50%" src="images/background/chat-1.png">
+				<div class="elementor-widget-container"><br>
+					<h3 class="elementor-image-box-title">Communication</h3><br>
+					<p class="elementor-image-box-description">Chat, send letters, call, share your photos and videos</p><br>
+				</div>
+			</div>
+			<div style="text-align: center;" class="col-sm-4">
+				<img style="width: 50%" src="images/background/check-1.png">
+				<div class="elementor-widget-container"><br>
+					<h3 class="elementor-image-box-title">Verification</h3><br>
+					<p class="elementor-image-box-description">All members are personally confirmed by our staff to prove they are real</p><br>
+				</div>
+			</div>
+		</div>
+	</div><br>
+	<!-- stage 3 end -->
 
 <!-- client messages start -->
+<!--
 <div class="about_middle cf">
 	<div class="container">
 	    <h2>Happy Clients</h2>
@@ -188,22 +222,22 @@
 					<figure class="featured-thumbnail">
 						<img src="images/a1.jpg" class="img-responsive" alt=""/>
 					</figure>
-					<div><a href="#">Aenean nonummy hendrerit mau phasellu porta. Fusce suscipit varius mi sed. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui.…</a>
+					<div><a href="#">"I would like to thank kapu.com for bringing us together, as we begin our journey together, we wish all the team members of kapu.com my deepest regards and hope you keep up the good work. Thank You once again"</a>
 					<div class="clearfix"></div>
 					</div>
 				</blockquote>
-			    <small class="testi-meta"><span class="user">Eiusmod tempor incididunt</span></small>
+			    <small class="testi-meta"><span class="user">25/12/2020</span></small>
 			</div>
 			<div class="col-sm-6 testi_grid list-item-1">
 				<blockquote class="testi_grid_blockquote">
 					<figure class="featured-thumbnail">
-						<img src="images/a2.jpg" class="img-responsive" alt=""/>
+						<img src="images/1.jpg" class="img-responsive" alt=""/>
 					</figure>
-					<div><a href="#">Aenean nonummy hendrerit mau phasellu porta. Fusce suscipit varius mi sed. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui.…</a>
+					<div><a href="#">"We met through kapu on 23rd June 2021. This will always be one of the most memorable  days in my life because I met a person who I was destined to be in love  with"</a>
 					<div class="clearfix"></div>
 					</div>
 				</blockquote>
-				<small class="testi-meta1"><span class="user">Sint occaecat </span></small>
+				<small class="testi-meta1"><span class="user">Ruwan Abeyasinghe</span></small>
 			</div>
 			<div class="clearfix"> </div>
 	  	</div>
@@ -234,6 +268,7 @@
 	    </div>
 	</div>
 </div>
+-->
 <!-- client messages end -->
 
 

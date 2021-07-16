@@ -122,10 +122,11 @@
 		</div>
 	</div>
 	</div>
-	<br><br><hr style="width: 80%; "><br>
+	<br><br>
 	<!-- stage 2 end -->
 
 	<!-- stage 3 start -->
+	<!--
 	<div class="container">
 		<div style="text-align: center;" class="elementor-widget-container">
 				<h2 style="font-size: 50px;" class="elementor-heading-title elementor-size-default">Why Choose Us?</h2><br>	
@@ -154,6 +155,7 @@
 			</div>
 		</div>
 	</div><br>
+	-->
 	<!-- stage 3 end -->
 
 	<!-- guest message-->
@@ -161,10 +163,10 @@
 		<div class="container"> 
 			<h3>Guest Messages</h3>
             <div class="col-sm-6">
-            	<div class="bg_left">
-            		<h4>Guest Message 1</h4>
-            		<h5>Guest 1 Name</h5>
-            		<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            	<div class="bg_left cc">
+            		<img style="width: 20%;border-radius: 50%;height: 20%" src="images/p14.jpg"><br><br>
+            		<h4>Roshani De Silva</h4>
+            		<p>"I would like to thank kapu.com for bringing us together, as we begin our journey together, we wish all the team members of kapu.com my deepest regards and hope you keep up the good work. Thank You once again"</p>
             	    <ul class="team-socials">
 	                    <li><a href="#"><span class="icon-social "><i class="fa fa-facebook"></i></span></a></li>
 	                    <li><a href="#"><span class="icon-social "><i class="fa fa-twitter"></i></span></a></li>
@@ -173,10 +175,10 @@
             	</div>
             </div>
             <div class="col-sm-6">
-            	<div class="bg_left">
-            		<h4>Guest Message 2</h4>
-            		<h5>Guest 2 Name</h5>
-            		<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            	<div class="bg_left cc"><img style="width: 20%;border-radius: 50%;height: 20%" src="images/1.jpg"><br><br>
+            		<h4>Ruwan Abeyasinghe</h4>
+
+            		<p>"We met through kapu on 23rd June 2021. This will always be one of the most memorable  days in my life because I met a person who I was destined to be in love  with"</p>
             	    <ul class="team-socials">
 	                    <li><a href="#"><span class="icon-social "><i class="fa fa-facebook"></i></span></a></li>
 	                    <li><a href="#"><span class="icon-social "><i class="fa fa-twitter"></i></span></a></li>
@@ -190,5 +192,6 @@
 		</div>
 	</div>
 	<!-- guest message end-->
+
 	
 <?php include_once 'footer.php'; ?>

@@ -237,5 +237,19 @@ $(window).load(function() {
     };
   })
 </script> 
+<!-- disable left click option to prevent inspect element-->
+<script type="text/javascript">
+  $(document).bind("contextmenu",function(e) {
+ e.preventDefault();
+});
+</script>
+<!-- disable F12 option to prevent inspect element-->
+<script type="text/javascript">
+  $(document).keydown(function(e){
+    if(e.which === 123){
+       return false;
+    }
+});
+</script>
 </body>
 </html>	

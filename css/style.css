@@ -986,7 +986,7 @@ a.religion_1 {
     margin-bottom: 5em;
 }
 .bg{
-	background:url(../images/y.jpg)no-repeat center top;
+	background:url(../images/img/Wedding-1024x681.jpeg)no-repeat center top;
 	background-size:cover;
     -webkit-background-size:cover;
     -moz-background-size:cover;
@@ -998,8 +998,8 @@ a.religion_1 {
 	text-align: center;
     font-family: 'Oswald', sans-serif;
     font-size: 2.5em;
-    color: #fff;
-    margin-bottom: 0;
+    color: grey;
+    margin-bottom: 1em;
     font-weight: 500;
 }
 .bg_left{
