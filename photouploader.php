@@ -96,7 +96,7 @@ $(document).ready(function(){
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
 
-        <li class="current-page">Login</li>
+        <li class="current-page">Upload Images</li>
          <?php
             if($message){
               if ($color=="blue") {
@@ -113,6 +113,10 @@ $(document).ready(function(){
 	   <form action="" method="post" enctype="multipart/form-data">
   	    <div class="form-item form-type-textfield form-item-name">
 	      <label for="edit-name">Upload Bride ?Groom Images <p style="font-size: 13px">(Image Formats png, jpeg, jpg)</p> <span class="form-required" title="This field is required."></span></label><br><br>
+          <div style="text-align: center;" class="alert alert-danger" role="alert">
+            <?php echo"Add All Images To Proceed"; ?>
+          </div>
+          <br>
 
           <div class="row">
             <div class="col-sm-4">
@@ -183,7 +187,7 @@ $(document).ready(function(){
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
                 <input type="file" id="file6" name="idBack" accept="image/png, image/jpg, image/jpeg" required />
-                  Identity Card Back Picture
+                  ID Card Back Picture
               </label>
             </div>
             <div class="col-sm-8">
@@ -192,10 +196,7 @@ $(document).ready(function(){
             </div>
           </div>
 
-          <br>
-          <div style="text-align: center;" class="alert alert-danger" role="alert">
-            <?php echo"Add All Images To Proceed"; ?>
-          </div>
+          
               
 
         <!--
@@ -208,8 +209,12 @@ $(document).ready(function(){
         <input type="file" id="edit-name" name="idBack" class="form-file required"  accept="image/png, image/jpg, image/jpeg" required> -->
 	    </div>
 	    <div class="form-actions">
-	    	<input type="submit" id="edit-submit" name="op" value="Upload" class="btn_1 submit">
+	    	<input style="width: 100%;" type="submit" id="edit-submit" name="op" value="Upload" class="btn_1 submit">
 	    </div>
+          <br>
+      <div style="text-align: center;" class="alert alert-danger" role="alert">
+            <?php echo"It Will Take A Few Seconds To Upload The Images"; ?>
+          </div>
 	   </form>
 	  </div>
 	  <div class="col-sm-5">

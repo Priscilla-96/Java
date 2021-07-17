@@ -96,12 +96,12 @@ $(document).ready(function(){
     <div class="row fadeInUp animated">
       <div style="background-color: #ccc;"><!-- Innernavigation starts -->
      	  <div <?php /*?>class="collapse navbar-collapse"<?php */?> id="bs-megadropdown-tabs">
-  		    <ul class="nav navbar-nav nav_1">
+  		    <ul class="nav navbar-nav nav_2">
   		      <li><a href="view_prfile.php?id=<?php echo $id;?>">View Profile</a></li>
             <li><a href="partner_preference.php?id=<?php echo $id;?>">Partner Preference</a></li>
              <li><a href="updateprofile.php?id=<?php echo $id;?>">Edit Groom/Bride Details</a></li>
-            <li><a href="updateimages.php?id=<?php echo $id;?>">Change Groom/Bride Images</a></li>
-            <li><a href="uploadIdImages.php?id=<?php echo $id;?>">Change ID Images</a></li>
+            <li><a href="updateimages.php?id=<?php echo $id;?>">Edit Groom/Bride Images</a></li>
+            <li><a href="uploadIdImages.php?id=<?php echo $id;?>">Edit ID Images</a></li>
             <li><a href="unlockedprofiles.php?id=<?php echo $id;?>">Unlocked Profiles</a></li>
             <li><a href="editUserProfile.php?id=<?php echo $id;?>">Edit profile</a></li>       
   		    </ul>

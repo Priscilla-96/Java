@@ -75,12 +75,19 @@ $(document).ready(function(){
     );
 });
 </script>
+<style> 
+    .cc{
+      background-image: url(images/background/right-shape.png);
+      width: 100%;
+    }
+  
+  </style>
 </head>
 <body>
 <!-- ============================  Navigation Start =========================== -->
  <?php include_once("includes/navigation.php");?>
 <!-- ============================  Navigation End ============================ -->
-<div class="grid_3">
+<div class="grid_3 cc">
   <div class="container fadeInUp animated">
    <div class="breadcrumb1">
      <ul>
@@ -103,7 +110,7 @@ $(document).ready(function(){
 				  <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
 				    <div class="tab_box">
 				    	<h1>My Ideal Partner would be</h1>
-				    	<p><textarea name="descr" rows="5" cols="150"><?php echo $descr;?></textarea></p>
+				    	<p><textarea style="width: 100%;" name="descr" rows="5"><?php echo $descr;?></textarea></p>
 				    </div>
 				    <div class="basic_1-left">
 				    	  <table class="table_working_hours">

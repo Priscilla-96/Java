@@ -92,7 +92,7 @@ $result=search();
         		<input type="radio" class="radio_1" name="maritalstatus" value="Single" <?php echo "checked" ?>/> Single &nbsp;&nbsp;
         		<input type="radio" class="radio_1" name="maritalstatus" value="Divorced" /> Divorced &nbsp;&nbsp;
         		<input type="radio" class="radio_1" name="maritalstatus" value="Married" /> Married &nbsp;&nbsp;
-        		<input type="radio" class="radio_1" name="maritalstatus" value="Not Defined"/> Any
+        		<!--<input type="radio" class="radio_1" name="maritalstatus" value="Not Defined"/> Any -->
         	</div>
       	 <div class="clearfix"> </div>
         </div>
@@ -181,13 +181,13 @@ $result=search();
           <div class="clearfix"> </div>
         </div>
         <div class="form_but1 fadeInUp animated">
-      	<label class="col-sm-5 control-lable1" for="Age">Age : </label>
+      	<label class="col-sm-5 control-lable1" for="Age">Age Range: </label>
         	<div class="col-sm-5 form_radios ">
         	  <div class="col-sm-5 input-group1">
-              <input class="form-control has-dark-background" name="agemin" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="slider-name" maxlength="2" placeholder="18" type="text" required=""/>
+              <input class="form-control has-dark-background" name="agemin" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="slider-name" maxlength="2" placeholder="min" type="text" required=""/>
             </div>          
             <div class="col-sm-5 input-group1">
-                <input class="form-control has-dark-background" name="agemax" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="2" id="slider-name" placeholder="50" type="text" required=""/><br><br>
+                <input class="form-control has-dark-background" name="agemax" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="2" id="slider-name" placeholder="max" type="text" required=""/><br><br>
             </div>
             <div class="clearfix"> </div>
         	</div>

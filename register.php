@@ -107,9 +107,14 @@ $(document).ready(function(){
               
 			  
 			  <div class="form-actions">
-			    <input type="submit" id="edit-submit" name="op" value="Submit" class="btn_1 submit">
+			    <input style="width: 100%" type="submit" id="edit-submit" name="op" value="Submit" class="btn_1 submit">
 			  </div>
 		 </form><br>
+
+		 <div style="text-align: center;" class="row">
+          <p>Already a Member? <a style="text-decoration: none;" href="login.php">Login And Start Searching</a></p>
+        </div><br>
+
 		  <ul class="sharing">
 		      <br>
 		      <div class="row">

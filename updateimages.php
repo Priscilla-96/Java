@@ -75,12 +75,19 @@ $(document).ready(function(){
     display: none;
   }
 </style>
+<style> 
+    .cc{
+      background-image: url(images/background/right-shape.png);
+      width: 100%;
+    }
+  
+  </style>
 </head>
 <body>
 <!-- ============================  Navigation Start =========================== -->
 <?php include_once("includes/navigation.php");?>
 <!-- ============================  Navigation End ============================ -->
-<div class="grid_3">
+<div class="grid_3 cc">
   <div class="container  fadeInUp animated">
    <div class="breadcrumb1">
      <ul>

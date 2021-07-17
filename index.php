@@ -4,6 +4,7 @@
 <html>
 <head>
 <title>Find Your Perfect Partner - KAPU | Home </title>
+<meta name="keyword" content="kapu.com, Matrimonials, sri lanka,  Matrimonial, Marriage, Matrimony,bride, Matchmaking">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -49,14 +50,14 @@
  <?php include_once("includes/navigation.php");?>
 <!-- Navigation End -->
 
-<div class="banner fadeInUp animated">
+<div class="banner">
   <div class="container">
     <div class="banner_info fadeInUp animated">
-      <h3>Welcome to Kapu Datings</h3>
+      <h3 id="demo"></h3>
       	<!-- Home page banner button -->
       		<?php 
 				if(isloggedin()){ $id=$_SESSION['id']; }
-				else{echo "<a href='register.php' class='hvr-shutter-out-horizontal'>Create your Profile</a>";}
+				else{echo "<a href='login.php?mes=search' class='hvr-shutter-out-horizontal'>Find Your Special Someone</a>";}
 			?>
     </div>
   </div> 
@@ -73,7 +74,7 @@
 			<div style="text-align: center;" class="col-sm-3">
 				<img style="width: 80%" src="images/background/icon2.png">
 				<div class="elementor-widget-container"><br>
-					<h3 style="opacity: 80%;" class="elementor-image-box-title">Signup</h3><br>
+					<h3 style="opacity: 80%;" class="elementor-image-box-title">Signup With Kapu For Free</h3><br>
 				</div>
 			</div>
 			<div class="col-sm-1">
@@ -82,7 +83,7 @@
 			<div style="text-align: center;" class="col-sm-3">
 				<img style="width: 80%;" src="images/background/illutration.png">
 				<div class="elementor-widget-container"><br>
-					<h3 style="opacity: 80%;" class="elementor-image-box-title">Search</h3><br>
+					<h3 style="opacity: 80%;" class="elementor-image-box-title">Search For That Special Person</h3><br>
 				</div>
 			</div>
 			<div class="col-sm-1">
@@ -91,7 +92,7 @@
 			<div style="text-align: center;" class="col-sm-4">
 				<img style="width: 71%" src="images/background/aimg3.png">
 				<div class="elementor-widget-container"><br>
-					<h3 style="opacity: 80%;" class="elementor-image-box-title">Find Love</h3><br>
+					<h3 style="opacity: 80%;" class="elementor-image-box-title">Find The Perfect Life Partner You've Been Looking For </h3><br>
 				</div>
 			</div>
 		</div>
@@ -195,3 +196,18 @@
 
 	
 <?php include_once 'footer.php'; ?>
+
+<script type="text/javascript">
+	var i = 0;
+	var txt = 'Welcome to Kapu Datings'; /* The text */
+	var speed = 55; /* The speed/duration of the effect in milliseconds */
+
+	function typeWriter() {
+	  if (i < txt.length) {
+	    document.getElementById("demo").innerHTML += txt.charAt(i);
+	    i++;
+	    setTimeout(typeWriter, speed);
+	  }
+	}
+	window.onload = typeWriter;
+</script>

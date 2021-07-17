@@ -16,7 +16,7 @@
         $message='Please Login To Start Searching For That Special Someone';
         $color="yellow";
       }elseif ($signupCheck == "contact") {
-        $message='Please Login To Get In Contact With Us';
+        $message='Please Login To Get In Touch With Us';
         $color="blue";
       }
       else{
@@ -124,9 +124,14 @@ $(document).ready(function(){
     	      <input type="password" id="edit-pass" name="password" size="60" maxlength="20" class="form-text required" required>
     	    </div>
     	    <div class="form-actions"><br>
-    	    	<input type="submit" id="edit-submit" name="op" value="Log in" class="btn_1 submit">
+    	    	<input style="width: 100%;" type="submit" id="edit-submit" name="op" value="Log in" class="btn_1 submit">
     	    </div>
   	    </form><br>
+
+        <div style="text-align: center;" class="row">
+          <p>Not a Member Yet? <a style="text-decoration: none;" href="register.php">Register For Free</a></p>
+        </div><br>
+
         <ul class="sharing"><br>
         <div class="row">
           <div class="col-sm-6">

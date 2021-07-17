@@ -155,7 +155,6 @@ function register(){
 
 			$result = mysqlexec($sql);
 				if ($result) {
-					echo "<script>alert(\"Successfully Registerd\")</script>";
 					echo "<script> window.location=\"login.php?mes=regsuccess\"</script>";
 
 				}
