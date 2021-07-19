@@ -58,6 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){ uploadphoto($id); }
 <!--font-Awesome-->
 <link href="css/font-awesome.css" rel="stylesheet"> 
 <!--font-Awesome-->
+<!--hour glass cdn-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script>
 $(document).ready(function(){
     $(".dropdown").hover(            
@@ -72,7 +74,27 @@ $(document).ready(function(){
     );
 });
 </script>
-<style type="text/css">
+<!--hidden div function-->
+<script type="text/javascript">
+ function showHide() {
+   var div = document.getElementById("hidden_div");
+   if (div.style.display == 'none') {
+     div.style.display = '';
+     $("#formid").trigger('submit')
+   }
+   else {
+     div.style.display = 'none';
+   }
+ }
+</script>
+<style> 
+  .cc{
+    background-image: url(images/background/right-shape.png);
+    width: 100%;
+   }
+  #div1 {
+  font-size:48px;
+}
   .custom-file-upload {
     border: 1px solid #ccc;
     display: inline-block;
@@ -83,41 +105,42 @@ $(document).ready(function(){
     display: none;
   }
 </style>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous">
+</script>
 </head>
 <body>
-<!-- ============================  Navigation Start =========================== -->
+<!-- Navigation Start-->
 <?php include_once("includes/navigation2.php");?>
-<!-- ============================  Navigation End ============================ -->
-<div class="grid_3">
+<!-- Navigation End-->
+<div class="grid_3 cc">
   <div class="container fadeInUp animated">
-   <div class="breadcrumb1">
-
-     <ul>
+    <div class="breadcrumb1">
+      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
-
         <li class="current-page">Upload Images</li>
          <?php
             if($message){
               if ($color=="blue") {
                 echo '  <div style="text-align: center;" class="alert alert-info" role="alert">'.$message.'<br>
-                  </div>';
-                  }
+                  </div>'; }
               }
               ?>
             <br>
-     </ul>
-   </div>
-   <div class="services fadeInUp animated">
+      </ul>
+    </div>
+    <div class="services fadeInUp animated">
    	  <div class="col-sm-7 login_left">
-	   <form action="" method="post" enctype="multipart/form-data">
+	    <form action="" method="post" id="formid" onsubmit="showHide();" enctype="multipart/form-data">
   	    <div class="form-item form-type-textfield form-item-name">
 	      <label for="edit-name">Upload Bride ?Groom Images <p style="font-size: 13px">(Image Formats png, jpeg, jpg)</p> <span class="form-required" title="This field is required."></span></label><br><br>
           <div style="text-align: center;" class="alert alert-danger" role="alert">
             <?php echo"Add All Images To Proceed"; ?>
           </div>
           <br>
-
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
@@ -126,11 +149,9 @@ $(document).ready(function(){
               </label>
             </div>
             <div class="col-sm-8">
-              <img style="width: 50%" id="image1" />
-              <br><br>
+              <img style="width: 50%" id="image1" /><br><br>
             </div>
           </div>
-
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
@@ -139,11 +160,9 @@ $(document).ready(function(){
               </label>
             </div>
             <div class="col-sm-8">
-              <img style="width: 50%" id="image2" />
-              <br><br>
+              <img style="width: 50%" id="image2" /><br><br>
             </div>
           </div>
-
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
@@ -152,11 +171,9 @@ $(document).ready(function(){
               </label>
             </div>
             <div class="col-sm-8">
-              <img style="width: 50%" id="image3" />
-              <br><br>
+              <img style="width: 50%" id="image3" /><br><br>
             </div>
           </div>
-
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
@@ -165,11 +182,9 @@ $(document).ready(function(){
               </label>
             </div>
             <div class="col-sm-8">
-              <img style="width: 50%" id="image4" />
-              <br><br>
+              <img style="width: 50%" id="image4" /><br><br>
             </div>
           </div>
-
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
@@ -178,11 +193,9 @@ $(document).ready(function(){
               </label>
             </div>
             <div class="col-sm-8">
-              <img style="width: 50%" id="image5" />
-              <br><br>
+              <img style="width: 50%" id="image5" /><br><br>
             </div>
           </div>
-
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
@@ -191,60 +204,44 @@ $(document).ready(function(){
               </label>
             </div>
             <div class="col-sm-8">
-              <img style="width: 50%" id="image6" />
-              <br><br>
+              <img style="width: 50%" id="image6" /><br><br>
             </div>
           </div>
-
-          
-              
-
-        <!--
-	      <input type="file" id="edit-name" name="pic1" class="form-file required"  accept="image/png, image/jpg, image/jpeg" required>
-        <input type="file" id="edit-name" name="pic2" class="form-file required"  accept="image/png, image/jpg, image/jpeg" required>
-        <input type="file" id="edit-name" name="pic3" class="form-file required"  accept="image/png, image/jpg, image/jpeg" required>
-        <input type="file" id="edit-name" name="pic4" class="form-file required"  accept="image/png, image/jpg, image/jpeg" required>
-        <label for="edit-name">Upload Your Identity Card Images <p style="font-size: 13px">(Image Formats png, jpeg, jpg)</p> <span class="form-required" title="This field is required."></span></label>
-        <input type="file" id="edit-name" name="idFront" class="form-file required"  accept="image/png, image/jpg, image/jpeg" required>
-        <input type="file" id="edit-name" name="idBack" class="form-file required"  accept="image/png, image/jpg, image/jpeg" required> -->
-	    </div>
-	    <div class="form-actions">
-	    	<input style="width: 100%;" type="submit" id="edit-submit" name="op" value="Upload" class="btn_1 submit">
-	    </div>
-          <br>
-      <div style="text-align: center;" class="alert alert-danger" role="alert">
-            <?php echo"It Will Take A Few Seconds To Upload The Images"; ?>
+	      </div>
+        <div style="display:none" id="hidden_div">
+          <div  id="div1" class="fa"></div>
+          <div  style="text-align: center;" class="alert alert-danger" role="alert">
+          <p>It Will Take A Few Seconds To Upload The Images </p>
           </div>
-	   </form>
-	  </div>
-	  <div class="col-sm-5">
+        </div>
+  	    <div class="form-actions">
+  	    	<input style="width: 100%;" type="submit" id="edit-submit" name="op" value="Upload" class="btn_1 submit">
+  	    </div><br>
+	    </form>
+	    </div>
+	    <div class="col-sm-5">
       <img style="width: 100%" src="images/background/illutration.png">
-	    
-	  </div>
-    <div class="row">
-      <div style="text-align: center;" class="col-sm-12">
-        <ul class="sharing">
-      <br>
-        <div class="col-sm-3">
-          <li><a href="#" class="facebook" title="Facebook"><i class="fa fa-boxed fa-fw fa-facebook"></i>Find Kapu on Facebook</a></li>
+	    </div>
+      <div class="row">
+        <div style="text-align: center;" class="col-sm-12">
+          <ul class="sharing"><br>
+          <div class="col-sm-3">
+            <li><a href="#" class="facebook" title="Facebook"><i class="fa fa-boxed fa-fw fa-facebook"></i>Find Kapu on Facebook</a></li>
+          </div>
+          <div class="col-sm-3">
+            <li><a href="#" class="twitter" title="Twitter"><i class="fa fa-boxed fa-fw fa-twitter"></i>Find Kapu on Twitter</a></li>
+          </div>
+          <div class="col-sm-3">
+            <li><a href="#" class="google" title="Google"><i class="fa fa-boxed fa-fw fa-google-plus"></i> Share on Google+</a></li>
+          </div>
+          <div class="col-sm-3">
+            <li><a href="#" class="linkedin" title="Linkedin"><i class="fa fa-boxed fa-fw fa-linkedin"></i> Share on LinkedIn</a></li>
+          </div>
+          </ul>
         </div>
-        <div class="col-sm-3">
-          <li><a href="#" class="twitter" title="Twitter"><i class="fa fa-boxed fa-fw fa-twitter"></i>Find Kapu on Twitter</a></li>
-        </div>
-        <div class="col-sm-3">
-          <li><a href="#" class="google" title="Google"><i class="fa fa-boxed fa-fw fa-google-plus"></i> Share on Google+</a></li>
-        </div>
-        <div class="col-sm-3">
-          <li><a href="#" class="linkedin" title="Linkedin"><i class="fa fa-boxed fa-fw fa-linkedin"></i> Share on LinkedIn</a></li>
-        </div>
-
-      
-    </ul>
       </div>
-      
+	    <div class="clearfix"> </div>
     </div>
-	  <div class="clearfix"> </div>
-   </div>
   </div>
 </div>
 
@@ -261,7 +258,8 @@ $(window).load(function() {
     controlNav: "thumbnails"
   });
 });
-</script>  
+</script> 
+<!-- scripts for showing the images live when uploaded --> 
 <script>
   document.getElementById('file1').onchange = function () {
   var src1 = URL.createObjectURL(this.files[0])
@@ -297,4 +295,21 @@ $(window).load(function() {
   var src6 = URL.createObjectURL(this.files[0])
   document.getElementById('image6').src = src6
 }
+</script>
+
+<!-- scripts for the hour glass animation --> 
+<script>
+function hourglass() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "&#xf251;";
+  setTimeout(function () {
+      a.innerHTML = "&#xf252;";
+    }, 1000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf253;";
+    }, 2000);
+}
+hourglass();
+setInterval(hourglass, 3000);
 </script>
