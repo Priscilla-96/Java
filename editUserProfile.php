@@ -1,9 +1,4 @@
- <script>
-  window.history.forward();
-  function noback(){
-     window.history.forward();
-  }
-</script>
+
 <?php include_once("includes/basic_includes.php");?>
 <?php include_once("functions.php"); ?>
 
@@ -100,6 +95,12 @@ $row=mysqli_fetch_assoc($result);
 <title>Find Your Perfect Partner - KAPU Dating
  | Register :: Make My Love
 </title>
+ <script>
+  window.history.forward();
+  function noback(){
+     window.history.forward();
+  }
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 

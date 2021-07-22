@@ -106,7 +106,7 @@ $(document).ready(function(){
    <div class="services">
    	  <div class="col-sm-12 login_left">
 	     <form action="" method="POST">	     	
-	  	    <div class="form-group col-sm-6">
+	  	    <div class="form-group col-sm-4">
 		      <label for="edit-name">First Name <span class="form-required" title="This field is required.">*</span></label>
 		      <input type="text" id="edit-name" name="fname" value="" size="60" maxlength="60" class="form-text required" required>
 		    </div>
@@ -114,7 +114,7 @@ $(document).ready(function(){
 		      <label for="edit-pass">Last Name <span class="form-required" title="This field is required.">*</span></label>
 		      <input type="text" id="edit-last" name="lname" size="60" maxlength="128" class="form-text required" required>
 		    </div>
-		     <div class="form-group col-sm-2">
+		     <div class="form-group col-sm-4">
 		      <label for="edit-name">Gender <span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
 	                <select name="sex">
@@ -248,9 +248,9 @@ $(document).ready(function(){
             </div>
             <div class="form-group col-sm-6">
 			    <div class="age_select">
-			      <label for="edit-pass">Religion <span class="form-required" title="This field is required.">*</span></label>
+			      <label for="edit-pass">Religion <span class="form-required" title="This field is required."></span></label>
 			        <div class="age_grid">
-			         <div class="col-sm-4 form_box">
+			         <div class="col-sm-12 form_box">
 	                  <div class="select-block1">
 	                    <select name="religion">
 		                    <option value="Not Applicable">Not Defined</option>
@@ -258,103 +258,91 @@ $(document).ready(function(){
 		                    <option value="Hindu">Hindu</option>
 		                    <option value="Muslim">Muslim</option>
 		                    <option value="Christian">Christian</option>
-		                    
-		                    
 	                    </select>
 	                  </div>
-	            </div>
-	         
-	            <div class="col-sm-8 form_box2">
-	                   <div class="select-block1">
-	                   	<input type="text" name="caste" size="60" maxlength="128" class="form-text required" placeholder="Caste">
-	                    
-	                  </div>
-	                 </div>
-	                 
+	            	 </div>                 
 	                  <div class="clearfix"> </div>
-	                 </div>
-	              </div>
+	                </div>
+	            </div>
             </div>
 
             <!-- Fourth Row starts -->
               <div class="form-group col-sm-6">
 			    <div class="age_select">
-			      <label for="edit-pass">Address <span class="form-required" title="This field is required.">*</span></label>
+			      	<label for="edit-pass">Residence <span class="form-required" title="This field is required.">*</span></label>
 			        <div class="age_grid">
-			         <div class="col-sm-4 form_box">
-	                  <div class="select-block1">
-	                    <select name="country">
-		                    <option value="Srilanka">Srilanka</option>
-		                    <option value="Australia">Australia</option>
-		                    <option value="India">India</option>
-		                    <option value="UAE">UAE</option>
-		                    
-	                    </select>
-	                  </div>
-	            </div>
-	         
-	            <div class="col-sm-4 form_box2">
-	            	<label for="edit-pass">Province <span class="form-required" title="This field is required.">*</span></label>
-	                   <div class="select-block1">
-	                    <select name="state">
-	                    	
-		                    <option value="Western">Western</option>
-		                    <option value="Central">Central</option>
-		                    <option value="Southern">Southern</option>
-		                    <option value="Uva">Uva</option>
-		                    <option value="Sabaragamuwa">Sabaragamuwa</option>
-		                    <option value="North Western">North Western</option>
-		                    <option value="North Central">North Central</option>
-		                    <option value="Eastern">Eastern</option> 
-		                    <option value="Nothern">Nothern</option> 
-	                    </select>
-	                  </div>
-	                 </div>
-	                 <div class="col-sm-4 form_box1">
-	                 	<label for="edit-pass">District <span class="form-required" title="This field is required.">*</span></label>
-	                   <div class="select-block1">
-	                    <select name="district">
+			         	<div class="col-sm-4 form_box">
+	                 		<div class="select-block1">
+	                    	<select name="country">
+		                    	<option value="Srilanka">Srilanka</option>
+		                    	<option value="Australia">Australia</option>
+		                    	<option value="India">India</option>
+		                    	<option value="UAE">UAE</option>                    
+	                    	</select>
+	                  		</div>
+	            		</div>
+	            	</div>
+	            	<div class="age_grid">
+	            		<div class="col-sm-4 form_box">	            	
+	                   		<div class="select-block1">
+	                    	<select name="state">	                    	
+		                    	<option value="Western">Western</option>
+		                    	<option value="Central">Central</option>
+		                    	<option value="Southern">Southern</option>
+		                    	<option value="Uva">Uva</option>
+		                    	<option value="Sabaragamuwa">Sabaragamuwa</option>
+		                    	<option value="North Western">North Western</option>
+		                    	<option value="North Central">North Central</option>
+		                    	<option value="Eastern">Eastern</option> 
+		                    	<option value="Nothern">Nothern</option> 
+	                    	</select>
+	                    	</div>
+	                 	</div>
+	                </div>
+	                <div class="age_grid">
+	                 	<div class="col-sm-4 form_box1">
+	                 	
+	                   		<div class="select-block1">
+	                    	<select name="district">
 
+		                    	<option value="Colombo">Colombo</option>
+		                    	<option value="Jaffna">Jaffna</option>
+		                    	<option value="Kilinochchi">Kilinochchi</option>
+		                    	<option value="Mannar">Mannar</option>
+		                    	<option value="Mulaitivu">Mulaitivu</option>
+		                    	<option value="Vavuniya">Vavuniya</option>
 
+		                    	<option value="Puttalam">Puttalam</option>
+		                    	<option value="Kurunegala">Kurunegala</option>
 
-		                    <option value="Colombo">Colombo</option>
-		                    <option value="Jaffna">Jaffna</option>
-		                    <option value="Kilinochchi">Kilinochchi</option>
-		                    <option value="Mannar">Mannar</option>
-		                    <option value="Mulaitivu">Mulaitivu</option>
-		                    <option value="Vavuniya">Vavuniya</option>
+		                    	<option value="Gampaha">Gampaha</option>
+		                    	<option value="Kalutara">Kalutara</option>
 
-		                    <option value="Puttalam">Puttalam</option>
-		                    <option value="Kurunegala">Kurunegala</option>
+		                    	<option value="Anuradhapura">Anuradhapura</option>
+		                    	<option value="Polonnaruwa">Polonnaruwa</option>
 
-		                    <option value="Gampaha">Gampaha</option>
-		                    <option value="Kalutara">Kalutara</option>
+		                    	<option value="Matale">Matale</option>
+		                    	<option value="Kandy">Kandy</option>
+		                    	<option value="Nuwara Eliya">Nuwara Eliya</option>
 
-		                    <option value="Anuradhapura">Anuradhapura</option>
-		                    <option value="Polonnaruwa">Polonnaruwa</option>
+		                    	<option value="Kegalle">Kegalle</option>
+		                    	<option value="Ratnapura">Ratnapura</option>
 
-		                    <option value="Matale">Matale</option>
-		                    <option value="Kandy">Kandy</option>
-		                    <option value="Nuwara Eliya">Nuwara Eliya</option>
+		                    	<option value="Trincomalee">Trincomalee</option>
+		                    	<option value="Batticaloa">Batticaloa</option>
+		                    	<option value="Ampara">Ampara</option>
 
-		                    <option value="Kegalle">Kegalle</option>
-		                    <option value="Ratnapura">Ratnapura</option>
+		                    	<option value="Badulla">Badulla</option>
+		                    	<option value="Monaragala">Monaragala</option>
 
-		                    <option value="Trincomalee">Trincomalee</option>
-		                    <option value="Batticaloa">Batticaloa</option>
-		                    <option value="Ampara">Ampara</option>
-
-		                    <option value="Badulla">Badulla</option>
-		                    <option value="Monaragala">Monaragala</option>
-
-		                    <option value="Hambantota">Hambantota</option>
-		                    <option value="Matara">Matara</option>
-		                    <option value="Galle">Galle</option>
-	                    </select>
-	                   </div>
-	                  </div>
-	                  <div class="clearfix"> </div>
-	                 </div>
+		                    	<option value="Hambantota">Hambantota</option>
+		                    	<option value="Matara">Matara</option>
+		                    	<option value="Galle">Galle</option>
+	                    	</select>
+	                   		</div>
+	                  	</div>
+	                  	<div class="clearfix"> </div>
+	                </div>
 	              </div>
             </div>
 
@@ -419,37 +407,15 @@ $(document).ready(function(){
 	                </select>
 			    </div>
 		    </div>
-		     <div class="form-group col-sm-2">
+            <!-- Fifth Row ends -->
+            <!-- sixth Row starts-->
+		     <div class="form-group col-sm-4">
 		      <label for="edit-name">Physical Status<span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
 	                <select name="physicalstatus">
 	                    <option value="No Problem">No Problem</option>
 	                    <option value="Blind">Blind</option> 
 	               		<option value="Deaf">Deaf</option> 
-	                </select>
-			    </div>
-		    </div>
-            <!-- Fifth Row ends -->
-            <!-- sixth Row starts-->
-            <div class="form-group col-sm-2">
-		      <label for="edit-name">Drinks<span class="form-required" title="This field is required.">*</span></label>
-			    <div class="select-block1">
-	                <select name="drink">
-	                	<option value="Not Defined">Not Defined</option>
-	                    <option value="No">No</option>
-	                    <option value="Yes">Yes</option> 
-	               		<option value="Sometimes">Sometimes</option> 
-	                </select>
-			    </div>
-		    </div>
-		    <div class="form-group col-sm-2">
-		      <label for="edit-name">Smoke<span class="form-required" title="This field is required.">*</span></label>
-			    <div class="select-block1">
-	                <select name="smoke">
-	                	<option value="Not Defined">Not Defined</option>
-	                    <option value="No">No</option>
-	                    <option value="Yes">Yes</option> 
-	               		<option value="Sometimes">Sometimes</option>
 	                </select>
 			    </div>
 		    </div>
@@ -465,7 +431,7 @@ $(document).ready(function(){
 	                </select>
 			    </div>
 		    </div>
-		    <div class="form-group col-sm-2">
+		    <div class="form-group col-sm-4">
 		      <label for="edit-name">Skin Colour<span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
 	                <select name="colour">
@@ -489,7 +455,7 @@ $(document).ready(function(){
 			  <input type="text" id="edit-name" placeholder="In kilograms" name="weight" value="" size="60" maxlength="6"  oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-text">
 		    </div>
 		   	
-		    <div class="form-group col-sm-2">
+		    <div class="form-group col-sm-4">
 		      <label for="edit-name">Diet<span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
 	                <select name="diet">
@@ -500,10 +466,7 @@ $(document).ready(function(){
 	                </select>
 			    </div>
 		    </div>
-		    <div class="form-group col-sm-2">
-		      <label for="edit-name">Annual Income <span class="form-required" title="This field is required."></span></label>
-			  <input type="text" id="edit-name" placeholder="In Sri Lankan Rupees" name="income" value=""  oninput="this.value=this.value.replace(/[^0-9]/g,'');" size="60" maxlength="7" class="form-text">
-		    </div>
+		   
 		    <div class="form-group col-sm-4">
 		      <label for="edit-name">Occupation <span class="form-required" title="This field is required."></span></label>
 			  <input type="text" id="edit-name" name="occupation" value="" size="60" maxlength="60" class="form-text">

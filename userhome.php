@@ -10,6 +10,27 @@ if(isloggedin()){
 }
 
 
+  if (!isset($_GET['mes'])) {
+      $message=null;
+      $color="";
+  }else{
+      $signupCheck = $_GET['mes'];
+      if ($signupCheck == "upidsucss") {
+        $message='ID Images Updated Successfully ';
+        $color="green";
+      }elseif ($signupCheck == "upimgsucss") {
+        echo "nhujsdhaudj";
+        $message='Images Updated Successfully  ';
+        $color="green";
+      }
+      else{
+        $message=null;
+        $color="";
+      }
+  }
+
+
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -87,12 +108,24 @@ $(document).ready(function(){
 <div class="grid_3">
   <div class="container fadeInUp animated">
     <div class="breadcrumb1">
+
       <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
         <li class="current-page">User Home / Manage User Details</li>
       </ul>
     </div>
+     <?php
+            if($message){
+             if ($color=="green") {
+                echo '  <div style="text-align: center;" class="alert alert-success" role="alert">
+              '.$message.'<br>
+                  </div>';
+              }
+
+              
+                }
+        ?>
     <div class="row fadeInUp animated">
       <div style="background-color: #ccc;"><!-- Innernavigation starts -->
      	  <div <?php /*?>class="collapse navbar-collapse"<?php */?> id="bs-megadropdown-tabs">

@@ -929,14 +929,16 @@ function updateIdPhoto($id){
 		   		unlink($apath);
 				move_uploaded_file($_FILES['pic1']['tmp_name'], $target1);
 				
-				echo "<script> window.location=\"uploadidimages.php?id=$id\"</script>";
+				echo "<script> window.location=\"userhome.php?id=$id&mes=upidsucss\"</script>";
 		    }else{
 		    	unlink($apath);
 				move_uploaded_file($_FILES['pic1']['tmp_name'], $target1);
 				
-				echo "<script> window.location=\"uploadidimages.php?id=$id\"</script>";
+				echo "<script> window.location=\"userhome.php?id=$id&mes=upidsucss\"</script>";
 		    }
 
+	}else{
+		alert("ane mata be");
 	}
 
 	if ($_FILES['pic2']['name']!= "") {
@@ -964,12 +966,12 @@ function updateIdPhoto($id){
 		    	unlink($bpath);
 		   		move_uploaded_file($_FILES['pic2']['tmp_name'], $target2);
 				
-				echo "<script> window.location=\"uploadidimages.php?id=$id\"</script>";
+				echo "<script> window.location=\"userhome.php?id=$id&mes=upidsucss\"</script>";
 		    }else{
 		    	unlink($bpath);
 				move_uploaded_file($_FILES['pic2']['tmp_name'], $target2);
 				
-				echo "<script> window.location=\"uploadidimages.php?id=$id\"</script>";
+				echo "<script> window.location=\"userhome.php?id=$id&mes=upidsucss\"</script>";
 		    }
 
 	}

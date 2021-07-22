@@ -120,7 +120,7 @@ $(document).ready(function(){
                     <img style="width: 100%" src="profile/<?php echo $profileid;?>/<?php echo $pic1;?>" /><br>
                     <br><label  style="width: 60%" class="custom-file-upload btn btn-success">
                       <input type="hidden" value="<?php echo $pic1;?>" name="a">
-                      <input type="file" id="file1" name="pic1" accept="image/png, image/jpg, image/jpeg" />
+                      <input type="file" id="file1" name="pic1" >
                         Select ID Front
                     </label>
                   </div>
