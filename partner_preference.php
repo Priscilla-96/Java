@@ -209,7 +209,7 @@ $(document).ready(function(){
 								</tr>
 								<tr class="opened">
 									<td class="day_label">Occupation :</td>
-									<td class="day_value closed"> <input type="text" id="edit-name" name="occupation" value="" size="60" maxlength="60" value="<?php echo $occupation;?>" class="form-text" required></td>
+									<td class="day_value closed"> <input type="text" id="edit-name" name="occupation" size="60" maxlength="60" value="<?php echo $occupation; ?>" class="form-text" required></td>
 								</tr>
 								<tr class="opened">
 									<td class="day_label">Country of Residence :</td>
