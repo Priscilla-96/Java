@@ -19,10 +19,20 @@ if(isloggedin()){
         $message='ID Images Updated Successfully ';
         $color="green";
       }elseif ($signupCheck == "upimgsucss") {
-        echo "nhujsdhaudj";
         $message='Images Updated Successfully  ';
         $color="green";
       }
+      elseif ($signupCheck == "upprofsucss") {
+        $message='User Profile Details Updated Successfully  ';
+        $color="green";
+      }elseif ($signupCheck == "upGBdetsucss") {
+        $message='Groom/Bride Details Updated Successfully  ';
+        $color="green";
+      }elseif ($signupCheck == "partnrsucss") {
+        $message='Partner Preferences Updated Successfully  ';
+        $color="green";
+      }
+
       else{
         $message=null;
         $color="";
@@ -121,9 +131,7 @@ $(document).ready(function(){
                 echo '  <div style="text-align: center;" class="alert alert-success" role="alert">
               '.$message.'<br>
                   </div>';
-              }
-
-              
+              }              
                 }
         ?>
     <div class="row fadeInUp animated">

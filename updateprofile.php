@@ -184,7 +184,7 @@ $(document).ready(function(){
    <div class="services  fadeInUp animated">
    	  <div class="col-sm-12 login_left">
 	     <form action="" method="POST">
-	  	    <div class="form-group col-sm-6">
+	  	    <div class="form-group col-sm-4">
 		      <label for="edit-name">First Name <span class="form-required" title="This field is required.">*</span></label>
 		      <input type="text" id="edit-name" name="fname" value="<?php echo $fname; ?>" size="60" maxlength="60" class="form-text required" required>
 		    </div>
@@ -192,7 +192,7 @@ $(document).ready(function(){
 		      <label for="edit-pass">Last Name <span class="form-required" title="This field is required.">*</span></label>
 		      <input type="text" id="edit-last" name="lname" size="60" value="<?php echo $lname; ?>" maxlength="128" class="form-text required" required>
 		    </div>
-		     <div class="form-group col-sm-2">
+		     <div class="form-group col-sm-4">
 		      <label for="edit-name">Gender <span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
 	                <select name="sex">
@@ -340,7 +340,7 @@ $(document).ready(function(){
 			    <div class="age_select">
 			      <label for="edit-pass">Religion <span class="form-required" title="This field is required.">*</span></label>
 			        <div class="age_grid">
-			         <div class="col-sm-4 form_box">
+			         <div class="col-sm-12 form_box">
 	                  <div class="select-block1">
 	                    <select name="religion"> 
 		                    <option value="<?php echo $religion; ?>"><?php echo $religion; ?></option>
@@ -355,13 +355,6 @@ $(document).ready(function(){
 	                  </div>
 	            </div>
 	         
-	            <div class="col-sm-8 form_box2">
-	                   <div class="select-block1">
-	                   	<label for="edit-pass">Caste <span class="form-required" title="This field is required.">*</span></label>
-	                   	<input type="text" name="caste" size="60" value="<?php echo $caste; ?>" maxlength="128" class="form-text required" placeholder="Caste">
-	                    
-	                  </div>
-	                 </div>
 	                 
 	                  <div class="clearfix"> </div>
 	                 </div>
@@ -371,7 +364,7 @@ $(document).ready(function(){
             <!-- Fourth Row starts -->
               <div class="form-group col-sm-6">
 			    <div class="age_select">
-			      <label for="edit-pass">Address <span class="form-required" title="This field is required.">*</span></label>
+			      <label for="edit-pass">Residence <span class="form-required" title="This field is required.">*</span></label>
 			        <div class="age_grid">
 			         <div class="col-sm-4 form_box">
 	                  <div class="select-block1">
@@ -388,10 +381,8 @@ $(document).ready(function(){
 	         
 	            <div class="col-sm-4 form_box2">
 	                   <div class="select-block1">
-	                   	<label for="edit-pass">Province <span class="form-required" title="This field is required.">*</span></label>
 	                    <select name="state">
 		                    <option value="<?php echo $state; ?>"><?php echo $state; ?></option>
-		                    <option value="">Province</option>
 		                    <option value="Western">Western</option>
 		                    <option value="Central">Central</option>
 		                    <option value="Southern">Southern</option>
@@ -406,10 +397,8 @@ $(document).ready(function(){
 	                 </div>
 	                 <div class="col-sm-4 form_box1">
 	                   <div class="select-block1">
-	                   	<label for="edit-pass">District <span class="form-required" title="This field is required.">*</span></label>
 	                    <select name="district">
 		                    <option value="<?php echo $district; ?>"><?php echo $district; ?></option>
-		                    <option value="">District</option>
 		                    <option value="Jaffna">Jaffna</option>
 		                    <option value="Kilinochchi">Kilinochchi</option>
 		                    <option value="Mannar">Mannar</option>
@@ -516,7 +505,7 @@ $(document).ready(function(){
 	                </select>
 			    </div>
 		    </div>
-		     <div class="form-group col-sm-2">
+		     <div class="form-group col-sm-4">
 		      <label for="edit-name">Physical Status<span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
 	                <select name="physicalstatus">
@@ -529,30 +518,7 @@ $(document).ready(function(){
 		    </div>
             <!-- Fifth Row ends -->
             <!-- sixth Row starts-->
-            <div class="form-group col-sm-2">
-		      <label for="edit-name">Drinks<span class="form-required" title="This field is required.">*</span></label>
-			    <div class="select-block1">
-	                <select name="drink">
-	                	<option value="<?php echo $drink; ?>"><?php echo $drink; ?></option>
-	                	<option value="Not Defined">Not Defined</option>
-	                    <option value="No">No</option>
-	                    <option value="Yes">Yes</option> 
-	               		<option value="Sometimes">Sometimes</option> 
-	                </select>
-			    </div>
-		    </div>
-		    <div class="form-group col-sm-2">
-		      <label for="edit-name">Smoke<span class="form-required" title="This field is required.">*</span></label>
-			    <div class="select-block1">
-	                <select name="smoke">
-	                	<option value="<?php echo $smoke; ?>"><?php echo $smoke; ?></option>
-	                	<option value="Not Defined">Not Defined</option>
-	                    <option value="No">No</option>
-	                    <option value="Yes">Yes</option> 
-	               		<option value="Sometimes">Sometimes</option>
-	                </select>
-			    </div>
-		    </div>
+            
 		    
 		    <div class="form-group col-sm-4">
 		      <label for="edit-name">Mother Tounge<span class="form-required" title="This field is required.">*</span></label>
@@ -566,7 +532,7 @@ $(document).ready(function(){
 	                </select>
 			    </div>
 		    </div>
-		   <div class="form-group col-sm-2">
+		   <div class="form-group col-sm-4">
 		      <label for="edit-name">Skin Colour<span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
 	                <select name="colour">
@@ -590,7 +556,7 @@ $(document).ready(function(){
 			  <input type="text" id="edit-name" name="weight" value="<?php echo $weight; ?>" size="60" maxlength="60" class="form-text" required>
 		    </div>
 		   	
-		    <div class="form-group col-sm-2">
+		    <div class="form-group col-sm-4">
 		      <label for="edit-name">Diet<span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
 	                <select name="diet">
@@ -604,10 +570,7 @@ $(document).ready(function(){
 		    </div>
 		     
 		    
-		    <div class="form-group col-sm-2">
-		      <label for="edit-name">Annual Income <span class="form-required" title="This field is required."></span></label>
-			  <input type="text" id="edit-name" name="income" value="<?php echo $income; ?>" size="60" maxlength="60" class="form-text">
-		    </div>
+		    
 		   <div class="form-group col-sm-4">
 		      <label for="edit-name">Occupation <span class="form-required" title="This field is required."></span></label>
 			  <input type="text" id="edit-name" name="occupation" value="<?php echo $occupation; ?>" size="60" maxlength="60" class="form-text">

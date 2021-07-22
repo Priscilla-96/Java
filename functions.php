@@ -91,7 +91,6 @@ function writepartnerprefs($id){
 		$height=$_POST['height'];
 		$diet=$_POST['diet'];
 		$religion=$_POST['religion'];
-		$caste=$_POST['caste'];
 		$mothertounge=$_POST['mothertounge'];
 		$education=$_POST['education'];
 		$occupation=$_POST['occupation'];
@@ -108,7 +107,6 @@ function writepartnerprefs($id){
 				   height = '$height',
 				   diet = '$diet',
 				   religion='$religion',
-				   caste = '$caste',
 				   mothertounge = '$mothertounge',
 				   education='$education',
 				   descr = '$descr',
@@ -118,10 +116,9 @@ function writepartnerprefs($id){
 				   custId = '$id'";
 
 		$result = mysqlexec($sql);
-		if ($result) {
-			echo "<script>alert(\"Successfully updated Partner Preference\")</script>";
-			echo "<script> window.location=\"userhome.php?id=$id\"</script>";
+		if ($result) {;
 
+			echo "<script> window.location=\"userhome.php?id=$idupGBdetsucss&mes=partnrsucss\"</script>";
 		}
 		else{
 			echo "Error";
@@ -398,8 +395,7 @@ if(mysqli_num_rows($result)>=1){
 		   ;
 	  	 $result=mysqlexec($sql);
 	   	if ($result) {
-	   		echo "<script>alert(\"Successfully Updated Profile\")</script>";
-	   		echo "<script> window.location=\"userhome.php?id=$id\"</script>";
+	   		echo "<script> window.location=\"userhome.php?id=$id&mes=upGBdetsucss\"</script>";
 		}else {
 		  	echo "Error: " . $sql . "<br>" . $conn->error;
 		}
@@ -442,8 +438,8 @@ if(mysqli_num_rows($result)>=1){
 		   ;
 	  	 $result=mysqlexec($sql);
 	   	if ($result) {
-	   		echo "<script>alert(\"Successfully Updated Profile details\")</script>";
-	   		echo "<script> window.location=\"userhome.php?id=$id\"</script>";
+	   		
+	   		echo "<script> window.location=\"userhome.php?id=$id&mes=upprofsucss\"</script>";
 		}else {
 		  	echo "Error: " . $sql . "<br>" . $conn->error;
 		}
@@ -721,12 +717,12 @@ function updatephoto($id){
 		    unlink($apath);
 		   	move_uploaded_file($_FILES['pic1']['tmp_name'], $target1);
 			
-			echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
+			echo "<script> window.location=\"userhome.php?id=$id&mes=upimgsucss\"</script>";
 		    }else{
 		    	unlink($apath);
 				move_uploaded_file($_FILES['pic1']['tmp_name'], $target1);
 				
-				echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
+				echo "<script> window.location=\"userhome.php?id=$id&mes=upimgsucss\"</script>";
 		    }
 
 
@@ -757,12 +753,12 @@ function updatephoto($id){
 		    	unlink($bpath);
 		   		move_uploaded_file($_FILES['pic2']['tmp_name'], $target2);
 				
-				echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
+				echo "<script> window.location=\"userhome.php?id=$id&mes=upimgsucss\"</script>";
 		    }else{
 		    	unlink($bpath);
 				move_uploaded_file($_FILES['pic2']['tmp_name'], $target2);
 				
-				echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
+				echo "<script> window.location=\"userhome.php?id=$id&mes=upimgsucss\"</script>";
 		    }
 
 	}
@@ -792,12 +788,12 @@ function updatephoto($id){
 		    	unlink($cpath);
 		   		move_uploaded_file($_FILES['pic3']['tmp_name'], $target3);
 				
-				echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
+				echo "<script> window.location=\"userhome.php?id=$id&mes=upimgsucss\"</script>";
 		    }else{
 		    	unlink($cpath);
 				move_uploaded_file($_FILES['pic3']['tmp_name'], $target3);
 				
-				echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
+				echo "<script> window.location=\"userhome.php?id=$id&mes=upimgsucss\"</script>";
 		    }
 
 	}
@@ -827,12 +823,12 @@ function updatephoto($id){
 		    	unlink($dpath);
 		   		move_uploaded_file($_FILES['pic4']['tmp_name'], $target4);
 				
-				echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
+				echo "<script> window.location=\"userhome.php?id=$id&mes=upimgsucss\"</script>";
 		    }else{
 		    	unlink($dpath);
 				move_uploaded_file($_FILES['pic4']['tmp_name'], $target4);
 				
-				echo "<script> window.location=\"updateimages.php?id=$id\"</script>";
+				echo "<script> window.location=\"userhome.php?id=$id&mes=upimgsucss\"</script>";
 		    }
 
 	}

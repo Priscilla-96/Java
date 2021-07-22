@@ -110,7 +110,7 @@ $(document).ready(function(){
 				  <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
 				    <div class="tab_box">
 				    	<h1>My Ideal Partner would be</h1>
-				    	<p><textarea style="width: 100%;" name="descr" rows="5"><?php echo $descr;?></textarea></p>
+				    	<p><textarea style="width: 100%;" name="descr" rows="5" required><?php echo $descr;?></textarea></p>
 				    </div>
 				    <div class="basic_1-left">
 				    	  <table class="table_working_hours">
@@ -118,7 +118,7 @@ $(document).ready(function(){
 				        		<tr class="opened">
 									<td class="day_label">Age   :</td>
 									<td class="day_value">
-									<input type="text" name="agemin" value="<?php echo $agemin; ?>">to <input type="text" name ="agemax" value="<?php echo $agemax; ?>"> 
+									<input type="text" name="agemin" value="<?php echo $agemin; ?>" required>to <input type="text" name ="agemax" value="<?php echo $agemax; ?>" required> 
 									</td>
 								</tr>
 				        		<tr class="opened">
@@ -149,7 +149,7 @@ $(document).ready(function(){
 								</tr>
 								<tr class="opened">
 									<td class="day_label">Height</td>
-									<td class="day_value closed"><input type="text"  id="edit-name" name="height" value="<?php echo $height;?>" size="60" maxlength="60" class="form-text">cm</td>
+									<td class="day_value closed"><input type="text"  id="edit-name" name="height" value="<?php echo $height;?>" size="60" maxlength="60" class="form-text" required>cm</td>
 								</tr>
 								<tr class="opened">
 									<td class="day_label">Diet :</td>
@@ -179,10 +179,7 @@ $(document).ready(function(){
 								</tr>
 								
 
-								<tr class="opened">
-									<td class="day_label">Caste :</td>
-									<td class="day_value closed"> <input type="text" id="edit-name" name="caste" value="" size="60" maxlength="60" value="<?php echo $occupation;?>" class="form-text"></td>
-								</tr>
+								
 
 								<tr class="opened">
 									<td class="day_label">Mother Tongue :</td>
@@ -212,7 +209,7 @@ $(document).ready(function(){
 								</tr>
 								<tr class="opened">
 									<td class="day_label">Occupation :</td>
-									<td class="day_value closed"> <input type="text" id="edit-name" name="occupation" value="" size="60" maxlength="60" value="<?php echo $occupation;?>" class="form-text"></td>
+									<td class="day_value closed"> <input type="text" id="edit-name" name="occupation" value="" size="60" maxlength="60" value="<?php echo $occupation;?>" class="form-text" required></td>
 								</tr>
 								<tr class="opened">
 									<td class="day_label">Country of Residence :</td>
