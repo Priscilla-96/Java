@@ -187,7 +187,7 @@ function processprofile_form($id){
 	$dob=$year ."-" . $month . "-" .$day ;
 	
 	$religion=$_POST['religion'];
-	$caste = $_POST['caste'];
+	//$caste = $_POST['caste'];
 	//$subcaste=$_POST['subcaste'];
 	
 	$country = $_POST['country'];
@@ -200,8 +200,8 @@ function processprofile_form($id){
 	$edudescr=$_POST['edudescr'];
 	$bodytype=$_POST['bodytype'];
 	$physicalstatus=$_POST['physicalstatus'];
-	$drink=$_POST['drink'];
-	$smoke=$_POST['smoke'];
+	//$drink=$_POST['drink'];
+	//$smoke=$_POST['smoke'];
 	$mothertounge=$_POST['mothertounge'];
 	//$bloodgroup=$_POST['bloodgroup'];
 	$weight=$_POST['weight'];
@@ -212,7 +212,7 @@ function processprofile_form($id){
 	$occupationdescr=$_POST['occupationdescr'];
 	//$fatheroccupation=$_POST['fatheroccupation'];
 	//$motheroccupation=$_POST['motheroccupation'];
-	$income=$_POST['income'];
+	//$income=$_POST['income'];
 	//$bros=$_POST['bros'];
 	//$sis=$_POST['sis'];
 	$aboutme=$_POST['aboutme'];
@@ -279,9 +279,9 @@ if(mysqli_num_rows($result)>=1){
 	$sql = "INSERT 
 				INTO
 				   customer
-				   (cust_id, email, age, sex, religion, caste, district, state, country, maritalstatus, profilecreatedby, education, education_sub, firstname, lastname, body_type, physical_status, drink, mothertounge, colour, weight, height, diet, smoke,   dateofbirth, occupation, occupation_descr, annual_income, aboutme, contact, Identity_card_no, profilecreationdate) 
+				   (cust_id, email, age, sex, religion, district, state, country, maritalstatus, profilecreatedby, education, education_sub, firstname, lastname, body_type, physical_status, mothertounge, colour, weight, height, diet,   dateofbirth, occupation, occupation_descr, aboutme, contact, Identity_card_no, profilecreationdate) 
 				VALUES
-				   ('$id','$email', '$age', '$sex', '$religion', '$caste',  '$district', '$state', '$country', '$maritalstatus', '$profileby', '$education', '$edudescr', '$fname', '$lname', '$bodytype', '$physicalstatus', '$drink', '$mothertounge', '$colour', '$weight', '$height',  '$diet', '$smoke', '$dob', '$occupation', '$occupationdescr', '$income',  '$aboutme', $contactNo, '$identityCardNo', CURDATE())
+				   ('$id','$email', '$age', '$sex', '$religion',  '$district', '$state', '$country', '$maritalstatus', '$profileby', '$education', '$edudescr', '$fname', '$lname', '$bodytype', '$physicalstatus', '$mothertounge', '$colour', '$weight', '$height',  '$diet', '$dob', '$occupation', '$occupationdescr',   '$aboutme', $contactNo, '$identityCardNo', CURDATE())
 			";
 	if (mysqli_query($conn,$sql)) {
 	  echo "<script> window.location=\"photouploader.php?id={$id}\"</script>";

@@ -208,6 +208,9 @@ $(document).ready(function(){
             </div>
           </div>
 	      </div>
+          <div  style="text-align: center;" class="alert alert-danger" role="alert">
+          <p>It Will Take A Few Seconds To Upload The Images </p>
+          </div>
         <div style="display:none" id="hidden_div">
           <div  id="div1" class="fa"></div>
           <div  style="text-align: center;" class="alert alert-danger" role="alert">
