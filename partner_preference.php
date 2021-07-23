@@ -112,124 +112,212 @@ $(document).ready(function(){
 				    	<h1>My Ideal Partner would be</h1>
 				    	<p><textarea style="width: 100%;" name="descr" rows="5" required><?php echo $descr;?></textarea></p>
 				    </div>
-				    <div class="basic_1-left">
-				    	  <table class="table_working_hours">
-				        	<tbody>
-				        		<tr class="opened">
-									<td class="day_label">Age   :</td>
-									<td class="day_value">
-									<input type="text" name="agemin" value="<?php echo $agemin; ?>" required>to <input type="text" name ="agemax" value="<?php echo $agemax; ?>" required> 
-									</td>
-								</tr>
-				        		<tr class="opened">
-									<td class="day_label">Marital Status :</td>
-									<td class="day_value">
-										<div class="select-block1">
-										<select name="maritalstatus">
-						                    <option value="<?php if($marital_status="Single"){echo "Single";} elseif ($marital_status="Married") {echo "Married";} else{echo "Divorced";}?>"><?php echo $marital_status;?></option>
 
-						                    <option value="Single">Single</option>
-						                    <option value="Married">Married</option> 
-						               		<option value="Divorsed">Divorsed</option>
-						                </select>
-						                </div>
-									</td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Complexion :</td>
-									<td class="day_value closed">
-									<div class="select-block1">
-						                <select name="colour">
-						                    <option value="Black">Black</option>
-						                    <option value="Fair">Fair</option> 
-						               		<option value="Normal">Normal</option> 
-						                </select>
-								    </div>
-								    </td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Height</td>
-									<td class="day_value closed"><input type="text"  id="edit-name" name="height" value="<?php echo $height;?>" size="60" maxlength="60" class="form-text" required>cm</td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Diet :</td>
-									<td class="day_value closed"><div class="select-block1">
-					                <select name="diet">
-					                    <option value="Veg">Veg</option>
-					                    <option value="Non Veg">Non Veg</option> 
-					                </select>
-							    	</div>
-							    	</td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Religion :</td>
-									<td class="day_value closed"><span>
-									<div class="select-block1">
-					                    <select name="religion">
-						                    <option value="Not Applicable">Not Applicable</option>
-						                    <option value="Hindu">Hindu</option>
-						                    <option value="Christian">Christian</option>
-						                    <option value="Muslim">Muslim</option>
-						                    <option value="Malay">Malay</option>
-						                    <option value="Sinhale">Sinhale</option>
-						                    
-					                    </select>
-	                 				</div></span>
-	                  			</td>
-								</tr>
-								
+			<!-- new code start -->
+			<div class="row">
+			<div class="form-group col-sm-4">
+		      <label for="edit-pass">Age Limit<span class="form-required" title="This field is required.">*</span></label>		      
+		    </div>
+			<div class="form-group col-sm-4">
+		      <label for="edit-pass">Min <span class="form-required" title="This field is required.">*</span></label>
+		      <input type="text" id="edit-last" name="agemin" size="60" value="<?php echo $agemin; ?>" maxlength="128" class="form-text required" required>
+		    </div>
+		    <div class="form-group col-sm-4">
+		      <label for="edit-pass">Max <span class="form-required" title="This field is required.">*</span></label>
+		      <input type="text" id="edit-last" name="agemax" size="60" value="<?php echo $agemax; ?>" maxlength="128" class="form-text required" required>
+		    </div>
+		    </div>
 
-								
+		    <div class="row">
+		    	<div class="col-sm-4">
+		    		<label for="edit-pass">Marital Status : <span class="form-required" title="This field is required.">*</span></label>
+		    	</div>
+		    	<div class="form-group col-sm-8">
+		      		<div class="age_select">
+			      	
+				        <div class="age_grid">
+					        <div class="col-sm-12 form_box">
+			                	<div class="select-block1">
+			                    <select name="maritalstatus"> 
+				                    <option value="<?php echo $religion; ?>"><?php echo $marital_status; ?></option>
+				                    <option value="Single">Single</option>
+				                    <option value="Married">Married</option>
+				                    <option value="Divorsed">Divorsed</option>
+				                </select>
+	                  			</div>
+	                  		</div>
+	                  	</div>
+	              	</div>
+		    	</div>
+		    </div>
 
-								<tr class="opened">
-									<td class="day_label">Mother Tongue :</td>
-									<td class="day_value closed">
-									<div class="select-block1">
-						                <select name="mothertounge">
-						                    <option value="Tamil">Tamil</option>
-						                    <option value="Sinhala">Sinhala</option> 
-						               		<option value="English">English</option> 
-						                </select>
-								    </div>
-								    </td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Education :</td>
-									<td class="day_value closed"><div class="select-block1">
-						                <select name="education">
-						                    <option value="Primary">Primary</option>
-						                    <option value="Ordinary level">Ordinary level</option> 
-						               		<option value="Advance Level">Advance Level</option> 
-						               		<option value="Degree">Degree</option> 
-						               		<option value="Diploma">Diploma</option> 
-						               		<option value="Doctorate">Doctorate</option> 
-						                </select>
-								    </div>
-								    </td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Occupation :</td>
-									<td class="day_value closed"> <input type="text" id="edit-name" name="occupation" size="60" maxlength="60" value="<?php echo $occupation; ?>" class="form-text" required></td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Country of Residence :</td>
-									<td class="day_value closed">
-										<div class="select-block1">
-						                    <select name="country">
-							                    <option value="Not Applicable">Country</option>
-							                    <option value="India">India</option>
-							                    <option value="Srilanka">Srilanka</option>
-							                    <option value="UAE">UAE</option>
-						                    </select>
-						                 </div>
-						            </td>
-								</tr>
-							 </tbody>
-				          </table>
-				        </div>
+		    <div class="row">
+		    	<div class="col-sm-4">
+		    		<label for="edit-pass">Complexion : <span class="form-required" title="This field is required.">*</span></label>
+		    	</div>
+		    	<div class="form-group col-sm-8">
+		      		<div class="age_select">
+			      	
+				        <div class="age_grid">
+					        <div class="col-sm-12 form_box">
+			                	<div class="select-block1">
+			                    <select name="colour"> 
+				                    <option value="<?php echo $complexion; ?>"><?php echo $complexion; ?></option>
+				                    <option value="Black">Black</option>
+				                    <option value="Fair">Fair</option>
+				                    <option value="Normal">Normal</option>
+				                </select>
+	                  			</div>
+	                  		</div>
+	                  	</div>
+	              	</div>
+		    	</div>
+		    </div>
+
+		    <div class="row">
+			<div class="form-group col-sm-4">
+		      <label for="edit-pass">Height :<span class="form-required" title="This field is required.">*</span></label>		      
+		    </div>
+			<div class="form-group col-sm-8">
+		      <input type="text" id="edit-last" name="height" size="60" value="<?php echo $height; ?>" maxlength="128" class="form-text required" required>
+		    </div>
+		    </div>
+
+		    <div class="row">
+		    	<div class="col-sm-4">
+		    		<label for="edit-pass">Diet : <span class="form-required" title="This field is required.">*</span></label>
+		    	</div>
+		    	<div class="form-group col-sm-8">
+		      		<div class="age_select">			      	
+				        <div class="age_grid">
+					        <div class="col-sm-12 form_box">
+			                	<div class="select-block1">
+			                    <select name="diet"> 
+				                    <option value="<?php echo $diet; ?>"><?php echo $diet; ?></option>
+				                    <option value="Veg">Veg</option>
+				                    <option value="Non Veg">Non Veg</option>
+				                </select>
+	                  			</div>
+	                  		</div>
+	                  	</div>
+	              	</div>
+		    	</div>
+		    </div>
+
+		    <div class="row">
+		    	<div class="col-sm-4">
+		    		<label for="edit-pass">Religion : <span class="form-required" title="This field is required.">*</span></label>
+		    	</div>
+		    	<div class="form-group col-sm-8">
+		      		<div class="age_select">
+			      	
+				        <div class="age_grid">
+					        <div class="col-sm-12 form_box">
+			                	<div class="select-block1">
+			                    <select name="religion"> 
+				                    <option value="<?php echo $religion; ?>"><?php echo $religion; ?></option>
+				                    <option value="Not Applicable">Not Applicable</option>
+				                    <option value="Hindu">Hindu</option>
+				                    <option value="Christian">Christian</option>
+				                    <option value="Muslim">Muslim</option>
+				                    <option value="Malay">Malay</option>
+				                    <option value="Buddhism">Buddhism</option>
+				                </select>
+	                  			</div>
+	                  		</div>
+	                  	</div>
+	              	</div>
+		    	</div>
+		    </div>
+
+		    <div class="row">
+		    	<div class="col-sm-4">
+		    		<label for="edit-pass">Mother Tongue : <span class="form-required" title="This field is required.">*</span></label>
+		    	</div>
+		    	<div class="form-group col-sm-8">
+		      		<div class="age_select">
+			      	
+				        <div class="age_grid">
+					        <div class="col-sm-12 form_box">
+			                	<div class="select-block1">
+			                    <select name="mothertounge"> 
+				                    <option value="<?php echo $mother_tounge; ?>"><?php echo $mother_tounge; ?></option>
+				                    <option value="Tamil">Tamil</option>
+				                    <option value="Sinhala">Sinhala</option>
+				                    <option value="English">English</option>
+				                </select>
+	                  			</div>
+	                  		</div>
+	                  	</div>
+	              	</div>
+		    	</div>
+		    </div>
+
+		    <div class="row">
+		    	<div class="col-sm-4">
+		    		<label for="edit-pass">Education : <span class="form-required" title="This field is required.">*</span></label>
+		    	</div>
+		    	<div class="form-group col-sm-8">
+		      		<div class="age_select">
+			      	
+				        <div class="age_grid">
+					        <div class="col-sm-12 form_box">
+			                	<div class="select-block1">
+			                    <select name="education"> 
+				                    <option value="<?php echo $education; ?>"><?php echo $education; ?></option>
+				                    <option value="Primary">Primary</option>
+				                    <option value="Ordinary level">Ordinary level</option>
+				                    <option value="Advance Level">Advance Level</option>
+				                    <option value="Degree">Degree</option>
+				                    <option value="Diploma">Diploma</option>
+				                    <option value="Doctorate">Doctorate</option>
+				                </select>
+	                  			</div>
+	                  		</div>
+	                  	</div>
+	              	</div>
+		    	</div>
+		    </div>
+
+		    <div class="row">
+			<div class="form-group col-sm-4">
+		      <label for="edit-pass">Occupation :<span class="form-required" title="This field is required.">*</span></label>		      
+		    </div>
+			<div class="form-group col-sm-8">
+		      <input type="text" id="edit-last" name="occupation" size="60" value="<?php echo $occupation; ?>" maxlength="128" class="form-text required" required>
+		    </div>
+		    </div>
+
+		    <div class="row">
+		    	<div class="col-sm-4">
+		    		<label for="edit-pass">Country of Residence : <span class="form-required" title="This field is required.">*</span></label>
+		    	</div>
+		    	<div class="form-group col-sm-8">
+		      		<div class="age_select">
+			      	
+				        <div class="age_grid">
+					        <div class="col-sm-12 form_box">
+			                	<div class="select-block1">
+			                    <select name="country"> 
+				                    <option value="<?php echo $country; ?>"><?php echo $country; ?></option>
+				                    <option value="Not Applicable">Not Applicable</option>
+				                    <option value="India">India</option>
+				                    <option value="Srilanka">Srilanka</option>
+				                    <option value="UAE">UAE</option>
+				                </select>
+	                  			</div>
+	                  		</div>
+	                  	</div>
+	              	</div>
+		    	</div>
+		    </div>
+
+		    <!-- new code end -->
+
+				    
 				  
 				  </div>
-				 <input type="submit" value="Update Preferences">
+				 <input type="submit" class="btn_1 submit" value="Update Preferences">
 		     </div>
 		     </form>
 		  </div>

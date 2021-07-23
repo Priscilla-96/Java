@@ -118,7 +118,7 @@ function writepartnerprefs($id){
 		$result = mysqlexec($sql);
 		if ($result) {;
 
-			echo "<script> window.location=\"userhome.php?id=$idupGBdetsucss&mes=partnrsucss\"</script>";
+			echo "<script> window.location=\"userhome.php?id=$id&mes=partnrsucss\"</script>";
 		}
 		else{
 			echo "Error";

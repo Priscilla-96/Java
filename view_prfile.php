@@ -254,10 +254,6 @@ $(document).ready(function(){
 									<td class="day_label">Profile Created by :</td>
 									<td class="day_value closed"><span><?php echo $profileby;?></span></td>
 								</tr>
-								<tr class="opened">
-									<td class="day_label">Drink :</td>
-									<td class="day_value closed"><span><?php echo $drink;?></span></td>
-								</tr>
 						    </tbody>
 				          </table>
 				         </div>
@@ -284,12 +280,7 @@ $(document).ready(function(){
 							    <tr class="closed">
 									<td class="day_label">Diet :</td>
 									<td class="day_value closed"><span><?php echo $diet;?></span></td>
-								</tr>
-							    <tr class="closed">
-									<td class="day_label">Smoke :</td>
-									<td class="day_value closed"><span><?php echo $smoke;?></span></td>
-								</tr>
-						    </tbody>
+								</tr>						    </tbody>
 				        </table>
 				        </div>
 				        <div class="clearfix"> </div>
@@ -313,10 +304,6 @@ $(document).ready(function(){
 				         <div class="col-md-6 basic_1-left">
 				          <table class="table_working_hours">
 				        	<tbody>
-				        		<tr class="opened">
-									<td class="day_label">Caste :</td>
-									<td class="day_value"><?php echo $caste;?></td>
-								</tr>
 							    
 							    
 							</tbody>
@@ -340,10 +327,6 @@ $(document).ready(function(){
 							    <tr class="opened">
 									<td class="day_label">Occupation Detail :</td>
 									<td class="day_value closed"><span><?php echo $occupationdescr;?></span></td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Annual Income :</td>
-									<td class="day_value closed"><span><?php echo $income;?></span></td>
 								</tr>
 							 </tbody>
 				          </table>
