@@ -132,7 +132,7 @@ $(document).ready(function(){
                 <input type="hidden" name="contactNo" value="<?php echo $contactNo ?>">
                 <input type="hidden" name="identityCardNo" value="<?php echo $identityCardNo ?>">
                     
-                <input style="width: 100%;height:60px;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
+                <input style="width: 100%;height:60px;opacity: 85%;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
               </form>
             </div>
           </div>
@@ -163,7 +163,7 @@ $(document).ready(function(){
                 <input type="hidden" name="contactNo" value="<?php echo $contactNo ?>">
                 <input type="hidden" name="identityCardNo" value="<?php echo $identityCardNo ?>">
                     
-                <input style="width: 100%;height:60px;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
+                <input style="width: 100%;height:60px;opacity: 85%;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
               </form>
             </div>
           </div>
@@ -193,7 +193,7 @@ $(document).ready(function(){
                 <input type="hidden" name="contactNo" value="<?php echo $contactNo ?>">
                 <input type="hidden" name="identityCardNo" value="<?php echo $identityCardNo ?>">
                     
-                <input style="width: 100%;height:60px;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
+                <input style="width: 100%;height:60px;opacity: 85%;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
               </form>
             </div>
           </div>
@@ -223,7 +223,7 @@ $(document).ready(function(){
                 <input type="hidden" name="contactNo" value="<?php echo $contactNo ?>">
                 <input type="hidden" name="identityCardNo" value="<?php echo $identityCardNo ?>">
                     
-                <input style="width: 100%;height:60px;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
+                <input style="width: 100%;height:60px;opacity: 85%;" class="btn btn-primary" type="submit" value="Find YourMatch" name="optionone"><br><hr  style="height:2px;border-width:0;color:gray;background-color:gray"><br>
               </form>                
             </div>
           </div>

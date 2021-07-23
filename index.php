@@ -71,10 +71,10 @@
 				<h3 style="opacity: 70%;" class="elementor-heading-title elementor-size-default">Someone is there Somewhere who dreams of you!</h3><br><br>
 			</div>
 		<div class="row">
-			<div style="text-align: center;" class="col-sm-3">
-				<img style="width: 80%" src="images/background/icon2.png">
+			<div style="text-align: center;" class="col-sm-4">
+				<img style="width: 76%" src="images/background/about-page-left.html.png">
 				<div class="elementor-widget-container"><br>
-					<h3 style="opacity: 80%;" class="elementor-image-box-title">Signup With Kapu For Free</h3><br>
+					<h3 style="opacity: 80%;" class="elementor-image-box-title">Signup With Kapu Matromany For Free</h3><br>
 				</div>
 			</div>
 			<div class="col-sm-1">
@@ -92,7 +92,7 @@
 			<div style="text-align: center;" class="col-sm-4">
 				<img style="width: 71%" src="images/background/aimg3.png">
 				<div class="elementor-widget-container"><br>
-					<h3 style="opacity: 80%;" class="elementor-image-box-title">Find The Perfect Life Partner You've Been Looking For </h3><br>
+					<h3 style="opacity: 80%;" class="elementor-image-box-title">Find The One You've Been Looking For </h3><br>
 				</div>
 			</div>
 		</div>
@@ -162,17 +162,13 @@
 	<!-- guest message-->
     <div class="bg">
 		<div class="container"> 
-			<h3>Guest Messages</h3>
+			<h3 style="background-color: white;opacity: 65%">Guest Messages</h3>
             <div class="col-sm-6">
             	<div class="bg_left cc">
             		<img style="width: 20%;border-radius: 50%;height: 20%" src="images/p14.jpg"><br><br>
             		<h4>Roshani De Silva</h4>
             		<p>"I would like to thank kapu.com for bringing us together, as we begin our journey together, we wish all the team members of kapu.com my deepest regards and hope you keep up the good work. Thank You once again"</p>
-            	    <ul class="team-socials">
-	                    <li><a href="#"><span class="icon-social "><i class="fa fa-facebook"></i></span></a></li>
-	                    <li><a href="#"><span class="icon-social "><i class="fa fa-twitter"></i></span></a></li>
-	                    <li><a href="#"><span class="icon-social"><i class="fa fa-google-plus"></i></span></a></li>
-                    </ul>
+            	    
             	</div>
             </div>
             <div class="col-sm-6">
@@ -180,11 +176,7 @@
             		<h4>Ruwan Abeyasinghe</h4>
 
             		<p>"We met through kapu on 23rd June 2021. This will always be one of the most memorable  days in my life because I met a person who I was destined to be in love  with"</p>
-            	    <ul class="team-socials">
-	                    <li><a href="#"><span class="icon-social "><i class="fa fa-facebook"></i></span></a></li>
-	                    <li><a href="#"><span class="icon-social "><i class="fa fa-twitter"></i></span></a></li>
-	                    <li><a href="#"><span class="icon-social"><i class="fa fa-google-plus"></i></span></a></li>
-                    </ul>
+            	   
             	</div>
             </div>
 

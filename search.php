@@ -192,7 +192,7 @@ $result=search();
             <div class="clearfix"> </div>
         	</div>
       	  <div class="clearfix"> </div>
-          <input style="width: 80%;min-width: 280px;" type="submit" class="btn btn-primary" name="search" value="Search"/>
+          <input style="width: 80%;min-width: 280px;opacity: 85%;" type="submit" class="btn btn-primary" name="search" value="Search"/>
         </div>
       </form>
       <div class="paid_people">

@@ -105,7 +105,7 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <img style="width: 100%" src="images/background/about-page-left.html.png" class="attachment-large size-large" alt="" loading="lazy" srcset="images/background/about-page-left.html.png 520w, https://slkapu.com/wp-content/uploads/2021/05/about-page-left.html-300x219.png 300w" class="img-responsive" alt=""/>
+                <img style="width: 100%" src="images/background/about-page-left.html.png" class="attachment-large size-large" alt="" loading="lazy" srcset="images/background/aimg3.png 520w, https://slkapu.com/wp-content/uploads/2021/05/aimg3-300x219.png 300w" class="img-responsive" alt=""/>
               </div>
             </div>
           </div>

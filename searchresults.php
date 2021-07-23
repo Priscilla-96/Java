@@ -141,7 +141,7 @@ $(document).ready(function(){
         <h1>Profiles</h1>
       </div>
     </div>
-    <form name=form1 id="formid" method=get action=addUnlockedProfiles.php?id=<?php echo $id ?> > 
+    <form style="" name=form1 id="formid" method=get action=addUnlockedProfiles.php?id=<?php echo $id ?> > 
 <?php
 
 echo "<div class='row'>"; //starting row  
@@ -155,8 +155,8 @@ while ($row = mysqli_fetch_assoc($result))
     $pic=$photo['pic1'];
 
     // printing profile details
-    echo "<div style='background-color: white;border-radius: 50px;' class=\"col-sm-4\">
-            <ul class=\"profile_item\">
+    echo "<div  class=\"col-sm-4\">
+            <ul style='background-color: white;border-radius: 30px;padding-top: 15px;padding-left: 10px;' class=\"profile_item\">
               <li class=\"profile_item-img\"><img src=\"profile/". $profid."/".$pic ."\"" . "class=\"img-responsive\" alt=\"\"/></li>
               <li class=\"profile_item-desc\">
               <input  style='display:inline-block;float:left;margin-top:0;' type='checkbox' class='game' value='". $profid."' name='data[]' >
@@ -164,7 +164,7 @@ while ($row = mysqli_fetch_assoc($result))
               <p>" . $row['firstname'] . " " . $row['lastname'] . "</p>
               <p>Age : " . $row['age']. "Yrs</p>
               <p>Mother Tounge : " . $row['mothertounge']. "</p>
-              </li><br><br>
+              </li><br>
             </ul>
           </div>"; // end    
   } //loop end
