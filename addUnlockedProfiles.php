@@ -25,27 +25,5 @@ if ($_GET['data'] !="") {
                 
 }
 
-    
 
-    //get passed data and filter
-    /*$agemin=$_GET['amin'];
-    $agemax=$_GET['amax'];
-    $maritalstatus=$_GET['maritalstatus'];
-    $mothertounge=$_GET['mothertounge'];
-    $sex = $_GET['sex'];
-    $limit = $_GET['limit'];
-    
-    $sql="SELECT * FROM customer WHERE 
-    sex='$sex' 
-    AND age>='$agemin'
-    AND age<='$agemax'
-    AND maritalstatus = '$maritalstatus'
-    AND mothertounge = '$mothertounge'";
-
-    $result = mysqlexec($sql);
-    /* if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    
-   // echo "<script> window.location=\"searchresults.php?result=$result\"</script>";
-    //return $result;
-    }*/
 ?>

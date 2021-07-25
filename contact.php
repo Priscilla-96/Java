@@ -5,6 +5,23 @@
 } else{
    header("location:login.php?mes=contact");
 }
+  if (!isset($_GET['mes'])) {
+      $message=null;
+      $color="";
+  }else{
+      $signupCheck = $_GET['mes'];
+      if ($signupCheck == "sent") {
+        $message='Message Sent, We Will Get Back To You Within Three Days ';
+        $color="green";
+      }elseif ($signupCheck == "failed") {
+        $message='An Error Occured While Sending The Mail, Please Try Again! ';
+        $color="red";
+      }
+      else{
+        $message=null;
+        $color="";
+      }
+  }
  ?>
 
 <!DOCTYPE HTML>
@@ -86,6 +103,18 @@
         <div class="grid_5  fadeInUp animated">
           <div class="container">
             <div class="row">
+              <?php
+            if($message){
+              if ($color=="red") {
+                echo '  <div style="text-align: center;" class="alert alert-danger" role="alert">'.$message.'<br>
+                  </div>';
+              }elseif ($color=="green") {
+                echo '  <div style="text-align: center;" class="alert alert-success" role="alert">
+              '.$message.'<br>
+                  </div>';
+              }              
+                }
+                ?>
               <div class="col-md-6">
                 <div class="elementor-widget-container">
                   <h1 class="elementor-heading-title elementor-size-default">Contact Us</h1> 
@@ -119,12 +148,13 @@
   <div class="about_middle cf">
     <div class="container">
   	 <h2>Contact Form</h2>
-  	  <form id="contact-form" class="contact-form">
+  	  <form action="mail.php" method="get" id="contact-form" class="contact-form">
           <fieldset>
-            <input type="text" class="text" placeholder="" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-            <input type="text" class="text" placeholder="" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}">
-            <input type="text" class="text" placeholder="" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-            <textarea value="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+            <input type="text" name="name" class="text" placeholder="Enter name" value="" required>
+            <input type="text" name="phone" class="text" placeholder="Enter phone no" value="" required>
+            <input type="text" name="mail" class="text" placeholder="Enter e-mail" value="" required>
+            <input type="text" name="subject" class="text" placeholder="Enter mail subject" value="" required>
+            <textarea name="message" value="" placeholder="Enter message" required></textarea>
             <input class="ce" name="submit" type="submit" id="submit" value="Submit">
           </fieldset>
         </form>
