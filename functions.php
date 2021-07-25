@@ -643,11 +643,6 @@ function uploadphoto($id){
 				move_uploaded_file($_FILES['idBack']['tmp_name'], $target6);				
 		    }
 
-	
-
-
-	// Tells you if its all ok
-		echo "The files has been uploaded, and your information has been added to the directory";
 		echo "<script> window.location=\"userhome.php?id=$id\"</script>";
 	
 

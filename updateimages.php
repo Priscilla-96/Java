@@ -228,6 +228,9 @@ $(document).ready(function(){
             </div> -->
         </div>
 	    </div>
+      <div  style="text-align: center;" class="alert alert-danger" role="alert">
+          <p>It Will Take A Few Seconds To Upload The Images </p>
+          </div>
 	    <div class="form-actions">
 	    	<input type="submit" id="edit-submit" name="op" value="Upload" class="btn_1 submit">
 	    </div>

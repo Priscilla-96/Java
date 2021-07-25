@@ -184,6 +184,9 @@ $(document).ready(function(){
             -->
         </div>
 	    </div>
+      <div  style="text-align: center;" class="alert alert-danger" role="alert">
+          <p>It Will Take A Few Seconds To Upload The Images </p>
+          </div>
 	    <div style="text-align: center;" class="form-actions">
 	    	<input style="width: 38%;min-height: 40px;" type="submit" id="edit-submit" name="op" value="Upload" class="btn_1 submit">
 	    </div>
