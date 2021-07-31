@@ -138,8 +138,9 @@ $(document).ready(function(){
 				        <div class="age_grid">
 					        <div class="col-sm-12 form_box">
 			                	<div class="select-block1">
-			                    <select name="maritalstatus"> 
+			                    <select name="maritalstatus" required> 
 				                    <option value="<?php echo $religion; ?>"><?php echo $marital_status; ?></option>
+				                    <option value="Not Applicable">Not Applicable</option>
 				                    <option value="Single">Single</option>
 				                    <option value="Married">Married</option>
 				                    <option value="Divorsed">Divorsed</option>
@@ -161,8 +162,9 @@ $(document).ready(function(){
 				        <div class="age_grid">
 					        <div class="col-sm-12 form_box">
 			                	<div class="select-block1">
-			                    <select name="colour"> 
+			                    <select name="colour" required> 
 				                    <option value="<?php echo $complexion; ?>"><?php echo $complexion; ?></option>
+				                    <option value="Not Applicable">Not Applicable</option>
 				                    <option value="Black">Black</option>
 				                    <option value="Fair">Fair</option>
 				                    <option value="Normal">Normal</option>
@@ -192,8 +194,9 @@ $(document).ready(function(){
 				        <div class="age_grid">
 					        <div class="col-sm-12 form_box">
 			                	<div class="select-block1">
-			                    <select name="diet"> 
+			                    <select name="diet" required> 
 				                    <option value="<?php echo $diet; ?>"><?php echo $diet; ?></option>
+				                    <option value="Not Applicable">Not Applicable</option>
 				                    <option value="Veg">Veg</option>
 				                    <option value="Non Veg">Non Veg</option>
 				                </select>
@@ -214,7 +217,7 @@ $(document).ready(function(){
 				        <div class="age_grid">
 					        <div class="col-sm-12 form_box">
 			                	<div class="select-block1">
-			                    <select name="religion"> 
+			                    <select name="religion" required> 
 				                    <option value="<?php echo $religion; ?>"><?php echo $religion; ?></option>
 				                    <option value="Not Applicable">Not Applicable</option>
 				                    <option value="Hindu">Hindu</option>
@@ -240,8 +243,9 @@ $(document).ready(function(){
 				        <div class="age_grid">
 					        <div class="col-sm-12 form_box">
 			                	<div class="select-block1">
-			                    <select name="mothertounge"> 
+			                    <select name="mothertounge" required> 
 				                    <option value="<?php echo $mother_tounge; ?>"><?php echo $mother_tounge; ?></option>
+				                    <option value="Not Applicable">Not Applicable</option>
 				                    <option value="Tamil">Tamil</option>
 				                    <option value="Sinhala">Sinhala</option>
 				                    <option value="English">English</option>
@@ -263,8 +267,9 @@ $(document).ready(function(){
 				        <div class="age_grid">
 					        <div class="col-sm-12 form_box">
 			                	<div class="select-block1">
-			                    <select name="education"> 
+			                    <select name="education" required> 
 				                    <option value="<?php echo $education; ?>"><?php echo $education; ?></option>
+				                    <option value="Not Applicable">Not Applicable</option>
 				                    <option value="Primary">Primary</option>
 				                    <option value="Ordinary level">Ordinary level</option>
 				                    <option value="Advance Level">Advance Level</option>
@@ -298,7 +303,7 @@ $(document).ready(function(){
 				        <div class="age_grid">
 					        <div class="col-sm-12 form_box">
 			                	<div class="select-block1">
-			                    <select name="country"> 
+			                    <select name="country" required> 
 				                    <option value="<?php echo $country; ?>"><?php echo $country; ?></option>
 				                    <option value="Not Applicable">Not Applicable</option>
 				                    <option value="India">India</option>

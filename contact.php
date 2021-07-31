@@ -117,19 +117,19 @@
                 ?>
               <div class="col-md-6">
                 <div class="elementor-widget-container">
-                  <h1 class="elementor-heading-title elementor-size-default">Contact Us</h1> 
+                  <h1 class="elementor-heading-title elementor-size-default">Contact Us</h1> <br>
                     <p style="font-size: 18px">We are here to build emotion, connect people and create happy stories. Online dating sites are the way to go for people seeking love or to meet singles while they don’t know where to find them. There are lots of online dating sites available which makes it .</p><br><br>
                     <div class="row">
                       <div class="col-md-5">Address</div>
-                      <div class="col-md-7">8901 Nulla Pariatur, <br>Ipsum, D05 87GR.</div>
+                      <div class="col-md-7">Panadura <br>Sri Lanka</div>
                     </div><br>
                     <div class="row">
                       <div class="col-md-5">Telephones :</div>
-                      <div class="col-md-7">+0774200428 <br>011245368</div>
+                      <div class="col-md-7">+94 773771521 </div>
                     </div><br>
                     <div class="row">
                       <div class="col-md-5">E-mail :</div>
-                      <div class="col-md-7">info@matkapu.com</div>
+                      <div class="col-md-7">hello@slkapu.com</div>
                     </div><br>  
                 </div>
               </div>

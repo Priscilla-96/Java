@@ -6,7 +6,7 @@
     			<p>"We build emotion, connect people and create happy stories"
                 </p>
     		</div>
-    		<div class="col-sm-2 col_2">
+    		<div class="col-sm-3 col_2">
     			<h4>Help & Support</h4>
     			<ul class="footer_links">
     				<li><a href="#">24x7 Live help</a></li>
@@ -14,7 +14,7 @@
     				<li><a href="#">Feedback</a></li>
     			</ul>
     		</div>
-    		<div class="col-sm-2 col_2">
+    		<div class="col-sm-3 col_2">
     			<h4>Quick Links</h4>
     			<ul class="footer_links">
     				<li><a href="privacy.php">Privacy Policy</a></li>

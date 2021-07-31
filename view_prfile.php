@@ -242,10 +242,7 @@ $(document).ready(function(){
 									<td class="day_value"><?php echo $bodytype;?></td>
 								</tr>
 							    
-							    <tr class="opened">
-									<td class="day_label">Age / Height :</td>
-									<td class="day_value"><?php echo $age; ?>/<?php echo $height;?> cm</td>
-								</tr>
+							    
 							    <tr class="opened">
 									<td class="day_label">Physical Status :</td>
 									<td class="day_value closed"><span><?php echo $physicalstatus;?></span></td>
@@ -262,7 +259,7 @@ $(document).ready(function(){
 				        	<tbody>
 				        		<tr class="opened_1">
 									<td class="day_label">Age :</td>
-									<td class="day_value"><?php echo $age;?></td>
+									<td class="day_value closed"><?php echo $age;?></td>
 								</tr>
 							    <tr class="opened">
 									<td class="day_label">Mother Tongue :</td>
@@ -286,8 +283,9 @@ $(document).ready(function(){
 				        <div class="clearfix"> </div>
 				    </div>
 				    <div class="basic_1">
-				    	<h3>Religious / Social & Astro Background</h3>
+				    	
 				    	<div class="col-md-6 basic_1-left">
+				    		<h3>Religious / Social & Astro Background</h3>
 				    	  <table class="table_working_hours">
 				        	<tbody>
 								<tr class="opened_1">
@@ -302,21 +300,11 @@ $(document).ready(function(){
 				          </table>
 				         </div>
 				         <div class="col-md-6 basic_1-left">
+				         	<h3>Education & Career</h3>
 				          <table class="table_working_hours">
 				        	<tbody>
 							    
-							    
-							</tbody>
-				        </table>
-				        </div>
-				        <div class="clearfix"> </div>
-				    </div>
-				    <div class="basic_1 basic_2">
-				    	<h3>Education & Career</h3>
-				    	<div class="basic_1-left">
-				    	  <table class="table_working_hours">
-				        	<tbody>
-				        		<tr class="opened">
+							    <tr class="opened">
 									<td class="day_label">Education   :</td>
 									<td class="day_value"><?php echo $education;?></td>
 								</tr>
@@ -328,6 +316,17 @@ $(document).ready(function(){
 									<td class="day_label">Occupation Detail :</td>
 									<td class="day_value closed"><span><?php echo $occupationdescr;?></span></td>
 								</tr>
+							</tbody>
+				        </table>
+				        </div>
+				        <div class="clearfix"> </div>
+				    </div>
+				    <div class="basic_1 basic_2">
+				    	
+				    	<div class="basic_1-left">
+				    	  <table class="table_working_hours">
+				        	<tbody>
+				        		
 							 </tbody>
 				          </table>
 				         </div>
@@ -395,10 +394,6 @@ $descr=$row['descr'];
 									<td class="day_value"><?php echo $maritalstatus;?></td>
 								</tr>
 							    <tr class="opened">
-									<td class="day_label">Body Type :</td>
-									<td class="day_value closed"><span><?php echo $bodytype;?></span></td>
-								</tr>
-							    <tr class="opened">
 									<td class="day_label">Complexion :</td>
 									<td class="day_value closed"><span><?php echo $colour;?></span></td>
 								</tr>
@@ -415,10 +410,6 @@ $descr=$row['descr'];
 									<td class="day_value closed"><span><?php echo $religion;?></span></td>
 								</tr>
 								<tr class="opened">
-									<td class="day_label">Caste :</td>
-									<td class="day_value closed"><span><?php echo $caste;?></span></td>
-								</tr>
-								<tr class="opened">
 									<td class="day_label">Mother Tongue :</td>
 									<td class="day_value closed"><span><?php echo $mothertounge;?></span></td>
 								</tr>
@@ -433,10 +424,6 @@ $descr=$row['descr'];
 								<tr class="opened">
 									<td class="day_label">Country of Residence :</td>
 									<td class="day_value closed"><span><?php echo $country;?></span></td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">State :</td>
-									<td class="day_value closed"><span><?php echo $state;?></span></td>
 								</tr>
 								
 							 </tbody>
