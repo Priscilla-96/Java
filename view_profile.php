@@ -344,7 +344,6 @@ $complexion=$row['complexion'];
 $height=$row['height'];
 $diet=$row['diet'];
 $religion=$row['religion'];
-$caste=$row['caste'];
 $mothertounge=$row['mothertounge'];
 $education=$row['education'];
 $occupation=$row['occupation'];
@@ -368,10 +367,6 @@ $descr=$row['descr'];
 									<td class="day_value"><?php echo $maritalstatus;?></td>
 								</tr>
 							    <tr class="opened">
-									<td class="day_label">Body Type :</td>
-									<td class="day_value closed"><span><?php echo $bodytype;?></span></td>
-								</tr>
-							    <tr class="opened">
 									<td class="day_label">Complexion :</td>
 									<td class="day_value closed"><span><?php echo $colour;?></span></td>
 								</tr>
@@ -388,10 +383,6 @@ $descr=$row['descr'];
 									<td class="day_value closed"><span><?php echo $religion;?></span></td>
 								</tr>
 								<tr class="opened">
-									<td class="day_label">Caste :</td>
-									<td class="day_value closed"><span><?php echo $caste;?></span></td>
-								</tr>
-								<tr class="opened">
 									<td class="day_label">Mother Tongue :</td>
 									<td class="day_value closed"><span><?php echo $mothertounge;?></span></td>
 								</tr>
@@ -406,10 +397,6 @@ $descr=$row['descr'];
 								<tr class="opened">
 									<td class="day_label">Country of Residence :</td>
 									<td class="day_value closed"><span><?php echo $country;?></span></td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">State :</td>
-									<td class="day_value closed"><span><?php echo $state;?></span></td>
 								</tr>
 								
 							 </tbody>

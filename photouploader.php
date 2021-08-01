@@ -144,7 +144,7 @@ $(document).ready(function(){
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
-                <input type="file" id="file1" name="pic1" accept="image/png, image/jpg, image/jpeg" required />
+                <input type="file" id="file1" name="pic1" required />
                   Profile Picture
               </label>
             </div>
@@ -155,7 +155,7 @@ $(document).ready(function(){
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
-                <input type="file" id="file2" name="pic2" accept="image/png, image/jpg, image/jpeg" required />
+                <input type="file" id="file2" name="pic2" required />
                   First Picture
               </label>
             </div>
@@ -166,7 +166,7 @@ $(document).ready(function(){
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
-                <input type="file" id="file3" name="pic3" accept="image/png, image/jpg, image/jpeg" required />
+                <input type="file" id="file3" name="pic3" required />
                   Second Picture
               </label>
             </div>
@@ -177,7 +177,7 @@ $(document).ready(function(){
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
-                <input type="file" id="file4" name="pic4" accept="image/png, image/jpg, image/jpeg" required />
+                <input type="file" id="file4" name="pic4" required />
                   Third Picture
               </label>
             </div>
@@ -188,7 +188,7 @@ $(document).ready(function(){
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
-                <input type="file" id="file5" name="idFront" accept="image/png, image/jpg, image/jpeg" required />
+                <input type="file" id="file5" name="idFront" required />
                   ID Card Front Picture
               </label>
             </div>
@@ -199,7 +199,7 @@ $(document).ready(function(){
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
-                <input type="file" id="file6" name="idBack" accept="image/png, image/jpg, image/jpeg" required />
+                <input type="file" id="file6" name="idBack" required />
                   ID Card Back Picture
               </label>
             </div>
