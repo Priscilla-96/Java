@@ -141,32 +141,35 @@ $(document).ready(function(){
             <?php echo"Add All Images To Proceed"; ?>
           </div>
           <br>
+
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
-                <input type="file" id="file1" name="pic1" required />
+                <input type="file" id="file1" name="pic1"  />
                   Profile Picture
               </label>
             </div>
+
             <div class="col-sm-8">
               <img style="width: 50%" id="image1" /><br><br>
             </div>
           </div>
+         
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
-                <input type="file" id="file2" name="pic2" required />
+                <input type="file" id="file2" name="pic2"  />
                   First Picture
               </label>
             </div>
             <div class="col-sm-8">
               <img style="width: 50%" id="image2" /><br><br>
             </div>
-          </div>
+          </div> 
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
-                <input type="file" id="file3" name="pic3" required />
+                <input type="file" id="file3" name="pic3"  />
                   Second Picture
               </label>
             </div>
@@ -177,7 +180,7 @@ $(document).ready(function(){
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
-                <input type="file" id="file4" name="pic4" required />
+                <input type="file" id="file4" name="pic4"  />
                   Third Picture
               </label>
             </div>
@@ -188,7 +191,7 @@ $(document).ready(function(){
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
-                <input type="file" id="file5" name="idFront" required />
+                <input type="file" id="file5" name="idFront"  />
                   ID Card Front Picture
               </label>
             </div>
@@ -199,24 +202,25 @@ $(document).ready(function(){
           <div class="row">
             <div class="col-sm-4">
               <label style="width: 90%" class="custom-file-upload btn btn-success">
-                <input type="file" id="file6" name="idBack" required />
+                <input type="file" id="file6" name="idBack"  />
                   ID Card Back Picture
               </label>
             </div>
             <div class="col-sm-8">
               <img style="width: 50%" id="image6" /><br><br>
             </div>
-          </div>
+          </div> 
 	      </div>
           <div  style="text-align: center;" class="alert alert-danger" role="alert">
           <p>It Will Take A Few Seconds To Upload The Images </p>
           </div>
-        <div style="display:none" id="hidden_div">
+        <!-- <div style="display:none" id="hidden_div">
           <div  id="div1" class="fa"></div>
           <div  style="text-align: center;" class="alert alert-danger" role="alert">
           <p>It Will Take A Few Seconds To Upload The Images </p>
           </div>
-        </div>
+        </div> -->
+
   	    <div class="form-actions">
   	    	<input style="width: 100%;" type="submit" id="edit-submit" name="op" value="Upload" class="btn_1 submit">
   	    </div><br>
@@ -300,7 +304,7 @@ $(window).load(function() {
 }
 </script>
 
-<!-- scripts for the hour glass animation --> 
+<!-- scripts for the hour glass animation  
 <script>
 function hourglass() {
   var a;
@@ -315,4 +319,133 @@ function hourglass() {
 }
 hourglass();
 setInterval(hourglass, 3000);
+</script>-->
+
+<script>
+  $('form').submit(function(event) {
+    
+
+    var file1 = $(document.getElementById('file1')).val();
+    var file2 = $(document.getElementById('file2')).val();
+    var file3 = $(document.getElementById('file3')).val();
+    var file4 = $(document.getElementById('file4')).val(); 
+    var file5 = $(document.getElementById('file5')).val();
+    var file6 = $(document.getElementById('file6')).val(); 
+
+      if ( !file1 || !file2 || !file3 || !file4 || !file5 || !file6) {
+        alert('Upload All Images To Continue');
+        event.preventDefault();
+        return;
+      } 
+
+    //profile image validation
+    var file11 = $(document.getElementById('file1')).val();
+      if (file11.match(/\.(?:jpeg|jpg|png)$/)) {            
+          var image = document.getElementById("file1");
+            if (typeof (image.files) != "undefined") {
+                var size = parseFloat(image.files[0].size / (1024 * 1024)).toFixed(2); 
+                if(size > 2) {
+                    alert('Profile Image Size Is Too Large! Select A Image Less Than 2 MB');
+                    event.preventDefault();
+                }else{}
+            } else {
+                alert("Profile Picture Uploading Error. Upload A Different Image");
+            }
+
+      }else{
+        alert('Profile Picture Format Not Supported. Choose A Different Image!');
+        event.preventDefault();
+      }
+
+    //first image validation     
+    var file22 = $(document.getElementById('file2')).val();
+      if (file22.match(/\.(?:jpeg|jpg|png)$/)) { 
+        var image = document.getElementById("file2");
+            if (typeof (image.files) != "undefined") {
+                var size = parseFloat(image.files[0].size / (1024 * 1024)).toFixed(2); 
+                if(size > 2) {
+                    alert('First Image Size Is Too Large! Select A Image Less Than 2 MB');
+                    event.preventDefault();
+                }else{}
+            } else {
+                alert("First Image Uploading Error. Upload A Different Image");
+            }
+
+      }else{
+        alert('First Picture Format Not Supported. Choose A Different Image!');
+        event.preventDefault();
+      }
+
+    //third image validation     
+    var file33 = $(document.getElementById('file3')).val();
+      if (file33.match(/\.(?:jpeg|jpg|png)$/)) {
+        var image = document.getElementById("file3");
+            if (typeof (image.files) != "undefined") {
+                var size = parseFloat(image.files[0].size / (1024 * 1024)).toFixed(2); 
+                if(size > 2) {
+                    alert('Second Image Size Is Too Large! Select A Image Less Than 2 MB');
+                    event.preventDefault();
+                }else{}
+            } else {
+                alert("Second Image Uploading Error. Upload A Different Image");
+            }       
+      }else{
+        alert('Second Picture Format Not Supported. Choose A Different Image!');
+        event.preventDefault();
+      }
+
+    //fourth image validation     
+    var file44 = $(document.getElementById('file4')).val();
+      if (file44.match(/\.(?:jpeg|jpg|png)$/)) {   
+          var image = document.getElementById("file4");
+            if (typeof (image.files) != "undefined") {
+                var size = parseFloat(image.files[0].size / (1024 * 1024)).toFixed(2); 
+                if(size > 2) {
+                    alert('Third Image Size Is Too Large! Select A Image Less Than 2 MB');
+                    event.preventDefault();
+                }else{}
+            } else {
+                alert("Third Image Uploading Error. Upload A Different Image");
+            }    
+      }else{
+        alert('Third Picture Format Not Supported. Choose A Different Image!');
+        event.preventDefault();
+      }
+
+    //fifth image validation     
+    var file55 = $(document.getElementById('file5')).val();
+      if (file55.match(/\.(?:jpeg|jpg|png)$/)) {   
+          var image = document.getElementById("file5");
+            if (typeof (image.files) != "undefined") {
+                var size = parseFloat(image.files[0].size / (1024 * 1024)).toFixed(2); 
+                if(size > 2) {
+                    alert('ID Front Image Size Is Too Large! Select A Image Less Than 2 MB');
+                    event.preventDefault();
+                }else{}
+            } else {
+                alert("'ID Front Image Uploading Error. Upload A Different Image");
+            }    
+      }else{
+        alert('ID Front Picture Format Not Supported. Choose A Different Image!');
+        event.preventDefault();
+      }
+
+    //sixth image validation     
+    var file66 = $(document.getElementById('file6')).val();
+      if (file66.match(/\.(?:jpeg|jpg|png)$/)) { 
+          var image = document.getElementById("file6");
+            if (typeof (image.files) != "undefined") {
+                var size = parseFloat(image.files[0].size / (1024 * 1024)).toFixed(2); 
+                if(size > 2) {
+                    alert('ID Back Image Size Is Too Large! Select A Image Less Than 2 MB');
+                    event.preventDefault();
+                }else{}
+            } else {
+                alert("ID Back Image Uploading Error. Upload A Different Image");
+            }      
+      }else{
+        alert('ID Back Picture Format Not Supported. Choose A Different Image!');
+        event.preventDefault();
+      }
+});
 </script>

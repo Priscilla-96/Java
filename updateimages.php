@@ -283,3 +283,99 @@ $(window).load(function() {
   document.getElementById('word4').innerHTML = 'Selected Picture';
 }
 </script>
+<script>
+  $('form').submit(function(event) {
+    
+
+    var file1 = $(document.getElementById('file1')).val();
+    var file2 = $(document.getElementById('file2')).val();
+    var file3 = $(document.getElementById('file3')).val();
+    var file4 = $(document.getElementById('file4')).val();  
+
+      
+      if (!file1) {}else{
+        //profile image validation
+    var file11 = $(document.getElementById('file1')).val();
+      if (file11.match(/\.(?:jpeg|jpg|png)$/)) {            
+          var image = document.getElementById("file1");
+            if (typeof (image.files) != "undefined") {
+                var size = parseFloat(image.files[0].size / (1024 * 1024)).toFixed(2); 
+                if(size > 2) {
+                    alert('Profile Image Size Is Too Large! Select A Image Less Than 2 MB');
+                    event.preventDefault();
+                }else{}
+            } else {
+                alert("Profile Picture Uploading Error. Upload A Different Image");
+            }
+
+      }else{
+        alert('Profile Picture Format Not Supported. Choose A Different Image!');
+        event.preventDefault();
+      }
+      }
+
+    
+      if (!file2) {}else{
+        //first image validation
+    var file22 = $(document.getElementById('file2')).val();
+      if (file22.match(/\.(?:jpeg|jpg|png)$/)) { 
+        var image = document.getElementById("file2");
+            if (typeof (image.files) != "undefined") {
+                var size = parseFloat(image.files[0].size / (1024 * 1024)).toFixed(2); 
+                if(size > 2) {
+                    alert('First Image Size Is Too Large! Select A Image Less Than 2 MB');
+                    event.preventDefault();
+                }else{}
+            } else {
+                alert("First Image Uploading Error. Upload A Different Image");
+            }
+
+      }else{
+        alert('First Picture Format Not Supported. Choose A Different Image!');
+        event.preventDefault();
+      }
+      }
+    
+      if (!file3) {}else{
+        //third image validation 
+    var file33 = $(document.getElementById('file3')).val();
+      if (file33.match(/\.(?:jpeg|jpg|png)$/)) {
+        var image = document.getElementById("file3");
+            if (typeof (image.files) != "undefined") {
+                var size = parseFloat(image.files[0].size / (1024 * 1024)).toFixed(2); 
+                if(size > 2) {
+                    alert('Second Image Size Is Too Large! Select A Image Less Than 2 MB');
+                    event.preventDefault();
+                }else{}
+            } else {
+                alert("Second Image Uploading Error. Upload A Different Image");
+            }       
+      }else{
+        alert('Second Picture Format Not Supported. Choose A Different Image!');
+        event.preventDefault();
+      }
+      }
+    
+      if (!file4) {}else{
+         //fourth image validation     
+    var file44 = $(document.getElementById('file4')).val();
+      if (file44.match(/\.(?:jpeg|jpg|png)$/)) {   
+          var image = document.getElementById("file4");
+            if (typeof (image.files) != "undefined") {
+                var size = parseFloat(image.files[0].size / (1024 * 1024)).toFixed(2); 
+                if(size > 2) {
+                    alert('Third Image Size Is Too Large! Select A Image Less Than 2 MB');
+                    event.preventDefault();
+                }else{}
+            } else {
+                alert("Third Image Uploading Error. Upload A Different Image");
+            }    
+      }else{
+        alert('Third Picture Format Not Supported. Choose A Different Image!');
+        event.preventDefault();
+      }
+      }
+   
+    
+});
+</script>

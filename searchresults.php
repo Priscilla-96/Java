@@ -159,7 +159,7 @@ while ($row = mysqli_fetch_assoc($result))
             <ul style='background-color: white;border-radius: 30px;padding-top: 15px;padding-left: 10px;' class=\"profile_item\">
               <li class=\"profile_item-img\"><img src=\"profile/". $profid."/".$pic ."\"" . "class=\"img-responsive\" alt=\"\"/></li>
               <li class=\"profile_item-desc\">
-              <input  style='display:inline-block;float:left;margin-top:0;' type='checkbox' class='game' value='". $profid."' name='data[]' >
+              <input  style='display:inline-block;float:left;margin-top:0;' type='checkbox' class='game' onchange='callFunction()' value='". $profid."' name='data[]' >
               <h4 style='color:black;'>&nbsp&nbsp Select</h4>
               <p>" . $row['firstname'] . " " . $row['lastname'] . "</p>
               <p>Age : " . $row['age']. "Yrs</p>
@@ -175,7 +175,7 @@ while ($row = mysqli_fetch_assoc($result))
         <div style="text-align: center;" class="alert alert-danger" role="alert">
           <?php echo"One Time Selection Only!"; ?>
         </div>
-        <input  style="width: 30%;min-width: 280px;"  class="download btn btn-primary" id="payhere-payment" type="button" name="" value="Unlock Selected Profiles">
+        <input  style="width: 30%;min-width: 280px;"  class="download btn btn-primary" id="payhere-payment" type="button"  name="" value="Unlock Selected Profiles" disabled>
       </div>
     </form> 
   </div>
@@ -250,6 +250,17 @@ $(window).load(function() {
        return false;
     }
 });
+</script>
+<script>
+  function callFunction() {
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  var checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
+
+  document.querySelectorAll('input[type="button"]')[0].disabled = true;
+  if (checkedOne) {
+    document.querySelectorAll('input[type="button"]')[0].disabled = false;
+  }
+}
 </script>
 </body>
 </html>	

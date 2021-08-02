@@ -226,3 +226,52 @@ $(window).load(function() {
   document.getElementById('word2').innerHTML = 'Selected Identification Back Picture';
 }
 </script>
+<script>
+  $('form').submit(function(event) {
+    
+
+    var file1 = $(document.getElementById('file1')).val();
+    var file2 = $(document.getElementById('file2')).val();
+
+    if (!file1) {}else{
+    //profile image validation
+    var file11 = $(document.getElementById('file1')).val();
+      if (file11.match(/\.(?:jpeg|jpg|png)$/)) {            
+          var image = document.getElementById("file1");
+            if (typeof (image.files) != "undefined") {
+                var size = parseFloat(image.files[0].size / (1024 * 1024)).toFixed(2); 
+                if(size > 2) {
+                    alert('ID Front Image Size Is Too Large! Select A Image Less Than 2 MB');
+                    event.preventDefault();
+                }else{}
+            } else {
+                alert("ID Front Image Uploading Error. Upload A Different Image");
+            }
+
+      }else{
+        alert('ID Front Format Not Supported. Choose A Different Image!');
+        event.preventDefault();
+      }
+    }
+    if (!file2) {}else{
+    //first image validation     
+    var file22 = $(document.getElementById('file2')).val();
+      if (file22.match(/\.(?:jpeg|jpg|png)$/)) { 
+        var image = document.getElementById("file2");
+            if (typeof (image.files) != "undefined") {
+                var size = parseFloat(image.files[0].size / (1024 * 1024)).toFixed(2); 
+                if(size > 2) {
+                    alert('ID Back Image Size Is Too Large! Select A Image Less Than 2 MB');
+                    event.preventDefault();
+                }else{}
+            } else {
+                alert("ID Back Image Uploading Error. Upload A Different Image");
+            }
+
+      }else{
+        alert('ID Back Picture Format Not Supported. Choose A Different Image!');
+        event.preventDefault();
+      }
+    }
+});
+</script>
