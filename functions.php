@@ -929,7 +929,7 @@ function updateIdPhoto($id){
 		    }
 
 	}else{
-		alert("ane mata be");
+		
 	}
 
 	if ($_FILES['pic2']['name']!= "") {

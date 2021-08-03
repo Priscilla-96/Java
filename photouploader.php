@@ -92,10 +92,7 @@ $(document).ready(function(){
     background-image: url(images/background/right-shape.png);
     width: 100%;
    }
-  #div1 {
-  font-size:48px;
-}
-  .custom-file-upload {
+     .custom-file-upload {
     border: 1px solid #ccc;
     display: inline-block;
     padding: 6px 12px;
@@ -105,6 +102,44 @@ $(document).ready(function(){
     display: none;
   }
 </style>
+  <style>
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+</style>
+  <style>
+#div1 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-70%);
+  -ms-transform: translate(-50%,-70%);
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -112,6 +147,16 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="overlay" onclick="off()">
+        <div style="text-align: center;font-size: 90%" id="text">Uploading Your Images!<br>This Will Take A Few Seconds</div><br>
+        <div id="div1" class="fa"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- Navigation Start-->
 <?php include_once("includes/navigation2.php");?>
 <!-- Navigation End-->
@@ -222,7 +267,7 @@ $(document).ready(function(){
         </div> -->
 
   	    <div class="form-actions">
-  	    	<input style="width: 100%;" type="submit" id="edit-submit" name="op" value="Upload" class="btn_1 submit">
+  	    	<input style="width: 100%;" type="submit" onclick="on()" id="edit-submit" name="op" value="Upload" class="btn_1 submit">
   	    </div><br>
 	    </form>
 	    </div>
@@ -335,6 +380,7 @@ setInterval(hourglass, 3000);
       if ( !file1 || !file2 || !file3 || !file4 || !file5 || !file6) {
         alert('Upload All Images To Continue');
         event.preventDefault();
+        document.getElementById("overlay").style.display = "none";
         return;
       } 
 
@@ -347,14 +393,18 @@ setInterval(hourglass, 3000);
                 if(size > 2) {
                     alert('Profile Image Size Is Too Large! Select A Image Less Than 2 MB');
                     event.preventDefault();
+                    document.getElementById("overlay").style.display = "none";
                 }else{}
             } else {
                 alert("Profile Picture Uploading Error. Upload A Different Image");
+                event.preventDefault();
+                document.getElementById("overlay").style.display = "none";
             }
 
       }else{
         alert('Profile Picture Format Not Supported. Choose A Different Image!');
         event.preventDefault();
+        document.getElementById("overlay").style.display = "none";
       }
 
     //first image validation     
@@ -366,14 +416,18 @@ setInterval(hourglass, 3000);
                 if(size > 2) {
                     alert('First Image Size Is Too Large! Select A Image Less Than 2 MB');
                     event.preventDefault();
+                    document.getElementById("overlay").style.display = "none";
                 }else{}
             } else {
                 alert("First Image Uploading Error. Upload A Different Image");
+                event.preventDefault();
+                document.getElementById("overlay").style.display = "none";
             }
 
       }else{
         alert('First Picture Format Not Supported. Choose A Different Image!');
         event.preventDefault();
+        document.getElementById("overlay").style.display = "none";
       }
 
     //third image validation     
@@ -385,13 +439,17 @@ setInterval(hourglass, 3000);
                 if(size > 2) {
                     alert('Second Image Size Is Too Large! Select A Image Less Than 2 MB');
                     event.preventDefault();
+                    document.getElementById("overlay").style.display = "none";
                 }else{}
             } else {
                 alert("Second Image Uploading Error. Upload A Different Image");
+                event.preventDefault();
+                document.getElementById("overlay").style.display = "none";
             }       
       }else{
         alert('Second Picture Format Not Supported. Choose A Different Image!');
         event.preventDefault();
+        document.getElementById("overlay").style.display = "none";
       }
 
     //fourth image validation     
@@ -403,13 +461,17 @@ setInterval(hourglass, 3000);
                 if(size > 2) {
                     alert('Third Image Size Is Too Large! Select A Image Less Than 2 MB');
                     event.preventDefault();
+                    document.getElementById("overlay").style.display = "none";
                 }else{}
             } else {
                 alert("Third Image Uploading Error. Upload A Different Image");
+                event.preventDefault();
+                document.getElementById("overlay").style.display = "none";
             }    
       }else{
         alert('Third Picture Format Not Supported. Choose A Different Image!');
         event.preventDefault();
+        document.getElementById("overlay").style.display = "none";
       }
 
     //fifth image validation     
@@ -421,13 +483,17 @@ setInterval(hourglass, 3000);
                 if(size > 2) {
                     alert('ID Front Image Size Is Too Large! Select A Image Less Than 2 MB');
                     event.preventDefault();
+                    document.getElementById("overlay").style.display = "none";
                 }else{}
             } else {
                 alert("'ID Front Image Uploading Error. Upload A Different Image");
+                event.preventDefault();
+                document.getElementById("overlay").style.display = "none";
             }    
       }else{
         alert('ID Front Picture Format Not Supported. Choose A Different Image!');
         event.preventDefault();
+        document.getElementById("overlay").style.display = "none";
       }
 
     //sixth image validation     
@@ -439,13 +505,38 @@ setInterval(hourglass, 3000);
                 if(size > 2) {
                     alert('ID Back Image Size Is Too Large! Select A Image Less Than 2 MB');
                     event.preventDefault();
+                    document.getElementById("overlay").style.display = "none";
                 }else{}
             } else {
                 alert("ID Back Image Uploading Error. Upload A Different Image");
+                event.preventDefault();
+                document.getElementById("overlay").style.display = "none";
             }      
       }else{
         alert('ID Back Picture Format Not Supported. Choose A Different Image!');
         event.preventDefault();
+        document.getElementById("overlay").style.display = "none";
       }
 });
+</script>
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+</script>
+<script>
+function hourglass() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "&#xf251;";
+  setTimeout(function () {
+      a.innerHTML = "&#xf252;";
+    }, 1000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf253;";
+    }, 2000);
+}
+hourglass();
+setInterval(hourglass, 3000);
 </script>
